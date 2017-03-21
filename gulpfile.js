@@ -15,6 +15,7 @@ var gulp = require('gulp'),
 var paths = {
   public: './public/',
   sass: './src/sass/',
+  bower: './bower_components/',
   css: './public/css/',
   data: './src/_data/'
 };
@@ -81,6 +82,7 @@ gulp.task('sass', function () {
  */
 gulp.task('watch', function () {
   gulp.watch(paths.sass + '**/*.scss', ['sass']);
+  gulp.watch(paths.bower + 'css-hamburgers/**/**/*.scss', ['sass']);
   gulp.watch('./src/**/*.pug', ['rebuild']);
 });
 

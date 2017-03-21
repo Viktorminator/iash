@@ -2,12 +2,9 @@
 @import "../../bower_components/css-hamburgers/_sass/hamburgers/hamburgers";
 
 
-
-header {
-  h1 {
-    font-weight: 300;
-    text-align: center;
-    font-size: 60px;
-    margin-top: 180px;
-  }
+/* HEADER
+------------------------*/
+.hamburger {
+  background-color: $primary-color;
+  padding: 15px 15px 10px 15px;
 }
