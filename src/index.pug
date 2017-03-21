@@ -5,6 +5,17 @@ block head_end
 
 block content
 	include _partials/header
-
+	main.layout(role='main')
+		section.block.block--introVideo
+			span.block--title IASH
+			span.block--longtitle ІНСТИТУТ СПЕЦІАЛЬНИХ ІСТОРИЧНИХ ДИСЦИПЛІН МУЗЕЮ ШЕРЕМЕТЬЄВИХ
+		section.chapter.chapter--1
+			span.chapter--title ABOUT
+			span.chapter--description Інститут спеціальних історичних дисциплін Музею Шереметьєвих – це науково-дослідна установа, яка була створена з метою сприяння розвитку сфрагістики, геральдики, генеалогії та суміжних з ними дисциплін.
+			| До роботи в Інституті залучаються провідні вітчизняні науковці,
+			| які активно займаються як прикладними дослідженнями, так і розвитком теоретичних підвалин зазначених галузей історичної науки.
+		section.chapter.chapter--2
+			span.chapter--title ГЕНЕАЛОГІЯ
+		section.chapter.chapter--3
 block body_end
 	script(type="text/javascript" src="/js/script.js")

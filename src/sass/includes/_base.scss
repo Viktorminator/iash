@@ -1,17 +1,22 @@
 /*	FONTS
 ------------------------*/
+@font-face {
+  font-family: Bodoni;
+  src: url("/fonts/Bodoni72C.otf") format("opentype");
+}
 
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
-
+/* VARIABLES
+-----------------------*/
+$primary-color: #6c593e;
 /*	TYPOGRAPHY
 –––––––––––––––––––––––––––*/
 
 body {
-  font-family: 'Raleway', Arial, sans-serif, ;
-  color: #555;
+  font-family: 'Bodoni', Arial, sans-serif;
+  color: $primary-color;
   font-size: 100%;
   line-height: 1.5;
-  background-color: #f2f2f2;
+  background-color: #ffffff;
   margin: 0;
 }
 
