@@ -7,6 +7,11 @@ var gulp = require('gulp'),
   pug = require('gulp-pug'),
   prefix = require('gulp-autoprefixer'),
   sass = require('gulp-sass'),
+  jshint = require('gulp-jshint'),
+  uglify = require('gulp-uglify'),
+  rename = require('gulp-rename'),
+  notify = require('gulp-notify'),
+  concat = require('gulp-concat'),
   browserSync = require('browser-sync');
 
 /*
@@ -17,7 +22,8 @@ var paths = {
   sass: './src/sass/',
   bower: './bower_components/',
   css: './public/css/',
-  data: './src/_data/'
+  data: './src/_data/',
+  scripts: './src/js/'
 };
 
 /**
@@ -76,6 +82,17 @@ gulp.task('sass', function () {
     }));
 });
 
+gulp.task('scripts', function() {
+  return gulp.src(paths.scripts + '*.js')
+      .pipe(jshint())
+      .pipe(jshint.reporter('default'))
+      .pipe(gulp.dest('public/js'))
+      .pipe(notify({ message: 'Scripts task complete' }))
+      .pipe(browserSync.reload({
+        stream: true
+      }));
+});
+
 /**
  * Watch scss files for changes & recompile
  * Watch .pug files run pug-rebuild then reload BrowserSync
@@ -84,6 +101,7 @@ gulp.task('watch', function () {
   gulp.watch(paths.sass + '**/*.scss', ['sass']);
   gulp.watch(paths.bower + 'css-hamburgers/**/**/*.scss', ['sass']);
   gulp.watch('./src/**/*.pug', ['rebuild']);
+  gulp.watch(paths.scripts + '*.js', ['scripts']);
 });
 
 // Build task compile sass and pug.
