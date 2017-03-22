@@ -1,8 +1,6 @@
 (function() {
     var triggerBttn = document.getElementById( 'trigger-overlay' ),
-        overlay = document.querySelector( 'div.overlay' ),
-        closeBttn = document.getElementById( 'trigger-overlay' );
-    console.log('This is it ' + triggerBttn);
+        overlay = document.querySelector( 'div.overlay' );
     transEndEventNames = {
         'WebkitTransition': 'webkitTransitionEnd',
         'MozTransition': 'transitionend',
@@ -15,6 +13,7 @@
 
     function toggleOverlay() {
         if( classie.has( overlay, 'open' ) ) {
+            classie.remove(triggerBttn, 'is-active');
             classie.remove( overlay, 'open' );
             classie.add( overlay, 'close' );
             var onEndTransitionFn = function( ev ) {
@@ -33,9 +32,9 @@
         }
         else if( !classie.has( overlay, 'close' ) ) {
             classie.add( overlay, 'open' );
+            classie.add( triggerBttn, 'is-active');
         }
     }
 
     triggerBttn.addEventListener( 'click', toggleOverlay );
-    closeBttn.addEventListener( 'click', toggleOverlay );
 })();
