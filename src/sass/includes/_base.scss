@@ -21,22 +21,18 @@
 @font-face {
   font-family: 'Bodoni';
   src: url("/fonts/Bodoni72C-Italic.otf") format("opentype");
-  font-weight: bold;
+  font-style: italic, oblique;
+}
+@font-face {
+  font-family: 'Helios';
+  src: url("/fonts/HeliosCondLightC-Italic.otf") format("opentype");
   font-style: italic, oblique;
 }
 @font-face {
   font-family: 'Helios';
   src: url("/fonts/HeliosCondLightC.otf") format("opentype");
   font-weight: normal;
-  font-style: normal;
 }
-@font-face {
-  font-family: 'Helios';
-  src: url("/fonts/HeliosCondLightC-Italic.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-
 
 /* VARIABLES
 -----------------------*/

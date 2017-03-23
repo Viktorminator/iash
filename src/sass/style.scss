@@ -55,6 +55,10 @@
 .overlay-hugeinc nav {
   -webkit-perspective: 1200px;
   perspective: 1200px;
+  margin: 7rem 0 0 2rem;
+  & li {
+    border: 1px solid green;
+  }
 }
 
 .overlay-hugeinc nav ul {
@@ -76,7 +80,14 @@
 .overlay-hugeinc a {
   color: white;
   text-decoration: none;
-  font-family: 'Lucida Grande', sans-serif;
+  font-family: 'Bodoni', sans-serif;
+  font-style: italic;
+  font-size: 25px;
+}
+.overlay-hugeinc .submenu a {
+  font-family: 'Helios', Arial, sans-serif;
+  font-style: normal;
+  font-size: 14px;
 }
 
 @media screen and (max-height: 30.5em) {
