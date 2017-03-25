@@ -35,9 +35,13 @@
   height: 100%;
   top: 0;
   left: 0;
-  background-color: #1e1d21;
+  background-color: $menu-color;
 }
+
 /* Menu style */
+.overlay a {
+  text-decoration: none;
+}
 
 /* Effects */
 .overlay-hugeinc {
@@ -47,7 +51,7 @@
 }
 
 .overlay-hugeinc.open {
-  opacity: 1;
+  opacity: 0.8;
   visibility: visible;
   transition: opacity 0.5s;
 }
@@ -55,17 +59,15 @@
 .overlay-hugeinc nav {
   -webkit-perspective: 1200px;
   perspective: 1200px;
-  margin: 7rem 0 0 2rem;
-  & li {
-    border: 1px solid green;
-  }
+  margin: 99px 0 0 2rem;
 }
 
-.overlay-hugeinc nav ul {
+.overlay-hugeinc nav > ul {
   opacity: 0.4;
   transform: translateY(-25%) rotateX(35deg);
   transition: transform 0.5s, opacity 0.5s;
   list-style-type: none;
+  display: flex;
 }
 
 .overlay-hugeinc.open nav ul {
@@ -77,26 +79,58 @@
   transform: translateY(25%) rotateX(-35deg);
 }
 
-.overlay-hugeinc a {
+.overlay-hugeinc .submenu li {
+  list-style-type: none;
+}
+.overlay .block {
+  display: block;
+  width: 33.333%;
+  & a:hover {
+    transition: 0.5s;
+    color: $secondary-color;
+  }
+}
+.overlay-hugeinc .submenu {
+  margin-bottom: 10px;
+}
+.overlay-hugeinc .block > a {
   color: white;
-  text-decoration: none;
   font-family: 'Bodoni', sans-serif;
   font-style: italic;
-  font-size: 25px;
-}
-.overlay-hugeinc .submenu a {
-  font-family: 'Helios', Arial, sans-serif;
-  font-style: normal;
-  font-size: 14px;
+  font-size: 38px;
+  position: relative;
 }
 
-@media screen and (max-height: 30.5em) {
-  .overlay nav {
-    height: 70%;
-    font-size: 34px;
-  }
-  .overlay ul li {
-    min-height: 34px;
-  }
+.overlay-hugeinc .block > a:before {
+  content: url('data:image/svg+xml; utf-8, <svg width="29px" height="8px" viewBox="0 0 29 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="2" fill="true" fill-rule="evenodd" stroke-linecap="square">
+        <path d="M1,4 L28,4" id="Line" stroke="#858069"></path>
+        <path id="Line-decoration-1" d="M28,4 L17.2,1 L17.2,7 L28,4 Z" stroke="#858069"></path>    </g>
+</svg>');
+  position: absolute;
+  top: -18px;
+  left: -40px;
 }
+
+.overlay-hugeinc .submenu a {
+  color: $primary-color;
+  font-family: 'Helios', Arial, sans-serif;
+  font-style: normal;
+  font-size: 22px;
+}
+
+.overlay-hugeinc .btn-default {
+  color: white;
+  border: 1px solid white;
+  padding: 5px 10px;
+  font-family: 'Helios', Arial, sans-serif;
+  font-size: 22px;
+  align-self: flex-end;
+}
+.overlay-hugeinc .container {
+  align-items: flex-end;
+  display: flex;
+  justify-content: center;
+}
+
 
