@@ -6,18 +6,30 @@ block head_end
 
 block content
 	include _partials/header
-	main.layout(role='main')
-		section.block.block--introVideo
-			span.block--title IASH
-			span.block--longtitle ІНСТИТУТ СПЕЦІАЛЬНИХ ІСТОРИЧНИХ ДИСЦИПЛІН МУЗЕЮ ШЕРЕМЕТЬЄВИХ
-		section.chapter.chapter--1
-			span.chapter--title ABOUT
-			span.chapter--description Інститут спеціальних історичних дисциплін Музею Шереметьєвих – це науково-дослідна установа, яка була створена з метою сприяння розвитку сфрагістики, геральдики, генеалогії та суміжних з ними дисциплін.
+	#intro
+		.content
+			h1 IASH
+			p ІНСТИТУТ СПЕЦІАЛЬНИХ ІСТОРИЧНИХ ДИСЦИПЛІН МУЗЕЮ ШЕРЕМЕТЬЄВИХ
+	#main.main-container(role='main')
+		#project01.project
+			h1 ABOUT
+			p Інститут спеціальних історичних дисциплін Музею Шереметьєвих – це науково-дослідна установа, яка була створена з метою сприяння розвитку сфрагістики, геральдики, генеалогії та суміжних з ними дисциплін.
 			| До роботи в Інституті залучаються провідні вітчизняні науковці,
 			| які активно займаються як прикладними дослідженнями, так і розвитком теоретичних підвалин зазначених галузей історичної науки.
-		section.chapter.chapter--2
-			span.chapter--title ГЕНЕАЛОГІЯ
-		section.chapter.chapter--3
+		#project02.project
+			h1 ГЕНЕАЛОГІЯ
+			p
+		.footer-container
+			footer.wrapper
+				h3
+					| 2017 &copy;
+					a(href='http://devuserlab.com', target='_blank') DevUserLab
 block body_end
 	script(type="text/javascript" src="/js/classie.js")
 	script(type="text/javascript" src="/js/script.js")
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js')
+    script.
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\\/script>')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js')
+    script(src='js/main.js')
