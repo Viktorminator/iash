@@ -1,7 +1,6 @@
 @import "includes/base";
 @import "../../bower_components/css-hamburgers/_sass/hamburgers/hamburgers";
 
-
 /* HEADER
 ------------------------*/
 .hamburger {
@@ -136,23 +135,13 @@
 
 .intro {
   height: 100vh;
-  background-color: black;
   padding: 0;
   margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  &__bcg {
-    background: url('/img/background1.png') no-repeat;
-    background-size: cover;
-    position: absolute;
-    width: 100%;
-    height: 140%;
-    z-index: 1;
-    opacity: 0.7;
-  }
   &__content {
-    z-index: 2;
+    z-index: 1;
     position: relative;
     width: auto;
     display: flex;
@@ -165,6 +154,7 @@
       font-family: 'Helios', sans-serif;
       font-size: 70px;
       font-weight: 100;
+      z-index: 2;
     }
     &--line {
       position: absolute;
@@ -179,8 +169,57 @@
       margin: 0;
       width: 300px;
       padding: 10px 0 0 70px;
-      z-index: 2;
+      z-index: 3;
     }
   }
 }
 
+.project {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__content {
+    z-index: 1;
+    position: relative;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    & h1 {
+      position: absolute;
+      margin: 0;
+      top: 0;
+      left: 0;
+      font-family: 'Helios', sans-serif;
+      font-size: 70px;
+      font-weight: 100;
+      z-index: 2;
+    }
+    &--line {
+      position: absolute;
+      left: 0;
+      top: -10px;
+      height: 100px;
+      width: 40px;
+      border-right: 2px solid $primary-color;
+      transform: skew(-30deg);
+    }
+    & p {
+      margin: 0;
+      width: 300px;
+      padding: 10px 0 0 70px;
+      z-index: 3;
+    }
+  }
+  &__bcg {
+    background: url('/img/background1.png') no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 140%;
+    z-index: 1;
+    opacity: 0.7;
+  }
+}
