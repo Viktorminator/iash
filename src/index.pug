@@ -9,19 +9,75 @@ block content
     #intro.intro
         .intro__content
             h1 IASH
+            .intro__content--line
             p ІНСТИТУТ СПЕЦІАЛЬНИХ ІСТОРИЧНИХ ДИСЦИПЛІН МУЗЕЮ ШЕРЕМЕТЬЄВИХ
     #main.main-container(role='main')
-        #project01.project
+        #pro.project.project_about
             .project__bcg
-            h1 ABOUT
-            .project--line
-            p Інститут спеціальних історичних дисциплін Музею Шереметьєвих – це науково-дослідна установа, яка була створена з метою сприяння розвитку сфрагістики, геральдики, генеалогії та суміжних з ними дисциплін.
-                | До роботи в Інституті залучаються провідні вітчизняні науковці,
-                | які активно займаються як прикладними дослідженнями, так і розвитком теоретичних підвалин зазначених галузей історичної науки.
-        #project02.project
-            h1 ГЕНЕАЛОГІЯ
-            p Щось про генеалогію
-        #project03.project
+            .project__content
+                .project__content--title ABOUT
+                .project__content--line
+                .project__content--text
+                    h1 ПРО ІНСТИТУТ
+                    p Інститут спеціальних історичних дисциплін Музею Шереметьєвих – це науково-дослідна установа, яка була створена з метою сприяння розвитку сфрагістики, геральдики, генеалогії та суміжних з ними дисциплін.
+                        | До роботи в Інституті залучаються провідні вітчизняні науковці,
+                        | які активно займаються як прикладними дослідженнями, так і розвитком теоретичних підвалин зазначених галузей історичної науки.
+        #genealogia.project.project_genealogia
+            #section-blog.section.slider.multi.active(data-menutitle='Blog', data-theme='lighttheme', data-logo='hidden', data-anchor='blog', data-initialized-sectionblog='true', data-initialized-slider='true')
+                ul#blog-wrapper.blog-overview.slides(style='width: 6760px; transform: translate(0px, 0px);')
+                    li#blog-teaser-1.blog-teaser.slide.even.active(data-logo='hidden', data-theme='lighttheme', data-anchor='1', style='opacity: 1;')
+                        .teaser-image.videobox(style='background-image:url(http://moodboard-film.de/wp-content/uploads/2016/08/Son_blog_web_1608_fullscreen_1.jpg)')
+                            .videocontainer.initialized(data-playaction='custom', data-autoplay='false', data-loop='true', data-title='Prädikat besonders wertvoll!', data-videosource='http://moodboard-film.de/wp-content/uploads/2016/08/Son_blog_web_1608_fullscreen_1.mp4', data-initialized-videocontainer='true')
+                        .separator.icon.iconpointer-up
+                        .teaser-content
+                            .teaser-text
+                                h3 Майстерня
+                    li#blog-teaser-2.blog-teaser.slide.odd(data-logo='hidden', data-theme='lighttheme', data-anchor='2', style='opacity: 1;')
+                        .teaser-image.videobox(style='background-image:url(http://moodboard-film.de/wp-content/uploads/2016/08/ATZEV_blog_web_1608_fullscreen_1.jpg)')
+                            .videocontainer.initialized(data-playaction='custom', data-autoplay='false', data-loop='true', data-title='ATZE-V!', data-videosource='http://moodboard-film.de/wp-content/uploads/2016/08/ATZEV_blog_web_1608_fullscreen.mp4', data-initialized-videocontainer='true')
+                        .separator.icon.iconpointer-down
+                        .teaser-content
+                            .teaser-text
+                                h3 Алфавіт родів
+                    li#blog-teaser-3.blog-teaser.slide.even(data-logo='hidden', data-theme='lighttheme', data-anchor='3', style='opacity: 1;')
+                        .teaser-image.videobox(style='background-image:url(http://moodboard-film.de/wp-content/uploads/2016/08/Schierker_blog_web_1608_fullscreen_1.jpg)')
+                            .videocontainer.initialized(data-playaction='custom', data-autoplay='false', data-loop='true', data-title='Reise in die Vergangenheit', data-videosource='http://moodboard-film.de/wp-content/uploads/2016/08/Schierker_blog_web_1608_fullscreen_1.mp4', data-initialized-videocontainer='true')
+                        .separator.icon.iconpointer-up
+                        .teaser-content
+                            .teaser-text
+                                h3 Література з генеалогії
+                    li#blog-teaser-4.blog-teaser.slide.odd(data-logo='hidden', data-theme='lighttheme', data-anchor='4', style='opacity: 1;')
+                        .teaser-image.videobox(style='background-image:url(http://moodboard-film.de/wp-content/uploads/2015/10/Sprenger_blog_web_1608_fullscreen_1.jpg)')
+                            .videocontainer.initialized(data-playaction='custom', data-autoplay='false', data-loop='true', data-title='Neuer Manufaktur-Film für Sprenger', data-videosource='http://moodboard-film.de/wp-content/uploads/2016/08/Sprenger_blog_web_1608_fullscreen_1.mp4', data-initialized-videocontainer='true')
+                        .separator.icon.iconpointer-down
+                        .teaser-content
+                            .teaser-text
+                                h3 Майстерня
+                    li#blog-teaser-5.blog-teaser.slide.even(data-logo='hidden', data-theme='lighttheme', data-anchor='5', style='opacity: 1;')
+                        .teaser-image.videobox(style='background-image:url(http://moodboard-film.de/wp-content/uploads/2015/01/offlinefilm_blog_280115.jpg)')
+                            .videocontainer.initialized(data-playaction='custom', data-autoplay='false', data-loop='true', data-title='99Fire-Films-Award 2015', data-videosource='http://moodboard-film.de/wp-content/uploads/2015/01/offlinefilm_blog_280115.mp4', data-initialized-videocontainer='true')
+                        .separator.icon.iconpointer-up
+                        .teaser-content
+                            .teaser-text
+                                h3 Алфавіт родів
+                    li#blog-teaser-6.blog-teaser.slide.odd(data-logo='hidden', data-theme='lighttheme', data-anchor='6', style='opacity: 1;')
+                        .teaser-image.videobox(style='background-image:url(http://moodboard-film.de/wp-content/uploads/2014/12/bulls1_blog_web_291214_fullscreen.jpg)')
+                            .videocontainer.initialized(data-playaction='custom', data-autoplay='false', data-loop='true', data-title='Dreh: Bulls Bikes', data-videosource='http://moodboard-film.de/wp-content/uploads/2015/01/bulls1_blog_web_291214_fullscreen.mp4', data-initialized-videocontainer='true')
+                        .separator.icon.iconpointer-down
+                        .teaser-content
+                            .teaser-text
+                                h3 Майстерня
+                    li#blog-teaser-7.blog-teaser.slide.even(data-logo='hidden', data-theme='lighttheme', data-anchor='7', style='opacity: 1;')
+                        .teaser-image.videobox(style='background-image:url(http://moodboard-film.de/wp-content/uploads/2014/10/covesilberbmwi_blog_web_311214_fullscreen.jpg)')
+                            .videocontainer.initialized(data-playaction='custom', data-autoplay='false', data-loop='true', data-title='Deutscher Wirtschaftsfilm­preis für Sartoriale', data-videosource='http://moodboard-film.de/wp-content/uploads/2015/01/covesilberbmwi_blog_web_311214_fullscreen.mp4', data-initialized-videocontainer='true')
+                        .separator.icon.iconpointer-up
+                        .teaser-content
+                            .teaser-text
+                                h3 Алфавіт родів
+                nav.arrownav(style='opacity: 1;')
+                    .arrownavlink.prev.icon.iconarrow-left.hidden
+                    .arrownavlink.next.icon.iconarrow-right
+        #geraldika.project
             h1 Геральдика
             p Something
         .footer-container

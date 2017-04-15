@@ -7,19 +7,19 @@
   font-style: normal;
 }
 @font-face {
-  font-family: 'Bodoni';
+  font-family: 'BodoniBold';
   src: url("/fonts/Bodoni72C-Bold.otf") format("opentype");
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Bodoni';
+  font-family: 'BodoniBoldItalic';
   src: url("/fonts/Bodoni72C-BoldItalic.otf") format("opentype");
   font-weight: bold;
   font-style: italic, oblique;
 }
 @font-face {
-  font-family: 'Bodoni';
+  font-family: 'BodoniItalic';
   src: url("/fonts/Bodoni72C-Italic.otf") format("opentype");
   font-style: italic, oblique;
 }
@@ -36,8 +36,8 @@
 
 /* VARIABLES
 -----------------------*/
-$primary-color: #858069;
-$menu-color: #17161e;
+$primary-color: #6d6855;
+$menu-color: #090f27;
 $secondary-color: #fff;
 /*	TYPOGRAPHY
 –––––––––––––––––––––––––––*/

@@ -1,0 +1,141 @@
+// **************************
+// ICONS
+// **************************
+@font-face {
+  font-family: 'icon';
+  src:url('../fonts/moodboard.eot');
+  src:url('../fonts/moodboard.eot') format('embedded-opentype'),
+  url('../fonts/moodboard.woff') format('woff'),
+  url('../fonts/moodboard.ttf') format('truetype'),
+  url('../fonts/moodboard.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon, [class^="icon"], [class*=" icon"] {
+  font-family: 'icon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.iconmenu:before {
+  content: "\e614";
+}
+.iconx-2:before {
+  content: "\e615";
+}
+.iconenvelope-o:before {
+  content: "\e613";
+}
+.iconquality-hq:before {
+  content: "\e602";
+}
+.iconpointer-down:before {
+  content: "\e600";
+}
+.iconpointer-up:before {
+  content: "\e601";
+}
+.iconlogo-m:before {
+  content: "\6e";
+}
+.iconlogo-typo:before {
+  content: "\77";
+}
+.iconlogo-typo-1:before {
+  content: "\e60b";
+}
+.iconlogo-typo-2:before {
+  content: "\e60c";
+}
+.iconlogo:before {
+  content: "\6c";
+}
+.iconaward:before {
+  content: "\61";
+}
+.iconclose:before {
+  content: "\78";
+}
+.iconlogo-m-big:before {
+  content: "\4d";
+}
+.iconplay:before {
+  content: "\e603";
+}
+.iconpause:before {
+  content: "\e604";
+}
+.iconunmute:before {
+  content: "\e605";
+}
+.iconmute:before {
+  content: "\e606";
+}
+.iconreplay:before {
+  content: "\e607";
+}
+.iconfacebook:before {
+  content: "\66";
+}
+.iconinstagram:before {
+  content: "\69";
+}
+.iconvimeo:before {
+  content: "\76";
+}
+.iconarrow-left:before {
+  content: "\3c";
+}
+.iconarrow-down:before {
+  content: "\64";
+}
+.iconarrow-up:before {
+  content: "\75";
+}
+.iconarrow-right:before {
+  content: "\3e";
+}
+.iconportrait:before {
+  content: "p";
+}
+.icontablet-mac:before {
+  content: "\e608";
+}
+.iconlaptop-mac:before {
+  content: "\e609";
+}
+.icondesktop-mac:before {
+  content: "\e60a";
+}
+
+.iconchrome:before {
+  content: "\e60d";
+}
+.iconfirefox:before {
+  content: "\e60e";
+}
+
+.iconIE:before {
+  content: "\e60f";
+}
+
+.iconopera:before {
+  content: "\e610";
+}
+.icongauge:before {
+  content: "\e612";
+}
+
+
+.iconsafari:before {
+  content: "\e611";
+}

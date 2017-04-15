@@ -1,7 +1,10 @@
 header.header
     .search-wrapper
-        input#js-search(placeholder='Введіть запит...', type='text', required='')
-        img.search-glass(src='')
+        form
+            input#search.search-wrapper-input(placeholder='Введіть запит...', type='search', value='', name='search')
+            |
+            input.search-wrapper-submit(type='submit', value='')
+            span.search-wrapper-icon
     button.hamburger.hamburger--spin.js-hamburger(type='button', id='trigger-overlay')
         span.hamburger-box
             span.hamburger-inner
@@ -9,7 +12,7 @@ header.header
         nav
             ul
                 li.block
-                    a(href='#') Про інститут
+                    a(href='#pro') Про інститут
                     ul.submenu
                         li
                             a(href='#') Історія
@@ -17,7 +20,7 @@ header.header
                             a(href='#') Місія
                         li
                             a(href='#') Цілі
-                    a(href='#') Генеалогія
+                    a(href='#genealogia') Генеалогія
                     ul.submenu
                         li
                             a(href='#') Майстерня
@@ -25,7 +28,7 @@ header.header
                             a(href='#') Алфавіт родів
                         li
                             a(href='#') Література з генеалогії
-                    a(href='#') Геральдика
+                    a(href='#geraldika') Геральдика
                     ul.submenu
                         li
                             a(href='#') Майстерня
@@ -36,7 +39,7 @@ header.header
                         li
                             a(href='#') Література з геральдики
                 li.block
-                    a(href='#') Сфрагістика
+                    a(href='#sfragistika') Сфрагістика
                     ul.submenu
                         li
                             a(href='#') Майстерня
@@ -49,20 +52,20 @@ header.header
                         li
                             a(href='#') Реставрація
 
-                    a(href='#') Ресурси
+                    a(href='#resursy') Ресурси
                     ul.submenu
                         li
                             a(href='#') Історіографія
                         li
                             a(href='#') Джерела
-                    a(href='#') Видавництво
+                    a(href='#vidavnictvo') Видавництво
                     ul.submenu
                         li
                             a(href='#') Крамниця
                         li
                             a(href='#') Пропозиції співпраці
                 li.block
-                    a(href='#') Проекти
+                    a(href='#proekty') Проекти
                     ul.submenu
                         li
                             a(href='#') Музей Шереметьєвих
@@ -76,7 +79,7 @@ header.header
                             a(href='#') Виставки і презентації
                         li
                             a(href='#') Вікіпедія
-                    a(href='#') Анонс подій
+                    a(href='#anonse') Анонс подій
                     ul.submenu
                         li
                             a(href='#') Графік семінарів СІД
@@ -88,6 +91,6 @@ header.header
                             a(href='#') Презентації
                         li
                             a(href='#') Конференції
-                    a(href='#') Премії та гранти
+                    a(href='#premii') Премії та гранти
             .container
                 a.btn-default(href='#') Контакти
