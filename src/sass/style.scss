@@ -186,7 +186,10 @@ input[type="search"].search-wrapper-input {
   display: flex;
   justify-content: center;
 }
-
+/* INTRO */
+svg {
+  fill: $primary-color;
+}
 .intro {
   height: 100vh;
   padding: 0;
@@ -226,6 +229,7 @@ input[type="search"].search-wrapper-input {
     }
   }
 }
+/* ABOUT */
 .project_about {
   padding: 0;
   margin: 0;
@@ -247,7 +251,7 @@ input[type="search"].search-wrapper-input {
       font-size: 70px;
       font-weight: 100;
       z-index: 2;
-      margin: 0 -18px;
+      margin: 0 -40px;
     }
     &--line {
       height: 100px;

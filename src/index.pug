@@ -8,15 +8,25 @@ block content
     include _partials/header
     #intro.intro
         .intro__content
-            h1 IASH
+            h1 IASD
             .intro__content--line
             p ІНСТИТУТ СПЕЦІАЛЬНИХ ІСТОРИЧНИХ ДИСЦИПЛІН МУЗЕЮ ШЕРЕМЕТЬЄВИХ
     #main.main-container(role='main')
         #pro.project.project_about
             .project__bcg
             .project__content
-                .project__content--title ABOUT
-                .project__content--line
+                .project__content--title
+                    | <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="100" viewBox="0 0 400 100" >
+                    |  <g>
+                    |   <clipPath id="text-mask">
+                    |    <polygon id="Path" stroke="" points="0 0 400 0 340 100 0 100" ></polygon>
+                    |   </clipPath>
+                    |  </g>
+                    |  <image clip-path="url(#text-mask)" height="100%" width="100%" xlink:href="http://placehold.it/1100x200" />
+                    |  <text clip-path="url(#text-mask)" height="100%" width="100%" x="205" y="80">ABOUT</text>
+                    |  <line x1="400" y1="0" x2="340" y2="100" style="stroke:rgb(255,0,0);stroke-width:3" />
+                    |  <line />
+                    | </svg>
                 .project__content--text
                     h1 ПРО ІНСТИТУТ
                     p Інститут спеціальних історичних дисциплін Музею Шереметьєвих – це науково-дослідна установа, яка була створена з метою сприяння розвитку сфрагістики, геральдики, генеалогії та суміжних з ними дисциплін.
