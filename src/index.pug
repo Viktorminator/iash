@@ -8,8 +8,15 @@ block content
     include _partials/header
     #intro.intro
         .intro__content
-            h1 IASD
-            .intro__content--line
+            | <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="100" viewBox="0 0 400 100" >
+            |  <g>
+            |   <clipPath id="text_mask">
+            |    <polygon id="intro_mask" stroke="" points="0 0 400 0 340 100 0 100" ></polygon>
+            |   </clipPath>
+            |  </g>
+            |  <text id="intro_text" clip-path="url(#text_mask)" height="100%" width="100%" x="225" y="85">IASH</text>
+            |  <line id="intro_line" x1="400" y1="0" x2="340" y2="100" style="stroke:#6d6855;stroke-width:1" />
+            | </svg>
             p ІНСТИТУТ СПЕЦІАЛЬНИХ ІСТОРИЧНИХ ДИСЦИПЛІН МУЗЕЮ ШЕРЕМЕТЬЄВИХ
     #main.main-container(role='main')
         #pro.project.project_about
@@ -22,16 +29,17 @@ block content
                     |    <polygon id="Path" stroke="" points="0 0 400 0 340 100 0 100" ></polygon>
                     |   </clipPath>
                     |  </g>
-                    |  <image clip-path="url(#text-mask)" height="100%" width="100%" xlink:href="http://placehold.it/1100x200" />
                     |  <text clip-path="url(#text-mask)" height="100%" width="100%" x="205" y="80">ABOUT</text>
-                    |  <line x1="400" y1="0" x2="340" y2="100" style="stroke:rgb(255,0,0);stroke-width:3" />
-                    |  <line />
+                    |  <line id="line2" x1="400" y1="0" x2="340" y2="100" style="stroke:#6d6855;stroke-width:3" />
                     | </svg>
                 .project__content--text
                     h1 ПРО ІНСТИТУТ
                     p Інститут спеціальних історичних дисциплін Музею Шереметьєвих – це науково-дослідна установа, яка була створена з метою сприяння розвитку сфрагістики, геральдики, генеалогії та суміжних з ними дисциплін.
                         | До роботи в Інституті залучаються провідні вітчизняні науковці,
                         | які активно займаються як прикладними дослідженнями, так і розвитком теоретичних підвалин зазначених галузей історичної науки.
+        #genintro.project.project_genintro
+            .project__bcg
+            .project__content
         #genealogia.project.project_genealogia
             #section-blog.section.slider.multi.active(data-menutitle='Blog', data-theme='lighttheme', data-logo='hidden', data-anchor='blog', data-initialized-sectionblog='true', data-initialized-slider='true')
                 ul#blog-wrapper.blog-overview.slides(style='width: 6760px; transform: translate(0px, 0px);')
@@ -104,4 +112,5 @@ block body_end
     script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js')
+    script(src='js/DrawSVGPlugin.min.js')
     script(src='js/main.js')

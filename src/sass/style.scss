@@ -205,18 +205,12 @@ svg {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    & h1 {
-      margin: 0 -5px;
+    & svg {
+      margin: 0 -35px;
       font-family: 'Helios', sans-serif;
       font-size: 84px;
       font-weight: 100;
       z-index: 2;
-    }
-    &--line {
-      height: 100px;
-      width: 10px;
-      border-right: 2px solid $primary-color;
-      transform: skew(-30deg);
     }
     & p {
       margin: 0;
