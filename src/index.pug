@@ -8,7 +8,8 @@ block content
     include _partials/header
     #intro.intro
         .intro__content
-            | <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="100" viewBox="0 0 400 100" >
+            | <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="100" viewBox="0 0 400 100" aria-labelledby="title">
+            | <title id="title">Інститут сфрагістики</title>
             |  <g>
             |   <clipPath id="text_mask">
             |    <polygon id="intro_mask" stroke="" points="0 0 400 0 340 100 0 100" ></polygon>
@@ -113,4 +114,5 @@ block body_end
     script(src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js')
     script(src='js/DrawSVGPlugin.min.js')
+    script(src='js/SplitText.min.js')
     script(src='js/main.js')

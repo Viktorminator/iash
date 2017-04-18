@@ -33,5 +33,8 @@
     "pug",
     "sass",
     "browsersync"
-  ]
+  ],
+  "dependencies": {
+    "textsplitr": "^0.1.1"
+  }
 }
