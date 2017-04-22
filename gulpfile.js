@@ -12,6 +12,8 @@ var gulp = require('gulp'),
   rename = require('gulp-rename'),
   notify = require('gulp-notify'),
   concat = require('gulp-concat'),
+  svgstore = require('gulp-svgstore'),
+  svgmin = require('gulp-svgmin'),
   browserSync = require('browser-sync');
 
 /*
@@ -23,7 +25,8 @@ var paths = {
   bower: './bower_components/',
   css: './public/css/',
   data: './src/_data/',
-  scripts: './src/js/'
+  scripts: './src/js/',
+  icons: './src/icons/'
 };
 
 /**
@@ -91,6 +94,16 @@ gulp.task('scripts', function() {
       .pipe(browserSync.reload({
         stream: true
       }));
+});
+
+/**
+ * Svg icons aggregation into one file
+ * */
+gulp.task('svgstore', function () {
+    return gulp
+        .src('src/icons/*.svg')
+        .pipe(svgstore())
+        .pipe(gulp.dest('public/img'));
 });
 
 /**

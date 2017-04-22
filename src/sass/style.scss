@@ -516,3 +516,63 @@ svg {
     }
   }
 }
+
+/**
+** Navigation arrow
+ */
+
+nav {
+  .arrownavlink {
+    @include font-size(20px, 20px, 0);
+    @include transition(all, 100ms);
+    background-color: #222;
+    color: $primary-color;
+    cursor: pointer;
+    height: 96px;
+    margin-top: -38px;
+    position: absolute;
+    top: 50%;
+    width: 48px;
+    z-index: 4;
+
+    &:before {
+      @include transition(all, 100ms);
+      @include transform(translate(0,-50%));
+      position: absolute;
+      top: 50%;
+    }
+
+    &.prev {
+      @include multiple-border-radius(0, 96px, 96px, 0);
+      @include transformorigin(0,50%);
+      left: 40px;
+
+      &:before {
+        right: 20px;
+      }
+
+      &.hidden {
+        @include transform(translate(-125px,0));
+      }
+    }
+
+    &.next {
+      @include multiple-border-radius(96px, 0, 0, 96px);
+      @include transformorigin(100%,50%);
+      right: 0px;
+
+      &:before {
+        left: 20px;
+      }
+
+      &.hidden {
+        @include transform(translate(85px,0));
+      }
+    }
+  }
+}
+
+.stamp {
+  width: 40px;
+  height: 40px;
+}

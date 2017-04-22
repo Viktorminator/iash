@@ -9,7 +9,7 @@ block content
     #intro.intro
         .intro__content
             | <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="100" viewBox="0 0 400 100" aria-labelledby="title">
-            | <title id="title">Інститут сфрагістики</title>
+            |  <title id="title">Інститут сфрагістики</title>
             |  <g>
             |   <clipPath id="text_mask">
             |    <polygon id="intro_mask" stroke="" points="0 0 400 0 340 100 0 100" ></polygon>
@@ -26,11 +26,11 @@ block content
                 .project__content--title
                     | <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="100" viewBox="0 0 400 100" >
                     |  <g>
-                    |   <clipPath id="text_mask">
+                    |   <clipPath id="abouttext_mask">
                     |    <polygon id="about_mask" stroke="" points="0 0 400 0 340 100 0 100" ></polygon>
                     |   </clipPath>
                     |  </g>
-                    |  <text id="about_text" clip-path="url(#text_mask)" height="100%" width="100%" x="200" y="80">ABOUT</text>
+                    |  <text id="about_text" clip-path="url(#abouttext_mask)" height="100%" width="100%" x="200" y="80">ABOUT</text>
                     |  <line id="about_line" x1="400" y1="0" x2="340" y2="100" style="stroke:#6d6855;stroke-width:1" />
                     | </svg>
                 .project__content--text
@@ -50,6 +50,8 @@ block content
                         .separator.icon.iconpointer-up
                         .teaser-content
                             .teaser-text
+                                svg.stamp
+                                    use(xlink:href='/img/icons.svg#1')
                                 h3 Майстерня
                     li#blog-teaser-2.blog-teaser.slide.odd(data-logo='hidden', data-theme='lighttheme', data-anchor='2', style='opacity: 1;')
                         .teaser-image.videobox(style='background-image:url(http://moodboard-film.de/wp-content/uploads/2016/08/ATZEV_blog_web_1608_fullscreen_1.jpg)')
@@ -57,6 +59,8 @@ block content
                         .separator.icon.iconpointer-down
                         .teaser-content
                             .teaser-text
+                                svg.stamp
+                                    use(xlink:href='/img/icons.svg#2')
                                 h3 Алфавіт родів
                     li#blog-teaser-3.blog-teaser.slide.even(data-logo='hidden', data-theme='lighttheme', data-anchor='3', style='opacity: 1;')
                         .teaser-image.videobox(style='background-image:url(http://moodboard-film.de/wp-content/uploads/2016/08/Schierker_blog_web_1608_fullscreen_1.jpg)')
@@ -64,6 +68,8 @@ block content
                         .separator.icon.iconpointer-up
                         .teaser-content
                             .teaser-text
+                                svg.stamp
+                                    use(xlink:href='/img/icons.svg#3')
                                 h3 Література з генеалогії
                     li#blog-teaser-4.blog-teaser.slide.odd(data-logo='hidden', data-theme='lighttheme', data-anchor='4', style='opacity: 1;')
                         .teaser-image.videobox(style='background-image:url(http://moodboard-film.de/wp-content/uploads/2015/10/Sprenger_blog_web_1608_fullscreen_1.jpg)')
@@ -71,6 +77,8 @@ block content
                         .separator.icon.iconpointer-down
                         .teaser-content
                             .teaser-text
+                                svg.stamp
+                                    use(xlink:href='/img/icons.svg#4')
                                 h3 Майстерня
                     li#blog-teaser-5.blog-teaser.slide.even(data-logo='hidden', data-theme='lighttheme', data-anchor='5', style='opacity: 1;')
                         .teaser-image.videobox(style='background-image:url(http://moodboard-film.de/wp-content/uploads/2015/01/offlinefilm_blog_280115.jpg)')
@@ -93,13 +101,13 @@ block content
                         .teaser-content
                             .teaser-text
                                 h3 Алфавіт родів
-                nav.arrownav(style='opacity: 1;')
+                nav.arrownav
                     .arrownavlink.prev.icon.iconarrow-left.hidden
                     .arrownavlink.next.icon.iconarrow-right
-        #geraldika.project
+        // #geraldika.project
             h1 Геральдика
             p Something
-        .footer-container
+        //.footer-container
             footer.wrapper
                 h3 Права захищені
                     | 2017 &copy;
