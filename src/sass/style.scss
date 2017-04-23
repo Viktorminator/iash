@@ -325,8 +325,6 @@ svg {
   }
 }
 #section-blog {
-  // background: $secondary-color;
-
   #blog-wrapper {
     padding-left: 0;
     font-size: 0;
@@ -368,79 +366,7 @@ svg {
         z-index: 10;
       }
 
-      .maincontent {
-        @include box-sizing();
-        @include transform(translate3d(100%, 0px,0));
-        @include transition(all, 500ms, ease-in-out);
-        background: $secondary-color;
-        height: 100%;
-        min-width: 500px;
-        overflow-x: hidden;
-        overflow-y: scroll;
-        padding: 0px;
-        position: absolute;
-        right: 0px;
-        width: 50%;
-        z-index: 3;
 
-        &.active {
-          display: block;
-          @include transform(translate3d(0%, 0px,0));
-          @include transition(all, 800ms, ease-in-out);
-
-          .text-wrap {
-            .text {
-              opacity: 1;
-            }
-          }
-        }
-
-        .text-wrap {
-          @include transform(translate3d(0px, -50%,0));
-          position: relative;
-          text-align: left;
-          top: 50%;
-          width: 100%;
-
-          &.scroll {
-            @extend .scrollcontent;
-          }
-
-          .text {
-            @include transition(all);
-            opacity: 0;
-            padding: 60px 150px 60px 100px;
-          }
-
-          h4,
-          h2 {
-            @include font-size(22px, 24px, 400);
-            color: $primary-color;
-            margin-bottom: 20px;
-            text-align: left;
-            word-wrap: break-word;
-            font-family: 'Helios';
-          }
-
-          h4 {
-            margin-top: 45px;
-          }
-
-          a {
-            display: inline;
-            text-transform: none;
-          }
-        }
-      }
-
-      .teaser-description {
-        @include font-size(11px, 22px, 400);
-        font-family: 'Bodoni';
-        font-style: italic;
-        position: relative;
-        text-transform: uppercase;
-        opacity: 0.5;
-      }
 
       .teaser-image {
         background-color: $primary-color;
@@ -452,7 +378,6 @@ svg {
         z-index: 1;
         @include transform(translateZ(0px));
       }
-
       .separator {
         @include font-size(40px, 40px, 0);
         @include transform(translateZ(1px));
@@ -482,34 +407,22 @@ svg {
         text-align: center;
         width: 100%;
         z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         .teaser-text {
-          @include transform(translate3d(0,-50%,0));
-          display: block;
-          position: relative;
-          top: 50%;
+          max-width: 50%;
 
+          .stamp {
+            width: 40px;
+            height: 40px;
+          }
+          
           h3 {
             font-family: 'Bodoni';
             font-weight: 500;
             @include font-size(30px, 1em, 1);
-            margin: auto;
-            padding: 0 30px;
-            top: 13%;
-            position: relative;
-            text-transform: uppercase;
-          }
-
-          .teaser-description {
-            top: 22%;
-            margin: auto;
-            padding: 30px;
-          }
-
-          p.teaser-date {
-            @include font-size(12px, 14px, 400);
-            opacity: 0.5;
-            padding: 0px 30px 30px;
           }
         }
       }
@@ -572,7 +485,4 @@ nav {
   }
 }
 
-.stamp {
-  width: 40px;
-  height: 40px;
-}
+

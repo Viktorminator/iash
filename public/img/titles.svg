@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="100" viewBox="0 0 400 100" aria-labelledby="title">
+  <symbol id="intro" viewBox="0 0 400 100">
+      <title id="title">Інститут сфрагістики</title>
+      <g>
+          <clipPath id="text_mask">
+              <polygon id="intro_mask" stroke="" points="0 0 400 0 340 100 0 100" ></polygon>
+          </clipPath>
+      </g>
+      <text id="intro_text" clip-path="url(#text_mask)" height="100%" width="100%" x="225" y="85">IASH</text>
+      <line id="intro_line" x1="400" y1="0" x2="340" y2="100" style="stroke:#6d6855;stroke-width:1" />
+  </symbol>
+</svg>
