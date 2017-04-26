@@ -26,7 +26,7 @@ block content
                 .project__content--title
                     | <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="100" viewBox="0 0 400 100" >
                     |  <g>
-                    |   <clipPath id="text_mask">
+                    |   <clipPath id="abouttext_mask">
                     |    <polygon id="about_mask" stroke="" points="0 0 400 0 340 100 0 100" ></polygon>
                     |   </clipPath>
                     |  </g>
@@ -45,35 +45,49 @@ block content
             #section-blog.section.slider.multi.active(data-menutitle='Blog', data-theme='lighttheme', data-logo='hidden', data-anchor='blog', data-initialized-sectionblog='true', data-initialized-slider='true')
                 ul#blog-wrapper.blog-overview.slides(style='width: 6760px; transform: translate(0px, 0px);')
                     li#blog-teaser-1.blog-teaser.slide.even.active(data-logo='hidden', data-theme='lighttheme', data-anchor='1', style='opacity: 1;')
-                        .teaser-image.videobox(style='background-image:url(http://moodboard-film.de/wp-content/uploads/2016/08/Son_blog_web_1608_fullscreen_1.jpg)')
+                        .teaser-image.videobox(style='background-image:url(/img/1-1.jpg)')
                             .videocontainer.initialized(data-playaction='custom', data-autoplay='false', data-loop='true', data-title='Prädikat besonders wertvoll!', data-videosource='http://moodboard-film.de/wp-content/uploads/2016/08/Son_blog_web_1608_fullscreen_1.mp4', data-initialized-videocontainer='true')
                         .separator.icon.iconpointer-up
                         .teaser-content
                             .teaser-text
                                 svg.stamp
-                                    use(xlink:href='/img/icons.svg#1')
+                                    g
+                                        clippath#stamp_mask
+                                            polygon(stroke='', points='0 0 30 0 20 30 0 30')
+                                    use(xlink:href='/img/icons.svg#1' clip-path="url(#stamp_mask)")
+                                svg.line(viewbox='0 0 100 100')
+                                    line#teaser-line(x1="100" y1="0" x2="55" y2="100" style="stroke:#6d6855;stroke-width:2")
                                 h3 Майстерня
                     li#blog-teaser-2.blog-teaser.slide.odd(data-logo='hidden', data-theme='lighttheme', data-anchor='2', style='opacity: 1;')
-                        .teaser-image.videobox(style='background-image:url(http://moodboard-film.de/wp-content/uploads/2016/08/ATZEV_blog_web_1608_fullscreen_1.jpg)')
+                        .teaser-image.videobox(style='background-image:url(/img/1-2.jpg)')
                             .videocontainer.initialized(data-playaction='custom', data-autoplay='false', data-loop='true', data-title='ATZE-V!', data-videosource='http://moodboard-film.de/wp-content/uploads/2016/08/ATZEV_blog_web_1608_fullscreen.mp4', data-initialized-videocontainer='true')
                         .separator.icon.iconpointer-down
                         .teaser-content
                             .teaser-text
                                 svg.stamp
-                                    use(xlink:href='/img/icons.svg#2')
+                                    g
+                                        clippath#stamp_mask
+                                            polygon(stroke='', points='0 0 30 0 20 30 0 30')
+                                    line#intro_line(x1='400', y1='0', x2='340', y2='100', style='stroke:#6d6855;stroke-width:1')
+                                    use(xlink:href='/img/icons.svg#2' clip-path="url(#stamp_mask)")
+                                svg.line(viewbox='0 0 100 100')
+                                    line#teaser-line(x1="100" y1="0" x2="55" y2="100" style="stroke:#6d6855;stroke-width:2")
                                 h3 Алфавіт родів
                     li#blog-teaser-3.blog-teaser.slide.even(data-logo='hidden', data-theme='lighttheme', data-anchor='3', style='opacity: 1;')
-                        .teaser-image.videobox(style='background-image:url(http://moodboard-film.de/wp-content/uploads/2016/08/Schierker_blog_web_1608_fullscreen_1.jpg)')
-                            .videocontainer.initialized(data-playaction='custom', data-autoplay='false', data-loop='true', data-title='Reise in die Vergangenheit', data-videosource='http://moodboard-film.de/wp-content/uploads/2016/08/Schierker_blog_web_1608_fullscreen_1.mp4', data-initialized-videocontainer='true')
+                        .teaser-image.videobox(style='background-image:url(/img/1-3.jpg)')
                         .separator.icon.iconpointer-up
                         .teaser-content
                             .teaser-text
                                 svg.stamp
-                                    use(xlink:href='/img/icons.svg#3')
+                                    g
+                                        clippath#stamp_mask
+                                            polygon(stroke='', points='0 0 30 0 20 30 0 30')
+                                    use(xlink:href='/img/icons.svg#3' clip-path="url(#stamp_mask)")
+                                svg.line(viewbox='0 0 100 100')
+                                    line#teaser-line(x1="100" y1="0" x2="55" y2="100" style="stroke:#6d6855;stroke-width:2")
                                 h3 Література з генеалогії
                     li#blog-teaser-4.blog-teaser.slide.odd(data-logo='hidden', data-theme='lighttheme', data-anchor='4', style='opacity: 1;')
-                        .teaser-image.videobox(style='background-image:url(http://moodboard-film.de/wp-content/uploads/2015/10/Sprenger_blog_web_1608_fullscreen_1.jpg)')
-                            .videocontainer.initialized(data-playaction='custom', data-autoplay='false', data-loop='true', data-title='Neuer Manufaktur-Film für Sprenger', data-videosource='http://moodboard-film.de/wp-content/uploads/2016/08/Sprenger_blog_web_1608_fullscreen_1.mp4', data-initialized-videocontainer='true')
+                        .teaser-image.videobox(style='background-image:url(/img/1-1.jpg)')
                         .separator.icon.iconpointer-down
                         .teaser-content
                             .teaser-text
@@ -81,22 +95,19 @@ block content
                                     use(xlink:href='/img/icons.svg#4')
                                 h3 Майстерня
                     li#blog-teaser-5.blog-teaser.slide.even(data-logo='hidden', data-theme='lighttheme', data-anchor='5', style='opacity: 1;')
-                        .teaser-image.videobox(style='background-image:url(http://moodboard-film.de/wp-content/uploads/2015/01/offlinefilm_blog_280115.jpg)')
-                            .videocontainer.initialized(data-playaction='custom', data-autoplay='false', data-loop='true', data-title='99Fire-Films-Award 2015', data-videosource='http://moodboard-film.de/wp-content/uploads/2015/01/offlinefilm_blog_280115.mp4', data-initialized-videocontainer='true')
+                        .teaser-image.videobox(style='background-image:url(/img/1-2.jpg)')
                         .separator.icon.iconpointer-up
                         .teaser-content
                             .teaser-text
                                 h3 Алфавіт родів
                     li#blog-teaser-6.blog-teaser.slide.odd(data-logo='hidden', data-theme='lighttheme', data-anchor='6', style='opacity: 1;')
-                        .teaser-image.videobox(style='background-image:url(http://moodboard-film.de/wp-content/uploads/2014/12/bulls1_blog_web_291214_fullscreen.jpg)')
-                            .videocontainer.initialized(data-playaction='custom', data-autoplay='false', data-loop='true', data-title='Dreh: Bulls Bikes', data-videosource='http://moodboard-film.de/wp-content/uploads/2015/01/bulls1_blog_web_291214_fullscreen.mp4', data-initialized-videocontainer='true')
+                        .teaser-image.videobox(style='background-image:url(/img/1-3.jpg)')
                         .separator.icon.iconpointer-down
                         .teaser-content
                             .teaser-text
                                 h3 Майстерня
                     li#blog-teaser-7.blog-teaser.slide.even(data-logo='hidden', data-theme='lighttheme', data-anchor='7', style='opacity: 1;')
-                        .teaser-image.videobox(style='background-image:url(http://moodboard-film.de/wp-content/uploads/2014/10/covesilberbmwi_blog_web_311214_fullscreen.jpg)')
-                            .videocontainer.initialized(data-playaction='custom', data-autoplay='false', data-loop='true', data-title='Deutscher Wirtschaftsfilm­preis für Sartoriale', data-videosource='http://moodboard-film.de/wp-content/uploads/2015/01/covesilberbmwi_blog_web_311214_fullscreen.mp4', data-initialized-videocontainer='true')
+                        .teaser-image.videobox(style='background-image:url(/img/1-1.jpg)')
                         .separator.icon.iconpointer-up
                         .teaser-content
                             .teaser-text

@@ -366,8 +366,6 @@ svg {
         z-index: 10;
       }
 
-
-
       .teaser-image {
         background-color: $primary-color;
         background-position-x: center;
@@ -412,17 +410,30 @@ svg {
         justify-content: center;
 
         .teaser-text {
-          max-width: 50%;
-
           .stamp {
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
           }
-          
+          .line {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            left: -22px;
+            top: -14px
+          }
+          position: relative;
+          width: auto;
+          display: flex;
+          flex-direction: row;
+          z-index: 3;
+
           h3 {
             font-family: 'Bodoni';
             font-weight: 500;
-            @include font-size(30px, 1em, 1);
+            @include font-size(24px, 1em, 1);
+            padding: 6px 0 0 5px;
+            margin: 0 auto;
+            text-transform: uppercase;
           }
         }
       }
