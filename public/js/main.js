@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+    startTween();
     // intro timeline animation
     var tl = new TimelineMax();
     tl.from('#intro_line', 1, { drawSVG: '0', delay: 2, ease: Power0.easeIn});
@@ -21,3 +21,8 @@ $(document).ready(function(){
 
 
 });
+
+function startTween() {
+    TweenLite.to($('#tube'), 1, {x: 0, y: 300 });
+
+}
