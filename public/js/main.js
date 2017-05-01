@@ -23,6 +23,5 @@ $(document).ready(function(){
 });
 
 function startTween() {
-    TweenLite.to($('#tube'), 1, {x: 0, y: 300 });
-
+    TweenLite.from($('#tube'), 1, {x: 0, y: -500 });
 }

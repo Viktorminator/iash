@@ -282,7 +282,12 @@ svg {
     height: 100%;
   }
 }
-
+/* Genintro */
+.project_genintro {
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
+}
 /* Slider */
 .scrollcontent {
   @include transform(initial);
