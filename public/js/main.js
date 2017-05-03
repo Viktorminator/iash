@@ -30,5 +30,4 @@ function startTween() {
 
     Gtl.to('#tube', 1, { x: -600, y: 0, scale: 1.6 });
     Gtl.to('#paper', 1, { x: 50, y: 0, delay: -1, scale: 1.6 });
-
 }
