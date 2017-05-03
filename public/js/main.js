@@ -23,5 +23,12 @@ $(document).ready(function(){
 });
 
 function startTween() {
-    TweenLite.from($('#tube'), 1, {x: 0, y: -500 });
+    /* Genealogia timeline with paper */
+    var Gtl = new TimelineMax();
+    Gtl.from('#tube', 1, { x: 0, y: -500 });
+    Gtl.from('#paper', 1, { x:0, y: -500, delay: -1 });
+
+    Gtl.to('#tube', 1, { x: -600, y: 0, scale: 1.6 });
+    Gtl.to('#paper', 1, { x: 50, y: 0, delay: -1, scale: 1.6 });
+
 }
