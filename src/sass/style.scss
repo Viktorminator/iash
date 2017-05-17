@@ -289,25 +289,50 @@ svg {
   align-items: center; /* align vertical */
   & #tube {
     position: absolute;
-    width: 468px;
-    height: 82px;
+    width: 670px;
+    height: 100px;
     z-index: 5;
   }
   & #paper {
-    z-index: 2;
-    width: 425px;
-    height: 63px;
+    width: 530px;
+    height: 80px;
     margin-top: 10px;
+    margin-left: 140px;
+    z-index: 2;
+    visibility: hidden;
   }
   & #gen_text {
     position: absolute;
     z-index: 4;
+  }
+  & #stamp {
+    position: absolute;
+    right: 100px;
+    top: 10px;
+    height: 90px;
+    transform: rotate(-90deg);
+    transform-origin: 100% 0;
+    z-index: 1;
+    visibility: hidden;
   }
   & #gen_text_content {
     position: relative;
     @include font-size(60px, 60px, 0);
     font-family: 'HeliosCondLightC', Arial, sans-serif;
     z-index: 2;
+
+  }
+  & #gen_text {
+    opacity: 0; 
+    visibility: hidden;
+    margin-left: 110px;
+  }
+  & #hat {
+    right: -20px;
+    position: absolute;
+    height: 100px;
+    z-index: 5;
+    visibility: hidden;
   }
 }
 /* Slider */
