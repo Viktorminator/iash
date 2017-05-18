@@ -62,13 +62,18 @@ function startTween() {
 
 
 // {bezier:[{left:100, top:250}, {left:300, top:0}, {left:500, top:400}], ease:Power1.easeInOut});
-    Gtl.to(stamp, 0.1, {x: '-=20', y: '+=20',scale: 1.4});
-    Gtl.to(tail1, 0.05, {x: '+=50'}, 5.6);
-    Gtl.to(stamp, 0.1, {x: '+=70', y: 60, transformOrigin:"50% 0" ,  bezier: [{x:0, y:0}, {x:50,y:10},{x:-10,y:100}]});
+    Gtl.to(stamp, 0.1, {x: '-=20', y: '+=15'});
+    Gtl.to(stamp, 0.01, { transformOrigin:"50% 0" });
+    Gtl.to(tail1, 0.01, { transformOrigin:"0 50%" } );
+    Gtl.to(tail2, 0.01, { transformOrigin:"0 50%" } );
+
+   /**/ Gtl.to(stamp, 0.1, {x: '+=70', y: 70, scale: 1.4,  bezier: [{x:0, y:0}, {x:50,y:10},{x:-10,y:100}], ease: SlowMo.ease.config(0.7, 0.7, false)});
 
     Gtl.to(stamp, 1, { x: 95, rotation: '+=90',  ease:Elastic.easeOut});
-    Gtl.to(tail1, 1, { rotation: '+=120', bezier: [{x:0, y:0}, {x:40,y:40},{x:90,y:80}]}, 5.65);
-    Gtl.to(tail2, 1, { rotation: '+=120', bezier: [{x:0, y:0}, {x:40,y:40},{x:90,y:80}]}, 5.65);
-    Gtl.to(gen_text, 1, { autoAlpha: 1 });
+    Gtl.to(tail1, 0.1, { rotation: '+=140', scale: 2, bezier: [{x:0, y:0}, {x:40,y:20},{x:40,y:50},{x:50,y:125}] }, 5.7);
+    Gtl.to(tail2, 0.1, { rotation: '+=170', scale: 2, bezier: [{x:0, y:0}, {x:40,y:20},{x:40,y:60},{x:70,y:100}] }, 5.7);
+    Gtl.to(tail1, 0.5, { rotation: '+=130', scale: 2.6, ease: Back.easeOut.config(4) }, 5.9 );
+    Gtl.to(tail2, 0.5, { rotation: '+=100', scale: 2.6, ease: Back.easeOut.config(4) }, 6 );
+    Gtl.to(gen_text, 1, { autoAlpha: 1 }, 6 ); 
     Gtl.restart();
 }

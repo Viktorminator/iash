@@ -328,7 +328,7 @@ svg {
     height: 90px;
     transform: rotate(-90deg);
     transform-origin: 100% 0;
-    z-index: 12;
+    z-index: 2;
     visibility: hidden;
   }
   & #gen_text_content {
@@ -353,8 +353,9 @@ svg {
   & #tail1, #tail2 {
     position: absolute;
     right:0;
-    height: 80px;
-    width: 150px;
+    top: 40px;
+    height: 40px;
+    width: 75px;
     z-index: 1;
     transform: rotateY(180deg);
     visibility: hidden;
