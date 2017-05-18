@@ -300,6 +300,15 @@ svg {
     z-index: 5;
     visibility: hidden;
   }
+  & #swatch {
+    position: absolute;
+    width: 59px;
+    height: 17px;
+    z-index: 2;
+    bottom: -12px;
+    right: -22px;
+    visibility: hidden;
+  }
   & #paper {
     width: 530px;
     height: 80px;
@@ -319,7 +328,7 @@ svg {
     height: 90px;
     transform: rotate(-90deg);
     transform-origin: 100% 0;
-    z-index: 2;
+    z-index: 12;
     visibility: hidden;
   }
   & #gen_text_content {
@@ -335,7 +344,7 @@ svg {
     margin-left: 110px;
   }
   & #hat {
-    right: -20px;
+    right: -19px;
     position: absolute;
     height: 100px;
     z-index: 5;
@@ -348,6 +357,7 @@ svg {
     width: 150px;
     z-index: 1;
     transform: rotateY(180deg);
+    visibility: hidden;
   }
 }
 /* Slider */
