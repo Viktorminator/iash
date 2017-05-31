@@ -7,9 +7,15 @@ $(document).ready(function(){
         ,swatch = document.getElementById('swatch')
         ,tail1 = document.getElementById('tail1')
         ,tail2 = document.getElementById('tail2')
-        ,gen_text = document.getElementById('gen_text');
+        ,gen_text = document.getElementById('gen_text')
+        ,letter = document.getElementById('letter')
+        ,lenta1 = document.getElementById('lenta1')
+        ,lenta2 = document.getElementById('lenta2')
+        ,stampiron = document.getElementById('stampiron')
+    ;
 
-    startTween();
+    startGenealogiaTween();
+    startSfragistikaTween();
     // intro timeline animation
     var tl = new TimelineMax();
     tl.from('#intro_line', 1, { drawSVG: '0', delay: 2, ease: Power0.easeIn});
@@ -31,7 +37,7 @@ $(document).ready(function(){
 
 });
 
-function startTween() {
+function startGenealogiaTween() {
     /* Genealogia timeline with paper */
     var Gtl = new TimelineMax();
     Gtl.from(tubebad, 3, { x: 0, y: -500 , ease:Elastic.easeOut.config(1, 0.75)});
@@ -76,4 +82,12 @@ function startTween() {
     Gtl.to(tail2, 0.5, { rotation: '+=100', scale: 2.6, ease: Back.easeOut.config(4) }, 6 );
     Gtl.to(gen_text, 1, { autoAlpha: 1 }, 6 ); 
     Gtl.restart();
+}
+
+function startSfragistikaTween() {
+    /* Sfragistika timeline */
+    var Stl = new TimelineMax();
+    // letter, lenta1, lenta2, stampiron
+    //Stl.to();
+
 }

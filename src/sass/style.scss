@@ -336,7 +336,6 @@ svg {
     @include font-size(60px, 60px, 0);
     font-family: 'HeliosCondLightC', Arial, sans-serif;
     z-index: 2;
-
   }
   & #gen_text {
     opacity: 0; 
@@ -359,6 +358,46 @@ svg {
     z-index: 1;
     transform: rotateY(180deg);
     visibility: hidden;
+  }
+}
+
+/* Sfragistika */
+.project_sfragistikaintro {
+  display: flex;
+  &__content {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;
+  }
+  & #letter {
+    position: absolute;
+    width: 100%;
+    top: -5%;
+    height: auto;
+  }
+  & #stampiron {
+    z-index: 3;
+    float: left;
+    width: 26%;
+    margin-top: 19%;
+    margin-left: 37%;
+  }
+  & #glove {
+    width: 25%;
+  }
+  &__bcg2 {
+    background: url('/img/background2.png') center center no-repeat fixed;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  & #lenta1 {
+    position: absolute;
+    transform: rotate(-50deg);
+    left: 30%;
+    top: 53%;
   }
 }
 /* Slider */
@@ -403,6 +442,7 @@ svg {
   }
 }
 #section-blog {
+  z-index: 2;
   #blog-wrapper {
     padding-left: 0;
     font-size: 0;
