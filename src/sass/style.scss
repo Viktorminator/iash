@@ -363,42 +363,51 @@ svg {
 
 /* Sfragistika */
 .project_sfragistikaintro {
-  display: flex;
   &__content {
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
     position: relative;
-    width: 100%;
     overflow: hidden;
     height: 100vh;
   }
   & #letter {
     position: absolute;
-    width: 100%;
-    top: -5%;
-    height: auto;
   }
   & #stampiron {
-    z-index: 3;
-    float: left;
-    width: 26%;
-    margin-top: 19%;
-    margin-left: 37%;
+    position: absolute;
+    width: 370px;
+    z-index: 5;
   }
   & #glove {
-    width: 25%;
+    position: absolute;
+    width: 400px;
+    top: 260px;
+    transform: rotate(30deg);
+    z-index: 6;
+    transform-origin: 50% 18%;
   }
+  & #stamper {
+    position: absolute;
+    width: 360px;
+    z-index: 4;
+    visibility: hidden;
+  }
+  & #sfr_text {
+    position: absolute;
+    z-index: 4;
+    opacity: 0;
+  }
+
   &__bcg2 {
     background: url('/img/background2.png') center center no-repeat fixed;
     background-size: cover;
     position: absolute;
     width: 100%;
     height: 100%;
+    overflow: hidden;
   }
-  & #lenta1 {
-    position: absolute;
-    transform: rotate(-50deg);
-    left: 30%;
-    top: 53%;
-  }
+
 }
 /* Slider */
 .scrollcontent {

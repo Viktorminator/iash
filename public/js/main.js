@@ -9,13 +9,18 @@ $(document).ready(function(){
         ,tail2 = document.getElementById('tail2')
         ,gen_text = document.getElementById('gen_text')
         ,letter = document.getElementById('letter')
-        ,lenta1 = document.getElementById('lenta1')
-        ,lenta2 = document.getElementById('lenta2')
         ,stampiron = document.getElementById('stampiron')
+        ,glove = document.getElementById('glove')
+        ,fingers = document.getElementById('fingers')
+        ,stamper = document.getElementById('stamper')
+        ,sfr_text = document.getElementById('sfr_text')
     ;
-
-    startGenealogiaTween();
-    startSfragistikaTween();
+    var bh = window.innerHeight;
+    var bw = window.innerWidth;
+    console.log('bh = ' + bh + ', bw = ' + bw);
+    //start Genealogia Tween();
+    // startGenealogiaTween();
+    startSfragistikaTween(bw,bh);
     // intro timeline animation
     var tl = new TimelineMax();
     tl.from('#intro_line', 1, { drawSVG: '0', delay: 2, ease: Power0.easeIn});
@@ -33,8 +38,6 @@ $(document).ready(function(){
     tla.from('#about_mask', 1.5, { x: '-170', ease: Bounce.easeOut, delay: -1.5});
     tla.from('.project__content--text h1', 1.5, { opacity: '0', delay: -1.5});
     tla.from('.project__content--text p', 1.5, { opacity: '0', ease: Power0.easeIn});
-
-
 });
 
 function startGenealogiaTween() {
@@ -88,6 +91,24 @@ function startSfragistikaTween() {
     /* Sfragistika timeline */
     var Stl = new TimelineMax();
     // letter, lenta1, lenta2, stampiron
-    //Stl.to();
+    Stl.from(letter, 1, {y: '-500', ease:Elastic.easeOut.config(1, 0.75) }, 1);
+    Stl.from(stampiron, 1, {y: '-500', ease:Elastic.easeOut.config(1, 0.75) }, 1);
+    Stl.from(glove, 1, { bezier: [{x: '0', y: '0'}, {x: '-400', y: '200'},  {x: '-500', y: '500'}] }, 1);
+    Stl.to(letter, 0.8, { y: '+=50', ease:Elastic.easeOut }, 2.2);
+    Stl.to(stampiron, 0.8, { y: '+=50', ease:Elastic.easeOut }, 2.2);
+    Stl.to(glove, 0.8, { y: '+=50', ease:Elastic.easeOut }, 2.2);
+    Stl.to(glove, 1, { attr:{src:'/img/glove2.png'}}, 2);
+    Stl.to(stamper, 0.01, { y: '+=45' }, 2); // Correct stamper position
 
+    Stl.to(glove, 1, { bezier: [{x: '0', y: '0'}, {x: '-400', y: '200'},  {x: '-500', y: '500'}]  });
+    Stl.to(stampiron, 1, { bezier: [{x: '0', y: '0'}, {x: '-400', y: '200'},  {x: '-500', y: '500'}] }, 3);
+
+    Stl.to(stamper, 0.01, { autoAlpha: 1 }, 3);
+    Stl.to(glove, 0.01, { css:{ zIndex: 2}}, 3.4);
+    Stl.to(stampiron, 0.01, { css:{ zIndex: 1}}, 3.4);
+    Stl.to(stamper, 1.5, {scale: 6 }, 3.3 );
+    Stl.to(letter, 1, { y: '+=200' }, 3.3 );
+    Stl.to(sfr_text, 1, { css:{ opacity: 1 }}, 3.3 );
+
+    Stl.restart();
 }
