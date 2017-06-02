@@ -17,6 +17,7 @@ $(document).ready(function(){
         ,saber = document.getElementById('saber')
         ,scabbard = document.getElementById('scabbard')
         ,saber2 = document.getElementById('saber2')
+        ,ger_overlay = document.getElementById('ger_overlay')
     ;
     var bh = window.innerHeight;
     var bw = window.innerWidth;
@@ -111,9 +112,9 @@ function startSfragistikaTween() {
     Stl.to(stamper, 0.01, { autoAlpha: 1 }, 3);
     Stl.to(glove, 0.01, { css:{ zIndex: 2}}, 3.4);
     Stl.to(stampiron, 0.01, { css:{ zIndex: 1}}, 3.4);
-    Stl.to(stamper, 1.5, {scale: 6 }, 3.3 );
-    Stl.to(letter, 1, { y: '+=200' }, 3.3 );
-    Stl.to(sfr_text, 1, { css:{ opacity: 1 }}, 3.3 );
+    Stl.to(stamper, 1.5, {scale: 6 }, 3.3);
+    Stl.to(letter, 1, { y: '+=200' }, 3.3);
+    Stl.to(sfr_text, 1, { css:{ opacity: 1 }}, 3.3);
 
     Stl.restart();
 }
@@ -126,11 +127,15 @@ function startGeraldikaTween(bw) {
     Grl.to(saber, 0.2, { rotation: '+=5' });
     Grl.to(saber, 0.5, { rotation: '-=10' });
     Grl.to(saber, 1.8, { rotation: '+=5' , ease:Elastic.easeOut.config(1, 0.75)});
-    Grl.to(saber, 0.01, {attr:{src:'/img/scabbard.png'}}, 1 );
-    /* Move saber left */
-    Grl.to(saber2, 1, { x: -leftSaber2 }, 2);
-    Grl.to(saber, 1, { x: '+=50', y: '-=25', rotation: '-=4'  }, 2);
+    Grl.to(saber, 0.01, {attr:{src:'/img/scabbard.png'}}, 1.5);
+    Grl.to(saber2, 0.01, { autoAlpha: 1 }, 1.5);
+    Grl.to(garda, 0.01, { autoAlpha: 1}, 1.5);
+
+    Grl.to(saber, 1, { x: '+=100', y: '-=25', rotation: '-=4'  }, 2);
+    Grl.to(saber2, 1, { x: '-=500', rotation: '+=2' }, 2);
+    Grl.to(garda, 1, {x: '-=500', y: '-=7', rotation: '+=2'}, 2);
     Grl.to(ger_text, 1, { css:{ opacity: 1 }}, 2.3 );
+    Grl.to(ger_overlay, 1, { autoAlpha: 1  }, 2.3 );
 
     Grl.restart();
 }

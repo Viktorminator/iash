@@ -428,22 +428,42 @@ svg {
       height: 100%;
       overflow: hidden;
     }
+    &__overlay {
+      background: url('/img/overlay.png') center center no-repeat fixed;
+      background-size: cover;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      visibility: hidden;
+    }
     & #saber, #scabbard {
       position: absolute;
     }
     & #saber {
       transform-origin: 80% 0;
-      margin-left: 140px;
+      margin-left: 40px;
       margin-top: -20px;
       z-index: 2;
     }
-
+    & #saber2 {
+      position: absolute;
+      margin-top: 210px;
+      margin-left: 360px;
+      visibility: hidden;
+    }
     & #ger_text {
       position: absolute;
       margin-top: 370px;
-      margin-left: -240px;
+      margin-left: -28%;
       z-index: 4;
       opacity: 0;
+    }
+    & #garda {
+      position: absolute;
+      margin-top: 210px;
+      margin-left: -334px;
+      z-index: 3;
+      visibility: hidden;
     }
 }
 /* Slider */
