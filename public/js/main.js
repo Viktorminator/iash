@@ -14,13 +14,18 @@ $(document).ready(function(){
         ,fingers = document.getElementById('fingers')
         ,stamper = document.getElementById('stamper')
         ,sfr_text = document.getElementById('sfr_text')
+        ,saber = document.getElementById('saber')
+        ,scabbard = document.getElementById('scabbard')
+        ,saber2 = document.getElementById('saber2')
     ;
     var bh = window.innerHeight;
     var bw = window.innerWidth;
     console.log('bh = ' + bh + ', bw = ' + bw);
     //start Genealogia Tween();
     // startGenealogiaTween();
-    startSfragistikaTween(bw,bh);
+    // startSfragistikaTween();
+    startGeraldikaTween(bw);
+
     // intro timeline animation
     var tl = new TimelineMax();
     tl.from('#intro_line', 1, { drawSVG: '0', delay: 2, ease: Power0.easeIn});
@@ -111,4 +116,21 @@ function startSfragistikaTween() {
     Stl.to(sfr_text, 1, { css:{ opacity: 1 }}, 3.3 );
 
     Stl.restart();
+}
+
+function startGeraldikaTween(bw) {
+    /* Geraldika timeline */
+    var Grl = new TimelineMax();
+    var leftSaber2 = bw/3;
+    var rightSaber = bw/7;
+    Grl.to(saber, 0.2, { rotation: '+=5' });
+    Grl.to(saber, 0.5, { rotation: '-=10' });
+    Grl.to(saber, 1.8, { rotation: '+=5' , ease:Elastic.easeOut.config(1, 0.75)});
+    Grl.to(saber, 0.01, {attr:{src:'/img/scabbard.png'}}, 1 );
+    /* Move saber left */
+    Grl.to(saber2, 1, { x: -leftSaber2 }, 2);
+    Grl.to(saber, 1, { x: '+=50', y: '-=25', rotation: '-=4'  }, 2);
+    Grl.to(ger_text, 1, { css:{ opacity: 1 }}, 2.3 );
+
+    Grl.restart();
 }

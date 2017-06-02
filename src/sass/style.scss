@@ -282,7 +282,7 @@ svg {
     height: 100%;
   }
 }
-/* Genintro */
+/* Genealogia intro */
 .project_genintro {
   display: flex;
   justify-content: center; /* align horizontal */
@@ -361,7 +361,7 @@ svg {
   }
 }
 
-/* Sfragistika */
+/* Sfragistika intro */
 .project_sfragistikaintro {
   &__content {
     display: flex;
@@ -399,7 +399,7 @@ svg {
     opacity: 0;
   }
 
-  &__bcg2 {
+  &__bcg {
     background: url('/img/background2.png') center center no-repeat fixed;
     background-size: cover;
     position: absolute;
@@ -408,6 +408,43 @@ svg {
     overflow: hidden;
   }
 
+}
+
+/* Geraldika intro */
+.project_geraldikaintro {
+    &__content {
+      display: flex;
+      justify-content: flex-end; /* align horizontal */
+      align-items: flex-start; /* align vertical */
+      position: relative;
+      overflow: hidden;
+      height: 100vh;
+    }
+    &__bcg {
+      background: url('/img/background3.png') center center no-repeat fixed;
+      background-size: cover;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    & #saber, #scabbard {
+      position: absolute;
+    }
+    & #saber {
+      transform-origin: 80% 0;
+      margin-left: 140px;
+      margin-top: -20px;
+      z-index: 2;
+    }
+
+    & #ger_text {
+      position: absolute;
+      margin-top: 370px;
+      margin-left: -240px;
+      z-index: 4;
+      opacity: 0;
+    }
 }
 /* Slider */
 .scrollcontent {
