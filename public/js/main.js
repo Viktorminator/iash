@@ -18,6 +18,7 @@ $(document).ready(function(){
         ,scabbard = document.getElementById('scabbard')
         ,saber2 = document.getElementById('saber2')
         ,ger_overlay = document.getElementById('ger_overlay')
+        ,knot = document.getElementById('knot')
     ;
     var bh = window.innerHeight;
     var bw = window.innerWidth;
@@ -134,6 +135,7 @@ function startGeraldikaTween(bw) {
     Grl.to(saber, 1, { x: '+=100', y: '-=25', rotation: '-=4'  }, 2);
     Grl.to(saber2, 1, { x: '-=500', rotation: '+=2' }, 2);
     Grl.to(garda, 1, {x: '-=500', y: '-=7', rotation: '+=2'}, 2);
+    Grl.to(knot, 1, { x: '-=40', y: '-=10', rotation: '+=10', ease: Back.easeOut }, 2);
     Grl.to(ger_text, 1, { css:{ opacity: 1 }}, 2.3 );
     Grl.to(ger_overlay, 1, { autoAlpha: 1  }, 2.3 );
 

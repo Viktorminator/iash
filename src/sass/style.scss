@@ -436,7 +436,7 @@ svg {
       height: 100%;
       visibility: hidden;
     }
-    & #saber, #scabbard {
+    & #saber, #scabbard, #knot {
       position: absolute;
     }
     & #saber {
@@ -450,6 +450,9 @@ svg {
       margin-top: 210px;
       margin-left: 360px;
       visibility: hidden;
+    }
+    & #knot {
+      margin-left: -60px;
     }
     & #ger_text {
       position: absolute;
