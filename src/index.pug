@@ -107,7 +107,37 @@ block content
                         text(id='', fill='#fff')
                             tspan(x='0', y='60') РЕСУРСИ
         include _partials/items
-        
+
+        #publishing
+        #pub_intro.project_publishingintro
+            .project_publishingintro__bcg
+            .project_publishingintro__overlay#pub_overlay
+            .project_publishingintro__content
+                img#book(src='/img/book.png')
+                img#lupa(src='/img/lupa.png')
+                img#hand(src='/img/glove.png')
+                svg(id='pub_text' width='454px', height='62px', viewbox='0 0 454 62', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+                    title ВИДАВНИЦТВО
+                    desc ВИДАВНИЦТВО
+                    defs
+                    g#Page-1(stroke='none', stroke-width='1', fill='none', fill-rule='evenodd', font-weight='normal', font-size='80', font-family='HeliosCondLightC', font-style='condensed')
+                        text(id='', fill='#fff')
+                            tspan(x='0', y='60') ВИДАВНИЦТВО
+
+        include _partials/items
+
+        #projects
+        #pro_intro.project_projectsintro
+            .project_projectsintro__bcg
+            .project_projectsintro__content
+                img#lupa2(src='/img/lupa2.png')
+                svg(id='pro_text' width='280px', height='62px', viewbox='0 0 280 62', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+                    title ПРОЕКТИ
+                    desc ПРОЕКТИ
+                    defs
+                    g#Page-1(stroke='none', stroke-width='1', fill='none', fill-rule='evenodd', font-weight='normal', font-size='80', font-family='HeliosCondLightC', font-style='condensed')
+                        text(id='', fill='#fff')
+                            tspan(x='0', y='60') ПРОЕКТИ
 
 
 
@@ -124,7 +154,6 @@ block content
 block body_end
     script(type="text/javascript" src="/js/classie.js")
     script(type="text/javascript" src="/js/script.js")
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js')
     script.
         window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\\/script>')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js')

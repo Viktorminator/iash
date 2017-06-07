@@ -602,7 +602,7 @@ svg {
     height: 100%;
     overflow: hidden;
   }
-  & #paper1, #paper2, #paper3, #glasses, #tail3, #signet, #knot2 {
+  & #paper1, #paper2, #paper3, #glasses, #tail3, #signet, #knot2, #res_text {
     position: absolute;
   }
   & #paper3 {
@@ -636,18 +636,106 @@ svg {
   }
   & #signet {
     z-index: 6;
-    left: 440px;
+    margin-left: -300px;
     top: -70px;
-    border: 1px solid red;
   }
   & #res_text {
-    position: absolute;
     z-index: 5;
     align-self: center;
     opacity: 0;
   }
 
 }
+
+/* Publishing intro */
+.project_publishingintro {
+  &__content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; /* align vertical */
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+  }
+  #pub_overlay {
+    content:'\A';
+    position:absolute;
+    width:100%; height:100%;
+    left:0;
+    background:rgba(0,0,0,0.6);
+    opacity: 0;
+    z-index: 8;
+  }
+  &__bcg {
+    background: url('/img/background5.png') center center no-repeat fixed;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  & #book, #hand, #lupa {
+    position: absolute;
+  }
+  & #book {
+    top: -700px;
+  }
+  & #hand {
+    bottom: -830px;
+    margin-left: -300px;
+    transform: rotate(10deg);
+    z-index: 7;
+    width: 280px;
+  }
+  & #pub_text {
+    z-index: 6;
+    align-self: center;
+    opacity: 0;
+  }
+  & #lupa {
+    z-index: 7;
+    align-self: center;
+    margin-top: 130px;
+    margin-left: -80px;
+  }
+}
+
+/* Projects intro */
+.project_projectsintro {
+  &__content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; /* align vertical */
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+  }
+  &__bcg {
+    background: url('/img/background6.png') center center no-repeat fixed;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  & #lupa2, #pro_text {
+    position: absolute;
+  }
+  & #lupa2 {
+    align-self: center;
+    transform:  rotate(-70deg);
+    margin-top: 0;
+    width: 700px;
+    z-index: 3;
+  }
+  & #pro_text {
+    z-index: 2;
+    align-self: center;
+    opacity: 0;
+  }
+}
+
+
 /* Slider */
 .scrollcontent {
   @include transform(initial);

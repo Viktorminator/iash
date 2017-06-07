@@ -21,14 +21,20 @@ $(document).ready(function(){
         ,ger_overlay = document.getElementById('ger_overlay')
         ,knot = document.getElementById('knot')
         // resources variables
-        ,paper3=document.getElementById('paper3')
-        ,paper1=document.getElementById('paper1')
-        ,paper2=document.getElementById('paper2')
-        ,glasses=document.getElementById('glasses')
-        ,tail3=document.getElementById('tail3')
-        ,knot2=document.getElementById('knot2')
-        ,signet=document.getElementById('signet')
-        ,res_text=document.getElementById('res_text')
+        ,paper3 = document.getElementById('paper3')
+        ,paper1 = document.getElementById('paper1')
+        ,paper2 = document.getElementById('paper2')
+        ,glasses = document.getElementById('glasses')
+        ,tail3 = document.getElementById('tail3')
+        ,knot2 = document.getElementById('knot2')
+        ,signet = document.getElementById('signet')
+        ,res_text = document.getElementById('res_text')
+        // publishing variables
+        ,book = document.getElementById('book')
+        ,lupa = document.getElementById('lupa')
+        ,hand = document.getElementById('hand')
+        ,pub_text = document.getElementById('pub_text')
+        ,pub_overlay = document.getElementById('pub_overlay')
     ;
     var bh = window.innerHeight;
     var bw = window.innerWidth;
@@ -37,8 +43,9 @@ $(document).ready(function(){
     // startGenealogiaTween();
     // startSfragistikaTween();
     // startGeraldikaTween(bw);
-    startResourcesTween();
-
+    // startResourcesTween();
+    // startPublishingTween();
+    startProjectsTween();
     // intro timeline animation
     var tl = new TimelineMax();
     tl.from('#intro_line', 1, { drawSVG: '0', delay: 2, ease: Power0.easeIn});
@@ -173,17 +180,41 @@ function startResourcesTween() {
     // paper3, paper1
     Res.to(paper3, 0.1, { y: '-=400' }, 5.9);
     Res.to(paper1, 0.1, { y: '-=400' }, 5.9);
-
     Res.to(paper1, 0.1, { css: { zIndex: 8 }}, 6);
     Res.to(paper3, 0.1, { css: { zIndex: 6 }}, 6);
-    Res.to(signet, 0.1, { css: { zIndex: 7}}, 6);
-
+    Res.to(signet, 0.1, { css: { zIndex: 7 }}, 6);
     Res.to(paper1, 0.5, { y: '+=200' }, 6.3);
-    Res.to(signet, 1, { y: "+=100"}, 6.2);
-    Res.to(signet, 1, { rotation: "-=20", ease: Elastic.easeOut }, 6.1);
+    Res.to(signet, 1, { y: '+=100' }, 6.2);
+    Res.to(signet, 1, { rotation: '-=20', ease: Elastic.easeOut }, 6.1);
     Res.to(paper3, 0.5, { y: '+=200' }, 6.1);
 
-
-
     Res.restart();
+}
+
+function startPublishingTween() {
+    var Pub = new TimelineMax();
+
+    Pub.to(book, 1, { y: '+=940' });
+    Pub.to(lupa, 0.3, { x: '-=20', y: '-=20' }, 0.5);
+    Pub.to(lupa, 0.5, { x: '+=10', y: '+=40' }, 0.8);
+    Pub.to(lupa, 0.5, { rotation: '-=2' }, 0.5);
+    Pub.to(lupa, 0.5, { rotation: '+=2' }, 1);
+    Pub.to(pub_text, 1, { css:{ opacity: 1 } }, 1);
+    Pub.to(pub_overlay, 1, {  css:{ opacity: 1 } }, 1.2);
+    Pub.to(hand, 1, { x: '+=100', y: '-=300' }, 1.5);
+    Pub.to(hand, 0.8, { x: '+=100', y: '-=20' }, 2.3);
+    Pub.to(lupa, 0.8, { x: '+=100', y: '-=20' }, 2.3);
+    Pub.to(book, 1, { y: '+=500' }, 2.3);
+
+    Pub.restart();
+}
+
+function startProjectsTween() {
+    var Pro = new TimelineMax();
+
+    Pro.to(lupa2, 2, { x: '+=100', y: '+=300', rotation: '-=3' });
+    Pro.to(lupa2, 1, { x: '-=100', y: '-=50', rotation: '+=3' });
+    Pro.to(pub_text, 1, { css:{ opacity: 1 } });
+    
+    Pro.restart();
 }
