@@ -35,6 +35,9 @@ $(document).ready(function(){
         ,hand = document.getElementById('hand')
         ,pub_text = document.getElementById('pub_text')
         ,pub_overlay = document.getElementById('pub_overlay')
+        // projects variables
+        ,lupa2=document.getElementById('lupa2')
+        ,pro_text=document.getElementById('pro_text')
     ;
     var bh = window.innerHeight;
     var bw = window.innerWidth;
@@ -213,8 +216,8 @@ function startProjectsTween() {
     var Pro = new TimelineMax();
 
     Pro.to(lupa2, 2, { x: '+=100', y: '+=300', rotation: '-=3' });
-    Pro.to(lupa2, 1, { x: '-=100', y: '-=50', rotation: '+=3' });
-    Pro.to(pub_text, 1, { css:{ opacity: 1 } });
-    
+    Pro.to(lupa2, 1, { x: '-=180', y: '-=70', rotation: '+=3', scale: 1.3 });
+    Pro.to(pro_text, 1, { css:{ opacity: 1 } });
+
     Pro.restart();
 }
