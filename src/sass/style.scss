@@ -223,6 +223,123 @@ svg {
     }
   }
 }
+#section-blog {
+  z-index: 2;
+  #blog-wrapper {
+    padding-left: 0;
+    font-size: 0;
+    height: 100%;
+    list-style-type: none;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    width: 100000000px;
+
+    li {
+      display: inline-block;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      width: 380px;
+
+      &.even {
+        .teaser-image {
+          top: 0;
+        }
+
+        .teaser-content {
+          bottom: 0;
+        }
+      }
+
+      &.odd {
+        .teaser-image {
+          bottom: 0;
+        }
+
+        .teaser-content {
+          top: 0;
+        }
+      }
+
+      &.open {
+        z-index: 10;
+      }
+
+      .teaser-image {
+        background-color: $primary-color;
+        background-position-x: center;
+        background-size: cover;
+        height: 50%;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+        @include transform(translateZ(0px));
+      }
+      .separator {
+        @include font-size(40px, 40px, 0);
+        @include transform(translateZ(1px));
+        color: white;
+        font-family: 'icon';
+        left: 50%;
+        margin-left: -37px;
+        position: absolute;
+        top: 50%;
+        z-index: 1;
+
+        &.iconpointer-up {
+          margin-top: -34px;
+        }
+
+        &.iconpointer-down {
+          margin-top: -4px;
+        }
+      }
+
+      .teaser-content {
+        background-color: $secondary-color;
+        @include transform(translateZ(2px));
+        height: 50%;
+        overflow: hidden;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .teaser-text {
+          .stamp {
+            width: 30px;
+            height: 30px;
+          }
+          .line {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            left: -22px;
+            top: -14px
+          }
+          position: relative;
+          width: auto;
+          display: flex;
+          flex-direction: row;
+          z-index: 3;
+
+          h3 {
+            font-family: 'Bodoni';
+            font-weight: 500;
+            @include font-size(24px, 1em, 1);
+            padding: 6px 0 0 5px;
+            margin: 0 auto;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}
 /* ABOUT */
 .project_about {
   padding: 0;
@@ -360,7 +477,6 @@ svg {
     visibility: hidden;
   }
 }
-
 /* Sfragistika intro */
 .project_sfragistikaintro {
   &__content {
@@ -409,13 +525,12 @@ svg {
   }
 
 }
-
 /* Geraldika intro */
 .project_geraldikaintro {
     &__content {
       display: flex;
-      justify-content: flex-end; /* align horizontal */
-      align-items: flex-start; /* align vertical */
+      justify-content: flex-end;
+      align-items: flex-start;
       position: relative;
       overflow: hidden;
       height: 100vh;
@@ -469,6 +584,70 @@ svg {
       visibility: hidden;
     }
 }
+/* Resources intro */
+.project_resourcesintro {
+  &__content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; /* align vertical */
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+  }
+  &__bcg {
+    background: url('/img/background4.png') center center no-repeat fixed;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  & #paper1, #paper2, #paper3, #glasses, #tail3, #signet, #knot2 {
+    position: absolute;
+  }
+  & #paper3 {
+    z-index: 1;
+    margin-left: -150px;
+    top: -550px;
+  }
+  & #tail3 {
+    z-index: 3;
+    right: 200px;
+    top: -100px;
+    @include transformorigin(0,50%);
+  }
+  & #paper1 {
+    z-index: 3;
+    top: -610px;
+    margin-left: -80px;
+  }
+  & #paper2 {
+    z-index: 4;
+    top: -720px;
+  }
+  & #glasses {
+    z-index: 3;
+    top: -555px;
+  }
+  & #knot2 {
+    z-index: 8;
+    right: 90px;
+    top: -10px;
+  }
+  & #signet {
+    z-index: 6;
+    left: 440px;
+    top: -70px;
+    border: 1px solid red;
+  }
+  & #res_text {
+    position: absolute;
+    z-index: 5;
+    align-self: center;
+    opacity: 0;
+  }
+
+}
 /* Slider */
 .scrollcontent {
   @include transform(initial);
@@ -510,123 +689,7 @@ svg {
     }
   }
 }
-#section-blog {
-  z-index: 2;
-  #blog-wrapper {
-    padding-left: 0;
-    font-size: 0;
-    height: 100%;
-    list-style-type: none;
-    overflow: hidden;
-    position: relative;
-    top: 0;
-    width: 100000000px;
 
-    li {
-      display: inline-block;
-      height: 100%;
-      overflow: hidden;
-      position: relative;
-      width: 380px;
-
-      &.even {
-        .teaser-image {
-          top: 0;
-        }
-
-        .teaser-content {
-          bottom: 0;
-        }
-      }
-
-      &.odd {
-        .teaser-image {
-          bottom: 0;
-        }
-
-        .teaser-content {
-          top: 0;
-        }
-      }
-
-      &.open {
-        z-index: 10;
-      }
-
-      .teaser-image {
-        background-color: $primary-color;
-        background-position-x: center;
-        background-size: cover;
-        height: 50%;
-        width: 100%;
-        position: absolute;
-        z-index: 1;
-        @include transform(translateZ(0px));
-      }
-      .separator {
-        @include font-size(40px, 40px, 0);
-        @include transform(translateZ(1px));
-        color: white;
-        font-family: 'icon';
-        left: 50%;
-        margin-left: -37px;
-        position: absolute;
-        top: 50%;
-        z-index: 1;
-
-        &.iconpointer-up {
-          margin-top: -34px;
-        }
-
-        &.iconpointer-down {
-          margin-top: -4px;
-        }
-      }
-
-      .teaser-content {
-        background-color: $secondary-color;
-        @include transform(translateZ(2px));
-        height: 50%;
-        overflow: hidden;
-        position: absolute;
-        text-align: center;
-        width: 100%;
-        z-index: 2;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        .teaser-text {
-          .stamp {
-            width: 30px;
-            height: 30px;
-          }
-          .line {
-            width: 60px;
-            height: 60px;
-            position: absolute;
-            left: -22px;
-            top: -14px
-          }
-          position: relative;
-          width: auto;
-          display: flex;
-          flex-direction: row;
-          z-index: 3;
-
-          h3 {
-            font-family: 'Bodoni';
-            font-weight: 500;
-            @include font-size(24px, 1em, 1);
-            padding: 6px 0 0 5px;
-            margin: 0 auto;
-            text-transform: uppercase;
-          }
-        }
-      }
-    }
-  }
-}
 
 /**
 ** Navigation arrow

@@ -55,7 +55,7 @@ block content
                 | </svg>
         #genealogia
         include _partials/items
-        #sfr_intro.project_sfragistikaintro
+        #gen_intro.project_sfragistikaintro
             .project_sfragistikaintro__bcg
             .project_sfragistikaintro__content
                 img#letter(src='/img/letter.png')
@@ -71,7 +71,7 @@ block content
                             tspan(x='-4', y='59') СФРАГІСТИКА
         #sfragistika
         include _partials/items
-        #ger_intro.project_geraldikaintro
+        #sfr_intro.project_geraldikaintro
             .project_geraldikaintro__bcg
             .project_geraldikaintro__overlay#ger_overlay
             .project_geraldikaintro__content
@@ -87,8 +87,32 @@ block content
                     g#Page-1(stroke='none', stroke-width='1', fill='none', fill-rule='evenodd', font-weight='normal', font-size='80', font-family='HeliosCondLightC', font-style='condensed')
                         text(id='', fill='#fff')
                             tspan(x='-4', y='59') ГЕРАЛЬДИКА
-        #geraldika
+        #resources
         include _partials/items
+        #res_intro.project_resourcesintro
+            .project_resourcesintro__bcg
+            .project_resourcesintro__content
+                img#paper3(src='/img/paper3.png')
+                img#paper1(src='/img/paper1.png')
+                img#paper2(src='/img/paper2.png')
+                img#glasses(src='/img/glasses.png')
+                img#tail3(src='/img/tail3.png')
+                img#knot2(src='/img/knot2.png')
+                img#signet(src='/img/signet.png')
+                svg(id='res_text' width='280px', height='62px', viewbox='0 0 280 62', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+                    title РЕСУРСИ
+                    desc РЕСУРСИ
+                    defs
+                    g#Page-1(stroke='none', stroke-width='1', fill='none', fill-rule='evenodd', font-weight='normal', font-size='80', font-family='HeliosCondLightC', font-style='condensed')
+                        text(id='', fill='#fff')
+                            tspan(x='0', y='60') РЕСУРСИ
+        include _partials/items
+        
+
+
+
+
+
     // #geraldika.project
             h1 Геральдика
             p Something

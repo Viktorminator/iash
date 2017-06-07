@@ -14,19 +14,30 @@ $(document).ready(function(){
         ,fingers = document.getElementById('fingers')
         ,stamper = document.getElementById('stamper')
         ,sfr_text = document.getElementById('sfr_text')
+        // geraldika variables
         ,saber = document.getElementById('saber')
         ,scabbard = document.getElementById('scabbard')
         ,saber2 = document.getElementById('saber2')
         ,ger_overlay = document.getElementById('ger_overlay')
         ,knot = document.getElementById('knot')
+        // resources variables
+        ,paper3=document.getElementById('paper3')
+        ,paper1=document.getElementById('paper1')
+        ,paper2=document.getElementById('paper2')
+        ,glasses=document.getElementById('glasses')
+        ,tail3=document.getElementById('tail3')
+        ,knot2=document.getElementById('knot2')
+        ,signet=document.getElementById('signet')
+        ,res_text=document.getElementById('res_text')
     ;
     var bh = window.innerHeight;
     var bw = window.innerWidth;
     console.log('bh = ' + bh + ', bw = ' + bw);
-    //start Genealogia Tween();
+
     // startGenealogiaTween();
     // startSfragistikaTween();
-    startGeraldikaTween(bw);
+    // startGeraldikaTween(bw);
+    startResourcesTween();
 
     // intro timeline animation
     var tl = new TimelineMax();
@@ -39,7 +50,7 @@ $(document).ready(function(){
 
     var tla = new TimelineMax();
     // About timeline animation
-   // tla.from('.project__bcg', 3, { overflow: 'hidden', opacity: '0', backgroundSize: 'inherit', ease: Power0.easeIn, delay: -1 });
+    // tla.from('.project__bcg', 3, { overflow: 'hidden', opacity: '0', backgroundSize: 'inherit', ease: Power0.easeIn, delay: -1 });
     tla.from('#about_line', 1, { drawSVG: '0', delay: 2, ease: Power0.easeIn});
     tla.from('#about_text', 1.5, { x: '170', ease: Bounce.easeOut });
     tla.from('#about_mask', 1.5, { x: '-170', ease: Bounce.easeOut, delay: -1.5});
@@ -75,7 +86,6 @@ function startGenealogiaTween() {
     Gtl.to(swatch, 0.5, { rotation: '+=10', ease: Back.easeOut.config(4) }, 4.4);
     Gtl.to(tail1, 0.1, { autoAlpha: 1 }, 4.5);
     Gtl.to(tail2, 0.1, { autoAlpha: 1 }, 4.5);
-
 
 // {bezier:[{left:100, top:250}, {left:300, top:0}, {left:500, top:400}], ease:Power1.easeInOut});
     Gtl.to(stamp, 0.1, {x: '-=20', y: '+=15'});
@@ -132,12 +142,48 @@ function startGeraldikaTween(bw) {
     Grl.to(saber2, 0.01, { autoAlpha: 1 }, 1.5);
     Grl.to(garda, 0.01, { autoAlpha: 1}, 1.5);
 
-    Grl.to(saber, 1, { x: '+=100', y: '-=25', rotation: '-=4'  }, 2);
+    Grl.to(saber, 1, { x: '+=100', y: '-=25', rotation: '-=4' }, 2);
     Grl.to(saber2, 1, { x: '-=500', rotation: '+=2' }, 2);
-    Grl.to(garda, 1, {x: '-=500', y: '-=7', rotation: '+=2'}, 2);
+    Grl.to(garda, 1, {x: '-=500', y: '-=7', rotation: '+=2' }, 2);
     Grl.to(knot, 1, { x: '-=40', y: '-=10', rotation: '+=10', ease: Back.easeOut }, 2);
     Grl.to(ger_text, 1, { css:{ opacity: 1 }}, 2.3 );
     Grl.to(ger_overlay, 1, { autoAlpha: 1  }, 2.3 );
 
     Grl.restart();
+}
+
+function startResourcesTween() {
+    /* Resources timeline */
+    var Res = new TimelineMax();
+    // Tail movement
+    Res.to(tail3, 1, { y: '+=30', rotation: '+=2', ease: Power0 });
+    Res.to(tail3, 1, { y: '+=30', rotation: '-=2', ease: Power0 });
+    Res.to(tail3, 1, { y: '+=20', ease: Elastic.easeOut.config(1.5, 0.4) });
+    // Papers & glasses go down
+    Res.to(paper3, 0.5, { x: '-=50', y: '+=330' });
+    Res.to(paper1, 0.5, { x: '+=100', y: '+=290' }, 3.2);
+    Res.to(paper2, 0.8, { y: '+=300', rotation: '+=2' }, 3.8);
+    Res.to(paper2, 0.2, { y: '+=60', rotation: '-=2' });
+    Res.to(paper2, 0.4, { y: '-=150', rotation: '+=2' });
+    Res.to(glasses, 1, { y: '+=870', rotation: '-=100' }, 4.7);
+    Res.to(glasses, 0.1, { css: {zIndex: 6 }});
+    Res.to(paper2, 1, { y: '+=500', rotation: '-=3' });
+    Res.to(glasses, 1, { x: '-=80', y: '+=50', rotation: '-=10' }, 5.9);
+    Res.to(res_text, 1, { css:{ opacity: 1 }}, 5.9 );
+    // paper3, paper1
+    Res.to(paper3, 0.1, { y: '-=400' }, 5.9);
+    Res.to(paper1, 0.1, { y: '-=400' }, 5.9);
+
+    Res.to(paper1, 0.1, { css: { zIndex: 8 }}, 6);
+    Res.to(paper3, 0.1, { css: { zIndex: 6 }}, 6);
+    Res.to(signet, 0.1, { css: { zIndex: 7}}, 6);
+
+    Res.to(paper1, 0.5, { y: '+=200' }, 6.3);
+    Res.to(signet, 1, { y: "+=100"}, 6.2);
+    Res.to(signet, 1, { rotation: "-=20", ease: Elastic.easeOut }, 6.1);
+    Res.to(paper3, 0.5, { y: '+=200' }, 6.1);
+
+
+
+    Res.restart();
 }
