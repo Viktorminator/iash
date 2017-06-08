@@ -752,25 +752,84 @@ svg {
     height: 100%;
     overflow: hidden;
   }
-  & #arrow, #eve_text, #eve_canvas {
+  & #arrow, #eve_text, #smoke1, #smoke2, #smoke3, #smoke4, #smoke5 {
     position: absolute;
   }
   & #arrow {
-    bottom: 300px;
+    bottom: 340px;
+    z-index: 3;
   }
   & #knot3 {
     margin-right: -55%;
   }
   & #eve_text {
+    align-self: center;
+    opacity: 0;
     z-index: 2;
-    align-self: center;
-    opacity: 1;
   }
-  & #eve_canvas {
-    align-self: center;
+  & #smoke1 {
+    bottom: -400px;
+    margin-left: 24%;
+  }
+  & #smoke2 {
+    bottom: -500px;
+    margin-left: -10%;
+    width: 1000px;
+  }
+  & #smoke3 {
+    bottom: -600px;
+    margin-left: -10%;
+    width: 1500px;
+  }
+  & #smoke4 {
+    bottom: -500px;
+    margin-left: 30%;
+    width: 1200px;
+    z-index: 5;
+  }
+  & #smoke5 {
+    bottom: -600px;
+    margin-left: 15%;
   }
 }
-
+/* Events anons intro */
+.project_grantsintro {
+  &__content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; /* align vertical */
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+  }
+  &__bcg {
+    background: url('/img/background7.png') center center no-repeat fixed;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  & #gra_text, #paper4, #stamp2, #hand3, .wax {
+    position: absolute;
+  }
+  & #gra_text {
+    align-self: center;
+    opacity: 1;
+    z-index: 2;
+  }
+  & #stamp2, .wax {
+    align-self: center;
+    margin-left: -360px;
+    margin-top: 100px;
+  }
+  & #stamp2 {
+    z-index: 3;
+  }
+  & #knot4 {
+    margin-right: -55%;
+  }
+}
 
 /* Slider */
 .scrollcontent {

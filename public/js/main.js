@@ -38,6 +38,14 @@ $(document).ready(function(){
         // projects variables
         ,lupa2=document.getElementById('lupa2')
         ,pro_text=document.getElementById('pro_text')
+        // events variables
+        ,smoke1 = document.getElementById('smoke1')
+        ,smoke2 = document.getElementById('smoke2')
+        ,smoke3 = document.getElementById('smoke3')
+        ,smoke4 = document.getElementById('smoke4')
+        ,smoke5 = document.getElementById('smoke5')
+        ,eve_text = document.getElementById('eve_text')
+        ,arrow = document.getElementById('arrow')
     ;
     var bh = window.innerHeight;
     var bw = window.innerWidth;
@@ -224,61 +232,20 @@ function startProjectsTween() {
 }
 
 function startEventsTween(appWidth, appHeight) {
-    var smokeImages = ['/img/smokes/1.png', '/img/smokes/2.png', '/img/smokes/3.png', '/img/smokes/4.png', '/img/smokes/5.png'];
-    var imageNumber = Math.round(Math.random() * (smokeImages.length - 1));
-    console.log('imageNumber=' + imageNumber);
-    var smokeImage = smokeImages[imageNumber];
+    var Eve = new TimelineMax();
 
-    var appCenterX = appWidth/2,
-        appCenterY = appHeight/2,
-        stage = new Kinetic.Stage({
-            container: 'eve_canvas',
-            width: appWidth,
-            height: appHeight
-        }),
-        layer = new Kinetic.Layer(),
-        bugFile = new Image(),
-        tl;
+    Eve.to(smoke1, 4, { x: '+=300', y: '-=250', rotation: '-=50', scale: 2, opacity: 0.8,
+        ease:Linear.easeNone });
+    Eve.to(smoke2, 4, { x: '-=300', y: '-=500', rotation: '+=20', scale: 1.5, opacity: 0.7,
+        ease:Linear.easeNone }, 0);
+    Eve.to(smoke3, 4, { x: '+=250', y: '-=350', rotation: '-=40', scale: 1.5, opacity: 0.6,
+        ease:Linear.easeNone }, 0);
+    Eve.to(smoke4, 4, { x: '-=350', y: '-=400', rotation: '+=70', scale: 1.5, opacity: 0.5,
+        ease:Linear.easeNone }, 0);
+    Eve.to(smoke5, 4, { x: '-=200', y: '-=400', rotation: '-=30', scale: 1.5, zIndex: 3,
+        ease:Linear.easeNone }, 0);
+    Eve.to(eve_text, 2, { opacity: 1 }, 0.5);
+    Eve.fromTo(arrow, 3, { x: '1400', y: '-40'}, { x: '-1200', y: '40', ease: SlowMo.ease.config(0.5, 0.8, false)}, 0.5);
 
-    stage.add(layer);
-    bugFile.src = smokeImage;
-
-    function getAnimation() {
-        var creature = new Kinetic.Image({
-            image: bugFile,
-            width: 300,
-            height: 300,
-            x:-50
-        });
-
-        var bezTween = new TweenMax(creature, 6, {
-            bezier:{
-                type:"medium",
-                values:[{setX:150, setY:300}, {setX:300, setY:-10}, {setX:500 + Math.random() *100, setY:320*Math.random() + 50}, {setX:650, setY:320*Math.random() + 50}, {setX:900, setY:-80}],
-                //autoRotate needs to know how to adjust x/y/rotation so we pass in the names of the apporpriate KineticJS methods
-                autoRotate:["setX","setY","setRotationDeg"]
-            },
-            ease:Linear.easeNone, autoCSS:false});
-        layer.add(creature);
-        return bezTween;
-    }
-//create a bunch of Bezier tweens and add them to a timeline
-    function buildTimeline() {
-        tl = new TimelineMax({repeat:4, delay:1});
-        for (i = 0 ; i< 30; i++){
-            //start creature animation every 0.12 seconds
-            tl.add(getAnimation(), i * 0.17);
-        }
-    }
-
-    function redraw(){
-        layer.draw();
-    }
-
-
-
-   //redraw layer each time a tick event fires
-    TweenLite.ticker.addEventListener("tick", redraw);
-    buildTimeline();
-
+    Eve.restart();
 }
