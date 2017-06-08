@@ -140,6 +140,19 @@ block content
                             tspan(x='0', y='60') ПРОЕКТИ
 
         include _partials/items
+        #events
+        #events_intro.project_eventsintro
+            .project_eventsintro__bcg
+            .project_eventsintro__content
+                svg(id='eve_text' width='430px', height='100px', viewbox='0 0 430 100', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+                    title АНОНС ПОДІЙ
+                    desc АНОНС ПОДІЙ
+                    defs
+                    g#Page-1(stroke='none', stroke-width='1', fill='none', fill-rule='evenodd', font-weight='normal', font-size='80', font-family='HeliosCondLightC', font-style='condensed')
+                        text(id='', fill='#fff')
+                            tspan(x='0', y='75') АНОНС ПОДІЙ
+                img#arrow(src='/img/arrow.png')
+                img#knot3(src='/img/knot.png')
 
 
 
@@ -158,6 +171,7 @@ block body_end
     script.
         window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\\/script>')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js')
+    script(src='js/pixi.min.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js')
     script(src='js/DrawSVGPlugin.min.js')

@@ -48,7 +48,8 @@ $(document).ready(function(){
     // startGeraldikaTween(bw);
     // startResourcesTween();
     // startPublishingTween();
-    startProjectsTween();
+    // startProjectsTween();
+    startEventsTween();
     // intro timeline animation
     var tl = new TimelineMax();
     tl.from('#intro_line', 1, { drawSVG: '0', delay: 2, ease: Power0.easeIn});
@@ -220,4 +221,16 @@ function startProjectsTween() {
     Pro.to(pro_text, 1, { css:{ opacity: 1 } });
 
     Pro.restart();
+}
+
+function startEventsTween() {
+    var smokeImages = ['/img/smokes/1.png', '/img/smokes/2.png', '/img/smokes/3.png', '/img/smokes/4.png', '/img/smokes/5.png'];
+    var imageNumber = Math.round(Math.random() * (smokeImages.length - 1));
+    console.log('imageNumber=' + imageNumber);
+    var smokeImage = smokeImages[imageNumber];
+    var particle = new PIXI.Sprite.fromImage(smokeImage);
+    var difference = Math.floor(Math.random() * .02) + -.01;
+
+    var app = new PIXI.Application(800, 600, {backgroundColor : 0x1099bb});
+    document.getElementById('events_intro').appendChild(app.view);
 }
