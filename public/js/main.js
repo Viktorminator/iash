@@ -49,7 +49,7 @@ $(document).ready(function(){
     // startResourcesTween();
     // startPublishingTween();
     // startProjectsTween();
-    startEventsTween();
+    startEventsTween(bw, bh);
     // intro timeline animation
     var tl = new TimelineMax();
     tl.from('#intro_line', 1, { drawSVG: '0', delay: 2, ease: Power0.easeIn});
@@ -223,14 +223,62 @@ function startProjectsTween() {
     Pro.restart();
 }
 
-function startEventsTween() {
+function startEventsTween(appWidth, appHeight) {
     var smokeImages = ['/img/smokes/1.png', '/img/smokes/2.png', '/img/smokes/3.png', '/img/smokes/4.png', '/img/smokes/5.png'];
     var imageNumber = Math.round(Math.random() * (smokeImages.length - 1));
     console.log('imageNumber=' + imageNumber);
     var smokeImage = smokeImages[imageNumber];
-    var particle = new PIXI.Sprite.fromImage(smokeImage);
-    var difference = Math.floor(Math.random() * .02) + -.01;
 
-    var app = new PIXI.Application(800, 600, {backgroundColor : 0x1099bb});
-    document.getElementById('events_intro').appendChild(app.view);
+    var appCenterX = appWidth/2,
+        appCenterY = appHeight/2,
+        stage = new Kinetic.Stage({
+            container: 'eve_canvas',
+            width: appWidth,
+            height: appHeight
+        }),
+        layer = new Kinetic.Layer(),
+        bugFile = new Image(),
+        tl;
+
+    stage.add(layer);
+    bugFile.src = smokeImage;
+
+    function getAnimation() {
+        var creature = new Kinetic.Image({
+            image: bugFile,
+            width: 300,
+            height: 300,
+            x:-50
+        });
+
+        var bezTween = new TweenMax(creature, 6, {
+            bezier:{
+                type:"medium",
+                values:[{setX:150, setY:300}, {setX:300, setY:-10}, {setX:500 + Math.random() *100, setY:320*Math.random() + 50}, {setX:650, setY:320*Math.random() + 50}, {setX:900, setY:-80}],
+                //autoRotate needs to know how to adjust x/y/rotation so we pass in the names of the apporpriate KineticJS methods
+                autoRotate:["setX","setY","setRotationDeg"]
+            },
+            ease:Linear.easeNone, autoCSS:false});
+        layer.add(creature);
+        return bezTween;
+    }
+//create a bunch of Bezier tweens and add them to a timeline
+    function buildTimeline() {
+        tl = new TimelineMax({repeat:4, delay:1});
+        for (i = 0 ; i< 30; i++){
+            //start creature animation every 0.12 seconds
+            tl.add(getAnimation(), i * 0.17);
+        }
+    }
+
+    function redraw(){
+        layer.draw();
+    }
+
+
+
+   //redraw layer each time a tick event fires
+    TweenLite.ticker.addEventListener("tick", redraw);
+    buildTimeline();
+
 }

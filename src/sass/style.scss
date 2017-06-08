@@ -752,7 +752,7 @@ svg {
     height: 100%;
     overflow: hidden;
   }
-  & #arrow, #eve_text {
+  & #arrow, #eve_text, #eve_canvas {
     position: absolute;
   }
   & #arrow {
@@ -765,6 +765,9 @@ svg {
     z-index: 2;
     align-self: center;
     opacity: 1;
+  }
+  & #eve_canvas {
+    align-self: center;
   }
 }
 
