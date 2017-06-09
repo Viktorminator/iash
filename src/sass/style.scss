@@ -810,7 +810,7 @@ svg {
     height: 100%;
     overflow: hidden;
   }
-  & #gra_text, #paper4, #stamp2, #hand3, .wax {
+  & #gra_text, #paper4, #stamp2, #hand3, #hand4, .wax {
     position: absolute;
   }
   & #gra_text {
@@ -828,6 +828,13 @@ svg {
   }
   & #knot4 {
     margin-right: -55%;
+    z-index: 4;
+  }
+  & #hand3 {
+    margin-left: -760px;
+    margin-top: -200px;
+    transform: rotate(50deg);
+    z-index: 5;
   }
 }
 
