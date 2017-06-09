@@ -792,7 +792,7 @@ svg {
     margin-left: 15%;
   }
 }
-/* Events anons intro */
+/* Grants intro */
 .project_grantsintro {
   &__content {
     display: flex;
@@ -815,26 +815,83 @@ svg {
   }
   & #gra_text {
     align-self: center;
-    opacity: 1;
-    z-index: 2;
+    opacity: 0;
+    z-index: 4;
   }
-  & #stamp2, .wax {
+  & #stamp2 {
     align-self: center;
+    margin-left: -360px;
+    margin-top: -600px;
+    z-index: 13;
+  }
+  .wax {
+    align-self: center;
+    opacity: 0;
+  }
+  #wax1 {
+    margin-left: -330px;
+    margin-top: 100px;
+  }
+  #wax2 {
+    margin-left: -360px;
+    margin-top: 93px;
+  }
+  #wax3 {
+    margin-left: -390px;
+    margin-top: 70px;
+  }
+  #wax4 {
+    margin-left: -370px;
+    margin-top: 110px;
+  }
+  #wax5 {
     margin-left: -360px;
     margin-top: 100px;
   }
-  & #stamp2 {
-    z-index: 3;
+  #wax6 {
+    margin-left: -360px;
+    margin-top: 100px;
+  }
+  #wax7 {
+    margin-left: -360px;
+    margin-top: 100px;
+  }
+  #wax8 {
+    margin-left: -360px;
+    margin-top: 100px;
+  }
+  #wax9 {
+    margin-left: -360px;
+    margin-top: 100px;
+  }
+  #wax10 {
+    margin-left: -360px;
+    margin-top: 100px;
+  }
+  #wax11 {
+    margin-left: -360px;
+    margin-top: 100px;
   }
   & #knot4 {
     margin-right: -55%;
     z-index: 4;
   }
   & #hand3 {
-    margin-left: -760px;
+    margin-left: -1060px;
     margin-top: -200px;
     transform: rotate(50deg);
-    z-index: 5;
+    opacity: 0;
+    z-index: 20;
+  }
+  & #hand4 {
+    margin-left: 300px;
+    bottom: -950px;
+    z-index: 20;
+  }
+  #paper4 {
+    margin-top: -600px;
+    height: 900px;
+    z-index: 2;
   }
 }
 

@@ -46,6 +46,22 @@ $(document).ready(function(){
         ,smoke5 = document.getElementById('smoke5')
         ,eve_text = document.getElementById('eve_text')
         ,arrow = document.getElementById('arrow')
+        // grants variable gra_text,stamp2,knot4,paper4,hand3,hand4,wax1-9
+        ,gra_text=document.getElementById('gra_text')
+        ,stamp2=document.getElementById('stamp2')
+        ,knot4=document.getElementById('knot4')
+        ,paper4=document.getElementById('paper4')
+        ,hand3=document.getElementById('hand3')
+        ,hand4=document.getElementById('hand4')
+        ,wax1=document.getElementById('wax1')
+        ,wax2=document.getElementById('wax2')
+        ,wax3=document.getElementById('wax3')
+        ,wax4=document.getElementById('wax4')
+        ,wax5=document.getElementById('wax5')
+        ,wax6=document.getElementById('wax6')
+        ,wax7=document.getElementById('wax7')
+        ,wax8=document.getElementById('wax8')
+        ,wax9=document.getElementById('wax9')
     ;
     var bh = window.innerHeight;
     var bw = window.innerWidth;
@@ -57,7 +73,8 @@ $(document).ready(function(){
     // startResourcesTween();
     // startPublishingTween();
     // startProjectsTween();
-    startEventsTween(bw, bh);
+    // startEventsTween();
+    startGrantsTween();
     // intro timeline animation
     var tl = new TimelineMax();
     tl.from('#intro_line', 1, { drawSVG: '0', delay: 2, ease: Power0.easeIn});
@@ -231,7 +248,7 @@ function startProjectsTween() {
     Pro.restart();
 }
 
-function startEventsTween(appWidth, appHeight) {
+function startEventsTween() {
     var Eve = new TimelineMax();
 
     Eve.to(smoke1, 4, { x: '+=300', y: '-=250', rotation: '-=50', scale: 2, opacity: 0.8,
@@ -248,4 +265,41 @@ function startEventsTween(appWidth, appHeight) {
     Eve.fromTo(arrow, 3, { x: '1400', y: '-40'}, { x: '-1200', y: '40', ease: SlowMo.ease.config(0.5, 0.8, false)}, 0.5);
 
     Eve.restart();
+}
+
+function startGrantsTween() {
+    var Gra = new TimelineMax();
+    // gra_text,stamp2,knot4,paper4,hand3,hand4,wax
+    Gra.to(knot4, 1, { y: '-=10' }, 0);
+    Gra.to(hand4, 0.5, { y: '-=740', ease: Power2.easeOut }, 0);
+    Gra.to(hand4, 0.1, { attr:{src:'/img/glove2.png', width: 335 } });
+    Gra.to(hand4, 0.7, { y: '+=540', ease: Power3.easeIn });
+    Gra.to(paper4, 0.7, { y: '+=550', ease: Power3.easeIn }, 1.1);
+    Gra.to(stamp2, 0.7, { y: '+=460', ease: Power3.easeIn  }, 1.15);
+    Gra.to(stamp2, 0.5, { y: '+=25', ease: Power2.easeOut });
+    Gra.to(gra_text, 1, { opacity: 1 }, 2);
+    Gra.to(hand4, 0.7, { y: '+=300', ease: Power3.easeIn }, 3);
+    Gra.to('.wax', 0.1, { opacity: 1 }, 2.5);
+    Gra.to(wax1, 0.7, { zIndex: 2 }, 2.6);
+    Gra.to(wax2, 0.6, { zIndex: 3 }, 3.3);
+    Gra.to(wax3, 0.5, { zIndex: 4 }, 3.9);
+    Gra.to(wax4, 0.3, { zIndex: 5 }, 4.4);
+    Gra.to(wax5, 0.2, { zIndex: 6 }, 4.7);
+    Gra.to(wax6, 0.1, { zIndex: 7 }, 4.8);
+    Gra.to(wax10, 0.1, { zIndex: 8 }, 4.9);
+    Gra.to(hand3, 0.1, { opacity: 1 }, 3.7);
+    Gra.to(hand3, 0.5, { x: '+=350', y: '-=50', rotation: '+=50', opacity: 1, ease: Power2.easeOut }, 3.8);
+    Gra.to(hand3, 0.1, { attr:{src:'/img/glove3.png', width: '335'}}, 3.9);
+    Gra.to(hand3, 0.5, { scale: 1.1, y: '+=30', rotation: '-=30' }, 4);
+    Gra.to(stamp2, 0.5, { y: '-=200', rotation: '-=30' }, 4);
+    Gra.to(hand3, 0.3, { scale: 0.95, y: '+=330', rotation: '+=20', ease: Power4.easeIn }, 4.8);
+    Gra.to(stamp2, 0.3, { y: '+=420', rotation: '+=20', ease: Power4.easeIn }, 4.8);
+    Gra.to(wax11, 0.1, { zIndex: 11 }, 5.1 );
+
+    Gra.to(hand3, 0.3, { x: '+=40', y: '-=280', rotation: '-=20' }, 5.6 );
+    Gra.to(stamp2, 0.3, { y: '-=350', rotation: '-=20' }, 5.6 );
+
+
+
+    Gra.restart();
 }
