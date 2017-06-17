@@ -20,7 +20,7 @@ block content
             | </svg>
             p ІНСТИТУТ СПЕЦІАЛЬНИХ ІСТОРИЧНИХ ДИСЦИПЛІН МУЗЕЮ ШЕРЕМЕТЬЄВИХ
     #main.main-container(role='main')
-        #pro.project.project_about
+        #abo_intro.project.project_about
             .project__bcg
             .project__content
                 .project__content--title
@@ -38,7 +38,10 @@ block content
                     p Інститут спеціальних історичних дисциплін Музею Шереметьєвих – це науково-дослідна установа, яка була створена з метою сприяння розвитку сфрагістики, геральдики, генеалогії та суміжних з ними дисциплін.
                         |  До роботи в Інституті залучаються провідні вітчизняні науковці,
                         | які активно займаються як прикладними дослідженнями, так і розвитком теоретичних підвалин зазначених галузей історичної науки.
-        #genintro.project.project_genintro
+        // ********************
+        // ** Genealogia intro
+        // ********************
+        #gen_intro.project.project_genintro
             .project__bcg
             .project__content
                 img#tubebad(src='/img/498x84.png')
@@ -55,7 +58,10 @@ block content
                 | </svg>
         #genealogia
         include _partials/items
-        #gen_intro.project_sfragistikaintro
+        // ********************
+        // ** Sfragistika intro
+        // ********************
+        #sfr_intro.project_sfragistikaintro
             .project_sfragistikaintro__bcg
             .project_sfragistikaintro__content
                 img#letter(src='/img/letter.png')
@@ -71,7 +77,10 @@ block content
                             tspan(x='-4', y='59') СФРАГІСТИКА
         #sfragistika
         include _partials/items
-        #sfr_intro.project_geraldikaintro
+        // ********************
+        // ** Geraldika intro
+        // ********************
+        #ger_intro.project_geraldikaintro
             .project_geraldikaintro__bcg
             .project_geraldikaintro__overlay#ger_overlay
             .project_geraldikaintro__content
@@ -87,8 +96,11 @@ block content
                     g#Page-1(stroke='none', stroke-width='1', fill='none', fill-rule='evenodd', font-weight='normal', font-size='80', font-family='HeliosCondLightC', font-style='condensed')
                         text(id='', fill='#fff')
                             tspan(x='-4', y='59') ГЕРАЛЬДИКА
-        #resources
+        #geraldika
         include _partials/items
+        // ********************
+        // ** Resources intro
+        // ********************
         #res_intro.project_resourcesintro
             .project_resourcesintro__bcg
             .project_resourcesintro__content
@@ -107,8 +119,9 @@ block content
                         text(id='', fill='#fff')
                             tspan(x='0', y='60') РЕСУРСИ
         include _partials/items
-
-        #publishing
+        // ********************
+        // ** Publishing intro
+        // ********************
         #pub_intro.project_publishingintro
             .project_publishingintro__bcg
             .project_publishingintro__overlay#pub_overlay
@@ -123,10 +136,11 @@ block content
                     g#Page-1(stroke='none', stroke-width='1', fill='none', fill-rule='evenodd', font-weight='normal', font-size='80', font-family='HeliosCondLightC', font-style='condensed')
                         text(id='', fill='#fff')
                             tspan(x='0', y='60') ВИДАВНИЦТВО
-
+        #publishing
         include _partials/items
-
-        #projects
+        // ********************
+        // ** Projects intro
+        // ********************
         #pro_intro.project_projectsintro
             .project_projectsintro__bcg
             .project_projectsintro__content
@@ -138,9 +152,11 @@ block content
                     g#Page-1(stroke='none', stroke-width='1', fill='none', fill-rule='evenodd', font-weight='normal', font-size='80', font-family='HeliosCondLightC', font-style='condensed')
                         text(id='', fill='#fff')
                             tspan(x='0', y='60') ПРОЕКТИ
-
+        #projects
         include _partials/items
-        #events
+        // ********************
+        // ** Events announces intro
+        // ********************
         #events_intro.project_eventsintro
             .project_eventsintro__bcg
             .project_eventsintro__content
@@ -158,8 +174,11 @@ block content
                 img#smoke3(src='/img/smokes/3.png')
                 img#smoke4(src='/img/smokes/2.png')
                 img#smoke5(src='/img/smokes/5.png')
-
-        #grants
+        #events
+        include _partials/items
+        // ********************
+        // ** Grants intro
+        // ********************
         #grants_intro.project_grantsintro
             .project_grantsintro__bcg
             .project_grantsintro__content
@@ -183,13 +202,9 @@ block content
                 img.wax#wax6(src='/img/wax/6.png')
                 img.wax#wax10(src='/img/wax/10.png')
                 img.wax#wax11(src='/img/wax/11.png')
-
-
-
-
-
-
-
+                img#smoke6(src='/img/smokes/3.png')
+        #grants
+        include _partials/items
 
     // #geraldika.project
             h1 Геральдика
@@ -201,13 +216,13 @@ block content
                     a(href='http://devuserlab.com', target='_blank') DevUserLab
 block body_end
     script(type="text/javascript" src="/js/classie.js")
-    script(type="text/javascript" src="/js/script.js")
+    //script(type="text/javascript" src="/js/script.js")
     script.
         window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\\/script>')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js')
     script(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/kinetic-v5.1.0.min.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js')
     script(src='js/DrawSVGPlugin.min.js')
     script(src='js/SplitText.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/ScrollToPlugin.min.js')
     script(src='js/main.js')

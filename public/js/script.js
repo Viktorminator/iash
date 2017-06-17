@@ -1,5 +1,6 @@
 (function() {
     var triggerBttn = document.getElementById( 'trigger-overlay' ),
+        menuLinks = document.querySelectorAll('.block > a'),
         overlay = document.querySelector( 'div.overlay' );
     transEndEventNames = {
         'WebkitTransition': 'webkitTransitionEnd',
@@ -35,6 +36,8 @@
             classie.add( triggerBttn, 'is-active');
         }
     }
-
+    console.log(menuLinks);
     triggerBttn.addEventListener( 'click', toggleOverlay );
+
+
 })();

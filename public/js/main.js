@@ -47,26 +47,46 @@ $(document).ready(function(){
         ,eve_text = document.getElementById('eve_text')
         ,arrow = document.getElementById('arrow')
         // grants variable gra_text,stamp2,knot4,paper4,hand3,hand4,wax1-9
-        ,gra_text=document.getElementById('gra_text')
-        ,stamp2=document.getElementById('stamp2')
-        ,knot4=document.getElementById('knot4')
-        ,paper4=document.getElementById('paper4')
-        ,hand3=document.getElementById('hand3')
-        ,hand4=document.getElementById('hand4')
-        ,wax1=document.getElementById('wax1')
-        ,wax2=document.getElementById('wax2')
-        ,wax3=document.getElementById('wax3')
-        ,wax4=document.getElementById('wax4')
-        ,wax5=document.getElementById('wax5')
-        ,wax6=document.getElementById('wax6')
-        ,wax7=document.getElementById('wax7')
-        ,wax8=document.getElementById('wax8')
-        ,wax9=document.getElementById('wax9')
+        ,gra_text = document.getElementById('gra_text')
+        ,stamp2 = document.getElementById('stamp2')
+        ,knot4 = document.getElementById('knot4')
+        ,paper4 = document.getElementById('paper4')
+        ,hand3 = document.getElementById('hand3')
+        ,hand4 = document.getElementById('hand4')
+        ,wax1 = document.getElementById('wax1')
+        ,wax2 = document.getElementById('wax2')
+        ,wax3 = document.getElementById('wax3')
+        ,wax4 = document.getElementById('wax4')
+        ,wax5 = document.getElementById('wax5')
+        ,wax6 = document.getElementById('wax6')
+        ,wax7 = document.getElementById('wax7')
+        ,wax8 = document.getElementById('wax8')
+        ,wax9 = document.getElementById('wax9')
+        ,smoke6 = document.getElementById('smoke6')
+        // var menu
+        ,triggerBttn = document.getElementById( 'trigger-overlay' )
+        ,menuLinks = document.querySelectorAll('.block > a')
+        ,overlay = document.querySelector( 'div.overlay' );
     ;
     var bh = window.innerHeight;
     var bw = window.innerWidth;
     console.log('bh = ' + bh + ', bw = ' + bw);
+    // Init controller
+    var controller = new ScrollMagic.Controller();
 
+    // Change behavior of controller
+    // to animate scroll instead of jump
+    controller.scrollTo(function(target) {
+
+        TweenMax.to(window, 0.5, {
+            scrollTo : {
+                y : target, // scroll position of the target along y axis
+                autoKill : true // allows user to kill scroll action smoothly
+            },
+            ease : Cubic.easeInOut
+        });
+
+    });
     // startGenealogiaTween();
     // startSfragistikaTween();
     // startGeraldikaTween(bw);
@@ -74,7 +94,28 @@ $(document).ready(function(){
     // startPublishingTween();
     // startProjectsTween();
     // startEventsTween();
-    startGrantsTween();
+    // startGrantsTween();
+    //  Bind scroll to anchor links
+    $(triggerBttn).on("click", function() {
+        $(overlay).toggleClass('open');
+        $(triggerBttn).toggleClass('is-active');
+    })
+    $(document).on("click", "a[href^=#]", function(e) {
+        var id = $(this).attr("href");
+
+        if($(id).length > 0) {
+            e.preventDefault();
+
+            // trigger scroll
+            controller.scrollTo(id);
+
+            // If supported by the browser we can also update the URL
+            if (window.history && window.history.pushState) {
+                history.pushState("", document.title, id);
+            }
+        }
+
+    });
     // intro timeline animation
     var tl = new TimelineMax();
     tl.from('#intro_line', 1, { drawSVG: '0', delay: 2, ease: Power0.easeIn});
@@ -271,15 +312,16 @@ function startGrantsTween() {
     var Gra = new TimelineMax();
     // gra_text,stamp2,knot4,paper4,hand3,hand4,wax
     Gra.to(knot4, 1, { y: '-=10' }, 0);
-    Gra.to(hand4, 0.5, { y: '-=740', ease: Power2.easeOut }, 0);
+    Gra.to(hand4, 0.3, { y: '-=740', ease: Power2.easeOut }, 0);
     Gra.to(hand4, 0.1, { attr:{src:'/img/glove2.png', width: 335 } });
     Gra.to(hand4, 0.7, { y: '+=540', ease: Power3.easeIn });
     Gra.to(paper4, 0.7, { y: '+=550', ease: Power3.easeIn }, 1.1);
     Gra.to(stamp2, 0.7, { y: '+=460', ease: Power3.easeIn  }, 1.15);
     Gra.to(stamp2, 0.5, { y: '+=25', ease: Power2.easeOut });
     Gra.to(gra_text, 1, { opacity: 1 }, 2);
-    Gra.to(hand4, 0.7, { y: '+=300', ease: Power3.easeIn }, 3);
+    Gra.to(hand4, 0.4, { y: '+=300', ease: Power3.easeIn }, 2);
     Gra.to('.wax', 0.1, { opacity: 1 }, 2.5);
+    Gra.to(smoke6, 0.1, { opacity: 0.7 }, 2.5);
     Gra.to(wax1, 0.7, { zIndex: 2 }, 2.6);
     Gra.to(wax2, 0.6, { zIndex: 3 }, 3.3);
     Gra.to(wax3, 0.5, { zIndex: 4 }, 3.9);
@@ -289,17 +331,24 @@ function startGrantsTween() {
     Gra.to(wax10, 0.1, { zIndex: 8 }, 4.9);
     Gra.to(hand3, 0.1, { opacity: 1 }, 3.7);
     Gra.to(hand3, 0.5, { x: '+=350', y: '-=50', rotation: '+=50', opacity: 1, ease: Power2.easeOut }, 3.8);
-    Gra.to(hand3, 0.1, { attr:{src:'/img/glove3.png', width: '335'}}, 3.9);
+    Gra.to(hand3, 0.1, { attr:{ src:'/img/glove3.png', width: '335'}}, 3.9);
     Gra.to(hand3, 0.5, { scale: 1.1, y: '+=30', rotation: '-=30' }, 4);
     Gra.to(stamp2, 0.5, { y: '-=200', rotation: '-=30' }, 4);
     Gra.to(hand3, 0.3, { scale: 0.95, y: '+=330', rotation: '+=20', ease: Power4.easeIn }, 4.8);
     Gra.to(stamp2, 0.3, { y: '+=420', rotation: '+=20', ease: Power4.easeIn }, 4.8);
     Gra.to(wax11, 0.1, { zIndex: 11 }, 5.1 );
-
-    Gra.to(hand3, 0.3, { x: '+=40', y: '-=280', rotation: '-=20' }, 5.6 );
-    Gra.to(stamp2, 0.3, { y: '-=350', rotation: '-=20' }, 5.6 );
-
-
+    Gra.to(smoke6, 0.1, { zIndex: 12 }, 5.1 );
+    Gra.to(paper4, 0.1, { y: '-=5', scale: 1.01, rotate: '-=1' }, 5.05);
+    Gra.to(paper4, 0.1, { y: '+=5', scale: 0.99, rotate: '+=1' }, 5.15);
+    Gra.to(stamp2, 0.01, { attr:{ src: '/img/stamp3.png' }}, 5.6);
+    Gra.to(hand3, 0.3, { x: '+=100', y: '-=230', rotation: '-=20', opacity: 1 }, 5.6);
+    Gra.to(stamp2, 0.3, { x: '+=100', y: '-=230', rotation: '-=20', opacity: 1 }, 5.6);
+    Gra.to(smoke6, 2, { rotation: '+=10', scale: 5, opacity: 0 }, 5.6);
+    Gra.to(hand3, 0.5, { x: '-=80', rotation: '+=2', attr:{ src:'/img/glove.png' }}, 5.9);
+    Gra.to(stamp2, 0.3, { x: '+=60', y: '-=60', rotation: '+=50'}, 5.9);
+    Gra.to(hand3, 0.5, { x: '-=1100', y: '+=40', rotation: '+=50'}, 6.2);
+    Gra.to(stamp2, 1, { rotation: '+=7', ease: Bounce.easeOut }, 6.2);
+    Gra.to(stamp2, 1, { x: '+=20 '}, 6.2 );
 
     Gra.restart();
 }

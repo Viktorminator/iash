@@ -7,10 +7,11 @@
 ------------------------*/
 /* searchbox */
 .header {
-  position: absolute;
+  position: fixed;
   right: 0;
   display: flex;
   justify-content: flex-end;
+  z-index: 300;
 }
 .search-wrapper form {
   display: flex;
@@ -810,7 +811,7 @@ svg {
     height: 100%;
     overflow: hidden;
   }
-  & #gra_text, #paper4, #stamp2, #hand3, #hand4, .wax {
+  & #gra_text, #paper4, #stamp2, #hand3, #hand4, .wax, #smoke6 {
     position: absolute;
   }
   & #gra_text {
@@ -852,18 +853,6 @@ svg {
     margin-left: -360px;
     margin-top: 100px;
   }
-  #wax7 {
-    margin-left: -360px;
-    margin-top: 100px;
-  }
-  #wax8 {
-    margin-left: -360px;
-    margin-top: 100px;
-  }
-  #wax9 {
-    margin-left: -360px;
-    margin-top: 100px;
-  }
   #wax10 {
     margin-left: -360px;
     margin-top: 100px;
@@ -892,6 +881,13 @@ svg {
     margin-top: -600px;
     height: 900px;
     z-index: 2;
+  }
+  #smoke6 {
+    align-self: center;
+    margin-left: -360px;
+    margin-top: 100px;
+    opacity: 0;
+    width: 300px;
   }
 }
 
