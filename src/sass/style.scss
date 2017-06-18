@@ -933,7 +933,131 @@ svg {
   }
 }
 
+/**
+** 3 columns 2 rows
+ */
+.project_columns {
+  .section {
+    height: 100%;
+    overflow: hidden;
+  }
+}
+#section-anons {
+  z-index: 2;
+  #anons-wrapper {
+    padding-left: 0;
+    font-size: 0;
+    height: 100%;
+    list-style-type: none;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    width: 100%;
+    li {
+      display: inline-block;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      width: 33.3%;
 
+      &.even {
+        .teaser-image {
+          top: 0;
+        }
+
+        .teaser-content {
+          bottom: 0;
+        }
+      }
+
+      &.odd {
+        .teaser-image {
+          bottom: 0;
+        }
+
+        .teaser-content {
+          top: 0;
+        }
+      }
+
+      &.open {
+        z-index: 10;
+      }
+
+      .teaser-image {
+        background-color: $primary-color;
+        background-position-x: center;
+        background-size: cover;
+        height: 50%;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+        @include transform(translateZ(0px));
+      }
+      .separator {
+        @include font-size(40px, 40px, 0);
+        @include transform(translateZ(1px));
+        color: white;
+        font-family: 'icon';
+        left: 50%;
+        margin-left: -37px;
+        position: absolute;
+        top: 50%;
+        z-index: 1;
+
+        &.iconpointer-up {
+          margin-top: -34px;
+        }
+
+        &.iconpointer-down {
+          margin-top: -4px;
+        }
+      }
+
+      .teaser-content {
+        background-color: $secondary-color;
+        @include transform(translateZ(2px));
+        height: 50%;
+        overflow: hidden;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .teaser-text {
+          .stamp {
+            width: 30px;
+            height: 30px;
+          }
+          .line {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            left: -22px;
+            top: -14px
+          }
+          position: relative;
+          width: auto;
+          display: flex;
+          flex-direction: row;
+          z-index: 3;
+
+          h3 {
+            font-family: 'Bodoni';
+            font-weight: 500;
+            @include font-size(24px, 1em, 1);
+            padding: 6px 0 0 5px;
+            margin: 0 auto;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}
 /**
 ** Navigation arrow
  */

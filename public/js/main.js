@@ -87,6 +87,7 @@ $(document).ready(function(){
         });
 
     });
+    // startIntrotextTween();
     // startGenealogiaTween();
     // startSfragistikaTween();
     // startGeraldikaTween(bw);
@@ -116,7 +117,9 @@ $(document).ready(function(){
         }
 
     });
-    // intro timeline animation
+});
+
+function startIntrotextTween() {
     var tl = new TimelineMax();
     tl.from('#intro_line', 1, { drawSVG: '0', delay: 2, ease: Power0.easeIn});
     // intro text
@@ -133,7 +136,7 @@ $(document).ready(function(){
     tla.from('#about_mask', 1.5, { x: '-170', ease: Bounce.easeOut, delay: -1.5});
     tla.from('.project__content--text h1', 1.5, { opacity: '0', delay: -1.5});
     tla.from('.project__content--text p', 1.5, { opacity: '0', ease: Power0.easeIn});
-});
+}
 
 function startGenealogiaTween() {
     /* Genealogia timeline with paper */
