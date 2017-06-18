@@ -65,7 +65,6 @@ $(document).ready(function(){
         ,smoke6 = document.getElementById('smoke6')
         // var menu
         ,triggerBttn = document.getElementById( 'trigger-overlay' )
-        ,menuLinks = document.querySelectorAll('.block > a')
         ,overlay = document.querySelector( 'div.overlay' );
     ;
     var bh = window.innerHeight;
@@ -96,6 +95,7 @@ $(document).ready(function(){
     // startProjectsTween();
     // startEventsTween();
     // startGrantsTween();
+    // Menu interaction
     //  Bind scroll to anchor links
     $(triggerBttn).on("click", function() {
         $(overlay).toggleClass('open');
@@ -106,7 +106,8 @@ $(document).ready(function(){
 
         if($(id).length > 0) {
             e.preventDefault();
-
+            $(overlay).toggleClass('open');
+            $(triggerBttn).toggleClass('is-active');
             // trigger scroll
             controller.scrollTo(id);
 
