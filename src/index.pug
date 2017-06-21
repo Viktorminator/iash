@@ -215,13 +215,17 @@ block content
                     | 2017 &copy;
                     a(href='http://devuserlab.com', target='_blank') DevUserLab
 block body_end
-    script(type="text/javascript" src="/js/classie.js")
+    //script(type="text/javascript" src="/js/classie.js")
     //script(type="text/javascript" src="/js/script.js")
     script.
         window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\\/script>')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js')
-    script(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/kinetic-v5.1.0.min.js')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js')
+    //script(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/kinetic-v5.1.0.min.js')
+    script(src='js/ScrollMagic.min.js')
+    script(src='js/plugins/debug.addIndicators.min.js')
+    script(src='js/plugins/animation.gsap.min.js')
+    script(src='js/plugins/animation.velocity.min.js')
+    script(src='js/plugins/jquery.ScrollMagic.min.js')
     script(src='js/DrawSVGPlugin.min.js')
     script(src='js/SplitText.min.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/ScrollToPlugin.min.js')
