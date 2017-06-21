@@ -187,7 +187,7 @@ $(document).ready(function(){
     Sfr.to(letter, 1, { y: '+=200' }, 3.3);
     Sfr.to(sfr_text, 1, { css:{ opacity: 1 }}, 3.3);
     Sfr.restart();
-    var sceneSfragistika = new ScrollMagic.Scene({ triggerElement: '#gen_intro'})
+    var sceneSfragistika = new ScrollMagic.Scene({ triggerElement: '#sfr_intro'})
         .addIndicators({name: "Genealogia"})
         .addTo(controller)
         .setTween(Sfr);
