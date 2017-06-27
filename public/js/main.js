@@ -196,8 +196,6 @@ $(document).ready(function(){
      * GERALDIKA SCENE
      */
     var Grl = new TimelineMax();
-    var leftSaber2 = bw/3;
-    var rightSaber = bw/7;
     Grl.to(saber, 0.2, { rotation: '+=5' });
     Grl.to(saber, 0.5, { rotation: '-=10' });
     Grl.to(saber, 1.8, { rotation: '+=5' , ease:Elastic.easeOut.config(1, 0.75)});
@@ -377,6 +375,61 @@ $(document).ready(function(){
             }
         }
 
+    });
+    /**
+     * Slide scroller
+     */
+    var delta = 0;
+    var currentSlideIndex = 0;
+    var scrollThreshold = 4;
+    function elementScroll (e) {
+
+        // --- Scrolling up ---
+        if (e.originalEvent.detail < 0 || e.originalEvent.wheelDelta > 0) {
+
+            delta--;
+
+            if ( Math.abs(delta) >= scrollThreshold) {
+                console.log('prev');
+            }
+        }
+
+        // --- Scrolling down ---
+        else {
+
+            delta++;
+
+            if (delta >= scrollThreshold) {
+                console.log('next');
+            }
+        }
+
+        // Prevent page from scrolling
+        return false;
+    }
+
+    function prevSlide() {
+
+        currentSlideIndex--;
+
+        if (currentSlideIndex < 0) {
+            currentSlideIndex = 0;
+        }
+
+    }
+
+    function nextSlide() {
+
+        currentSlideIndex++;
+
+        if (currentSlideIndex > numSlides) {
+            currentSlideIndex = numSlides;
+        }
+
+    }
+
+    $(window).on({
+        'DOMMouseScroll mousewheel': elementScroll
     });
 });
 
