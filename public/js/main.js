@@ -252,8 +252,8 @@ function startIntroTween() {
     // intro text
     introtext = new SplitText(".intro__content p", {type: "words,chars"});
     tl.staggerFrom(introtext.chars, 0.6, {opacity:0, scale: .1}, 0.05);
-    tl.from('#intro_text', 3, { x: '160', ease: Back.easeOut.config(1.7) }, 4);
-    tl.from('#intro_mask', 3, { x: '-160', ease: Back.easeOut.config(1.7) }, 4);
+    tl.from('#intro_text', 3, { x: '160', ease: Back.easeOut.config(1.7) }, 5);
+    tl.from('#intro_mask', 3, { x: '-160', ease: Back.easeOut.config(1.7) }, 5);
     tl.restart();
     return tl;
 }
