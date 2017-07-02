@@ -404,13 +404,11 @@ svg {
     width: auto;
     display: flex;
     flex-direction: row;
-    z-index: 3;
+    z-index: 5;
+    padding-top: 100px;
     &--title {
-      color: $secondary-color;
       font-family: 'Helios', sans-serif;
-      font-size: 70px;
       font-weight: 100;
-      z-index: 2;
       margin: 0 -40px;
     }
     &--line {
@@ -420,10 +418,10 @@ svg {
       transform: skew(-30deg);
     }
     &--text {
-      max-width: 500px;
+      max-width: 600px;
       font-family: 'BodoniItalic', sans-serif;
       z-index: 3;
-      font-size: 17px;
+      font-size: 24px;
       & h1 {
         position: absolute;
         right: 0;
@@ -431,7 +429,8 @@ svg {
         font-size: 1.6em;
       }
       & p {
-        padding: 50px 0 100px 15px;
+        color: $secondary-color;
+        padding: 60px 0 100px 15px;
         text-align: justify;
         &::first-letter {
           font-size: 50px;
@@ -446,6 +445,7 @@ svg {
     position: absolute;
     width: 100%;
     height: 100%;
+    z-index: 4;
   }
 }
 /* Genealogia intro */
