@@ -9,13 +9,13 @@ block content
     #main.main-container(role='main')
         #intro.intro
             .intro__content
-                svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='400', height='100', viewbox='0 0 400 100', aria-labelledby='title')
+                svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='400', height='200', viewbox='0 0 400 200', aria-labelledby='title')
                     title#title Інститут сфрагістики
                     g
                         clippath#introtext_mask
-                            polygon#intro_mask(stroke='', points='0 0 400 0 340 100 0 100')
-                    text#intro_text(clip-path='url(#introtext_mask)', height='100%', width='100%', x='225', y='85') IASH
-                    line#intro_line(x1='400', y1='0', x2='340', y2='100', style='stroke:#6d6855;stroke-width:1')
+                            polygon#intro_mask(stroke='', points='0 0 400 0 300 200 0 200')
+                    text#intro_text(clip-path='url(#introtext_mask)', height='100%', width='100%', x='200', y='135', font-size='100') IASH
+                    line#intro_line(x1='400', y1='0', x2='300', y2='200', style='stroke:#6d6855;stroke-width:1')
                 p ІНСТИТУТ СПЕЦІАЛЬНИХ ІСТОРИЧНИХ ДИСЦИПЛІН МУЗЕЮ ШЕРЕМЕТЬЄВИХ
 
         #abo_intro.project.project_about
@@ -47,10 +47,8 @@ block content
                 img#hat(src='/img/hat.png')
                 img#tail1(src='/img/tail1.png')
                 img#tail2(src='/img/tail2.png')
-                // img#switch(src='/img/switch.png')
-                | <svg id="gen_text" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="100" viewBox="0 0 400 100" >
-                |  <text id="gen_text_content" height="100%" width="100%" x="110" y="60">ГЕНЕАЛОГІЯ</text>
-                | </svg>
+                svg#gen_text(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='400', height='100', viewbox='0 0 400 100')
+                    text#gen_text_content(height='100%', width='100%', x='110', y='60') ГЕНЕАЛОГІЯ
         #genealogia
         include _partials/items
         // ********************

@@ -1,10 +1,9 @@
 header.header
     .search-wrapper
         form
-            input#search.search-wrapper-input(placeholder='Введіть запит...', type='search', value='', name='search')
-            |
+            input#search.search-wrapper-input(placeholder='Введіть запит...', type='search', value='', name='search', style='display: none;')
             input.search-wrapper-submit(type='submit', value='')
-            span.search-wrapper-icon
+            span.search-wrapper-icon#search-icon
     button.hamburger.hamburger--spin.js-hamburger(type='button', id='trigger-overlay')
         span.hamburger-box
             span.hamburger-inner
