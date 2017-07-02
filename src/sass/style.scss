@@ -31,8 +31,8 @@
   height: 45px;
   margin: 0;
   z-index: 10;
-  font-family: 'HeliosCondLightC', Arial;
-  font-size: 30px;
+  font-family: 'HeliosCondLightC', Arial, sans-serif;
+  font-size: 20px;
 }
 input[type="search"].search-wrapper-input {
   -webkit-appearance: none;
@@ -201,7 +201,6 @@ svg {
   overflow: hidden;
   &__content {
     position: relative;
-    padding-left: 100px;
     width: auto;
     display: flex;
     flex-direction: row;
@@ -341,6 +340,57 @@ svg {
     }
   }
 }
+.project {
+  height: 100vh;
+  &__content {
+    position: relative;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    z-index: 3;
+    &--title {
+      color: $secondary-color;
+      font-family: 'Helios', sans-serif;
+      font-size: 70px;
+      font-weight: 100;
+      z-index: 2;
+      margin: 0 -40px;
+    }
+    &--line {
+      height: 100px;
+      width: 10px;
+      border-right: 2px solid $secondary-color;
+      transform: skew(-30deg);
+    }
+    &--text {
+      max-width: 500px;
+      font-family: 'BodoniItalic', sans-serif;
+      z-index: 3;
+      font-size: 17px;
+      & h1 {
+        position: absolute;
+        right: 0;
+        font-family: 'Bodoni', Arial, sans-serif;
+        font-size: 1.6em;
+      }
+      & p {
+        padding: 50px 0 100px 15px;
+        text-align: justify;
+        &::first-letter {
+          font-size: 50px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+  &__bcg {
+    background: url('/img/background1.png') no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
 /* ABOUT */
 .project_about {
   padding: 0;
@@ -348,8 +398,6 @@ svg {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.project {
   height: 100vh;
   &__content {
     position: relative;
@@ -402,6 +450,12 @@ svg {
 }
 /* Genealogia intro */
 .project_genintro {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   display: flex;
   justify-content: center; /* align horizontal */
   align-items: center; /* align vertical */
@@ -647,7 +701,6 @@ svg {
   }
 
 }
-
 /* Publishing intro */
 .project_publishingintro {
   &__content {
@@ -700,7 +753,6 @@ svg {
     margin-left: -80px;
   }
 }
-
 /* Projects intro */
 .project_projectsintro {
   &__content {
