@@ -167,6 +167,7 @@ $(document).ready(function(){
         $(overlay).toggleClass('open');
         $(triggerBttn).toggleClass('is-active');
     });
+
     $(document).on("click", "a[href^=#]", function(e) {
         var id = $(this).attr("href");
 
@@ -176,7 +177,7 @@ $(document).ready(function(){
             $(triggerBttn).toggleClass('is-active');
             // trigger scroll
             controller.scrollTo(id);
-
+            console.log(id);
             // If supported by the browser we can also update the URL
             if (window.history && window.history.pushState) {
                 history.pushState("", document.title, id);
@@ -190,6 +191,19 @@ $(document).ready(function(){
     var delta = 0;
     var currentSlideIndex = 0;
     var scrollThreshold = 4;
+    var anchors = [
+        'intro', 'abo_intro',
+        'gen_intro', 'genealogia',
+        'sfr_intro', 'sfragistika',
+        'ger_intro', 'geraldika',
+        'res_intro', 'resursi',
+        'pub_intro', 'publishing',
+        'pro_intro', 'projects',
+        'eve_intro', 'eve',
+        'gra_intro', 'gra'
+    ];
+    var numSlides = anchors.length - 1;
+
     function elementScroll (e) {
 
         // --- Scrolling up ---
@@ -198,7 +212,8 @@ $(document).ready(function(){
             delta--;
 
             if ( Math.abs(delta) >= scrollThreshold) {
-                console.log('prev');
+                //console.log('prev');
+                prevSlide();
             }
         }
 
@@ -208,7 +223,8 @@ $(document).ready(function(){
             delta++;
 
             if (delta >= scrollThreshold) {
-                console.log('next');
+                //console.log('next');
+                nextSlide();
             }
         }
 
@@ -224,6 +240,15 @@ $(document).ready(function(){
             currentSlideIndex = 0;
         }
 
+        console.log(anchors[currentSlideIndex]);
+
+        controller.scrollTo('#' + anchors[currentSlideIndex]);
+
+        // If supported by the browser we can also update the URL
+        if (window.history && window.history.pushState) {
+            history.pushState("", document.title, '#' + anchors[currentSlideIndex]);
+        }
+
     }
 
     function nextSlide() {
@@ -234,6 +259,14 @@ $(document).ready(function(){
             currentSlideIndex = numSlides;
         }
 
+        console.log(anchors[currentSlideIndex]);
+
+        controller.scrollTo('#' + anchors[currentSlideIndex]);
+
+        if (window.history && window.history.pushState) {
+            history.pushState("", document.title, '#' + anchors[currentSlideIndex]);
+        }
+
     }
 
     $(window).on({
@@ -242,7 +275,7 @@ $(document).ready(function(){
 
     $('#search-icon').click(function () {
         $('#search').toggle();
-        console.log('toggle search');
+        // console.log('toggle search');
     });
 });
 
