@@ -204,7 +204,6 @@ svg {
     position: relative;
     display: flex;
     align-self: center;
-    margin-left: -50px;
     & svg {
       font-family: 'Helios', sans-serif;
       font-size: 100px;
@@ -213,7 +212,7 @@ svg {
     }
     & p {
       margin: 0;
-      width: 470px;
+      width: 400px;
       height: 270px;
       padding: 50px 0 0 0;
       font-family: 'Bodoni', sans-serif;
@@ -405,7 +404,8 @@ svg {
     display: flex;
     flex-direction: row;
     z-index: 5;
-    padding-top: 100px;
+    margin-top: 180px;
+    margin-left: 20px;
     &--title {
       font-family: 'Helios', sans-serif;
       font-weight: 100;
@@ -418,15 +418,18 @@ svg {
       transform: skew(-30deg);
     }
     &--text {
-      max-width: 600px;
+      max-width: 710px;
+      margin-left: 10px;
       font-family: 'BodoniItalic', sans-serif;
       z-index: 3;
       font-size: 24px;
+      letter-spacing: 0.2ex;
       & h1 {
         position: absolute;
         right: 0;
         font-family: 'Bodoni', Arial, sans-serif;
-        font-size: 1.6em;
+        font-size: 34px;
+        margin-top: 12px !important;
       }
       & p {
         color: $secondary-color;
@@ -440,7 +443,8 @@ svg {
     }
   }
   &__bcg {
-    background: url('/img/background1.png') no-repeat;
+    background: url('/img/background1.png'), url('/img/overlay.png') no-repeat;
+    background-blend-mode: multiply;
     background-size: cover;
     position: absolute;
     width: 100%;
@@ -505,14 +509,13 @@ svg {
   }
   & #gen_text_content {
     position: relative;
-    @include font-size(60px, 60px, 0);
     font-family: 'HeliosCondLightC', Arial, sans-serif;
     z-index: 2;
   }
   & #gen_text {
     opacity: 0; 
     visibility: hidden;
-    margin-left: 110px;
+    margin-left: 76px;
   }
   & #hat {
     right: -19px;
