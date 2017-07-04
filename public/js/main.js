@@ -210,11 +210,12 @@ $(document).ready(function(){
         if (e.originalEvent.detail < 0 || e.originalEvent.wheelDelta > 0) {
 
             delta--;
-
+            if (delta < -4 ) { delta = 0; }
             if ( Math.abs(delta) >= scrollThreshold) {
                 //console.log('prev');
                 prevSlide();
             }
+            console.log('delta = ' + delta);
         }
 
         // --- Scrolling down ---
@@ -226,6 +227,8 @@ $(document).ready(function(){
                 //console.log('next');
                 nextSlide();
             }
+            console.log('delta = ' + delta);
+
         }
 
         // Prevent page from scrolling
@@ -241,14 +244,11 @@ $(document).ready(function(){
         }
 
         console.log(anchors[currentSlideIndex]);
-
-        controller.scrollTo('#' + anchors[currentSlideIndex]);
-
-        // If supported by the browser we can also update the URL
-        if (window.history && window.history.pushState) {
-            history.pushState("", document.title, '#' + anchors[currentSlideIndex]);
-        }
-
+        console.log(currentSlideIndex);
+        if(currentSlideIndex >= 0) {
+            controller.scrollTo('#' + anchors[currentSlideIndex]);
+            // If supported by the browser we can also update the URL
+         }
     }
 
     function nextSlide() {
@@ -260,13 +260,9 @@ $(document).ready(function(){
         }
 
         console.log(anchors[currentSlideIndex]);
-
-        controller.scrollTo('#' + anchors[currentSlideIndex]);
-
-        if (window.history && window.history.pushState) {
-            history.pushState("", document.title, '#' + anchors[currentSlideIndex]);
+        if (currentSlideIndex < numSlides) {
+            controller.scrollTo('#' + anchors[currentSlideIndex]);
         }
-
     }
 
     $(window).on({
