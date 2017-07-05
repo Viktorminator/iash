@@ -170,28 +170,11 @@ $(document).ready(function(){
         $(triggerBttn).toggleClass('is-active');
     });
 
-    $(document).on("click", "a[href^=#]", function(e) {
-        var id = $(this).attr("href");
 
-        if($(id).length > 0) {
-            e.preventDefault();
-            $(overlay).toggleClass('open');
-            $(triggerBttn).toggleClass('is-active');
-            // trigger scroll
-            controller.scrollTo(id);
-            console.log(id);
-            // If supported by the browser we can also update the URL
-            if (window.history && window.history.pushState) {
-                history.pushState("", document.title, id);
-            }
-        }
-
-    });
     /**
      * Slide scroller
      */
     var delta = 0;
-    var currentSlideIndex = 0;
     var scrollThreshold = 4;
     var anchors = [
         'intro', 'abo_intro',
@@ -204,7 +187,8 @@ $(document).ready(function(){
         'eve_intro', 'eve',
         'gra_intro', 'gra'
     ];
-    var numSlides = anchors.length - 1;
+    var currentSlideIndex = (window.location.hash ? anchors.indexOf(window.location.hash.slice(1)) : 0);
+    var numSlides = anchors.length;
 
     function elementScroll (e) {
 
@@ -212,11 +196,12 @@ $(document).ready(function(){
         if (e.originalEvent.detail < 0 || e.originalEvent.wheelDelta > 0) {
 
             delta--;
-            if (delta < -4 ) { delta = 0; }
             if ( Math.abs(delta) >= scrollThreshold) {
                 //console.log('prev');
                 prevSlide();
+                delta = 0;
             }
+
             console.log('delta = ' + delta);
         }
 
@@ -225,9 +210,10 @@ $(document).ready(function(){
 
             delta++;
 
-            if (delta >= scrollThreshold) {
+            if (delta > scrollThreshold) {
                 //console.log('next');
                 nextSlide();
+                delta = 0;
             }
             console.log('delta = ' + delta);
 
@@ -274,6 +260,28 @@ $(document).ready(function(){
     $('#search-icon').click(function () {
         $('#search').toggle();
         // console.log('toggle search');
+    });
+
+    $(document).on("click", "a[href^=#]", function(e) {
+        var id = $(this).attr("href");
+
+        if($(id).length > 0) {
+            e.preventDefault();
+            $(overlay).toggleClass('open');
+            $(triggerBttn).toggleClass('is-active');
+            // trigger scroll
+            controller.scrollTo(id);
+            // console.log(id);
+            // If supported by the browser we can also update the URL
+            if (window.history && window.history.pushState) {
+                history.pushState("", document.title, id);
+            }
+            var anchor = id.slice(1); // remove # from #anchorname
+            currentSlideIndex = anchors.indexOf(anchor);
+            // console.log('anchor = ' + anchor + ' currentSlideIndex =' + currentSlideIndex);
+            // console.log('anchors.id = ' + anchors[anchor]);
+        }
+
     });
 });
 
