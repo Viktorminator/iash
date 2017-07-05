@@ -438,10 +438,10 @@ function startPublishingTween() {
 
 function startProjectsTween() {
     var Pro = new TimelineMax();
-    Pro.to(lupa2, 2, { x: '+=100', y: '+=300', rotation: '-=3' });
+   Pro.to(lupa2, 2, { x: '+=100', y: '+=300', rotation: '-=3' });
     Pro.to(glass, 2, { x: '+=100', y: '+=300', rotation: '-=3' }, 0);
     Pro.to(lupa2, 1, { x: '-=180', y: '-=70', rotation: '+=3', scale: 1.3 }, 2);
-    Pro.to(lupa2, 1, { x: '-=180', y: '-=70', rotation: '+=3', scale: 1.3 }, 2);
+    Pro.to(glass, 1, { x: '-=160', y: '-=120', rotation: '+=3', scale: 1.3 }, 2);
     Pro.to(pro_text, 1, { css:{ opacity: 1 } });
     Pro.restart();
     return Pro;
