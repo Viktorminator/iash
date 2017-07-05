@@ -32,7 +32,6 @@
   font-size: $font-size;
   letter-spacing: $font-size * $letter-spacing / 1000;
   line-height: $line-height;
-
 }
 
 @mixin column ($column, $gap) {

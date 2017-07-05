@@ -34,10 +34,12 @@ $(document).ready(function(){
         ,book = document.getElementById('book')
         ,lupa = document.getElementById('lupa')
         ,hand = document.getElementById('hand')
+        ,paper5 = document.getElementById('paper5')
         ,pub_text = document.getElementById('pub_text')
         ,pub_overlay = document.getElementById('pub_overlay')
         // projects variables
         ,lupa2=document.getElementById('lupa2')
+        ,glass=document.getElementById('glass')
         ,pro_text=document.getElementById('pro_text')
         // events variables
         ,smoke1 = document.getElementById('smoke1')
@@ -416,17 +418,20 @@ function startResourcesTween() {
 
 function startPublishingTween() {
     var Pub = new TimelineMax();
-    Pub.to(book, 1, { y: '+=940' });
+    Pub.to(book, 2, { x: '+=20',y: '+=940' });
+    Pub.to(paper5, 2, { x: '+=20',y: '+=1040' }, 0);
     Pub.to(lupa, 0.3, { x: '-=20', y: '-=20' }, 0.5);
     Pub.to(lupa, 0.5, { x: '+=10', y: '+=40' }, 0.8);
     Pub.to(lupa, 0.5, { rotation: '-=2' }, 0.5);
     Pub.to(lupa, 0.5, { rotation: '+=2' }, 1);
-    Pub.to(pub_text, 1, { css:{ opacity: 1 } }, 1);
+    Pub.to(pub_text, 1, { css:{ opacity: 1 } }, 2);
     Pub.to(pub_overlay, 1, {  css:{ opacity: 1 } }, 1.2);
-    Pub.to(hand, 1, { x: '+=100', y: '-=300' }, 1.5);
-    Pub.to(hand, 0.8, { x: '+=100', y: '-=20' }, 2.3);
+    Pub.to(hand, 1, { x: '+=100', y: '-=200' }, 1.5);
+    Pub.to(hand, 0.8, { rotation: '+=10', x: '+=100', y: '-=20' }, 2.3);
     Pub.to(lupa, 0.8, { x: '+=100', y: '-=20' }, 2.3);
-    Pub.to(book, 1, { y: '+=500' }, 2.3);
+    Pub.to(book, 1, {  y: '-=50' }, 2.3);
+    Pub.to(paper5, 1, { x: '+=100', y: '-=50' }, 2.8);
+
     Pub.restart();
     return Pub;
 }
@@ -434,7 +439,9 @@ function startPublishingTween() {
 function startProjectsTween() {
     var Pro = new TimelineMax();
     Pro.to(lupa2, 2, { x: '+=100', y: '+=300', rotation: '-=3' });
-    Pro.to(lupa2, 1, { x: '-=180', y: '-=70', rotation: '+=3', scale: 1.3 });
+    Pro.to(glass, 2, { x: '+=100', y: '+=300', rotation: '-=3' }, 0);
+    Pro.to(lupa2, 1, { x: '-=180', y: '-=70', rotation: '+=3', scale: 1.3 }, 2);
+    Pro.to(lupa2, 1, { x: '-=180', y: '-=70', rotation: '+=3', scale: 1.3 }, 2);
     Pro.to(pro_text, 1, { css:{ opacity: 1 } });
     Pro.restart();
     return Pro;
