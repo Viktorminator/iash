@@ -459,9 +459,6 @@ svg {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  display: flex;
-  justify-content: center; /* align horizontal */
-  align-items: center; /* align vertical */
   & #tubebad {
     position: absolute;
     width: 690px;
@@ -586,8 +583,8 @@ svg {
 .project_geraldikaintro {
     &__content {
       display: flex;
-      justify-content: flex-end;
-      align-items: flex-start;
+      align-items: center;
+      justify-content: center;
       position: relative;
       overflow: hidden;
       height: 100vh;
@@ -608,28 +605,23 @@ svg {
       height: 100%;
       visibility: hidden;
     }
-    & #saber, #scabbard, #knot {
+    & #saber, #saber2, #scabbard, #knot {
       position: absolute;
     }
-    & #saber {
-      transform-origin: 80% 0;
-      margin-left: 40px;
-      margin-top: -20px;
+    & #scabbard {
       z-index: 2;
+      margin-top: -360px;
+      margin-left: 500px;
     }
     & #saber2 {
-      position: absolute;
-      margin-top: 210px;
-      margin-left: 360px;
-      visibility: hidden;
+      margin-top: -100px;
+      margin-left: 120px;
     }
     & #knot {
       margin-left: -60px;
     }
     & #ger_text {
       position: absolute;
-      margin-top: 370px;
-      margin-left: -28%;
       z-index: 4;
       opacity: 0;
     }

@@ -15,12 +15,12 @@ $(document).ready(function(){
         ,stamper = document.getElementById('stamper')
         ,sfr_text = document.getElementById('sfr_text')
         // geraldika variables
-        ,saber = document.getElementById('saber')
+        //,saber = document.getElementById('saber')
         ,scabbard = document.getElementById('scabbard')
         ,saber2 = document.getElementById('saber2')
-        ,garda = document.getElementById('garda')
+        //,garda = document.getElementById('garda')
         ,ger_overlay = document.getElementById('ger_overlay')
-        ,knot = document.getElementById('knot')
+        //,knot = document.getElementById('knot')
         // resources variables
         ,paper3 = document.getElementById('paper3')
         ,paper1 = document.getElementById('paper1')
@@ -376,16 +376,17 @@ function startSfragistikaTween() {
 function startGeraldikaTween(bw) {
     /* Geraldika timeline */
     var Grl = new TimelineMax();
-    Grl.to(saber, 0.2, { rotation: '+=5' });
-    Grl.to(saber, 0.5, { rotation: '-=10' });
-    Grl.to(saber, 1.8, { rotation: '+=5' , ease:Elastic.easeOut.config(1, 0.75)});
-    Grl.to(saber, 0.01, {attr:{src:'/img/scabbard.png'}}, 1.5);
+    Grl.to(scabbard, 1, { y: '100', ease:Elastic.easeOut.config(1, 0.75)  }, 0 );
+    Grl.to(saber2, 1, { y: '100', ease:Elastic.easeOut.config(1, 0.75)  }, 0 );
+    /*  Grl.to(saber, 0.01, {attr:{src:'/img/scabbard.png'}}, 1.5);
     Grl.to(saber2, 0.01, { autoAlpha: 1 }, 1.5);
     Grl.to(garda, 0.01, { autoAlpha: 1}, 1.5);
     Grl.to(saber, 1, { x: '+=100', y: '-=25', rotation: '-=4' }, 2);
     Grl.to(saber2, 1, { x: '-=500', rotation: '+=2' }, 2);
     Grl.to(garda, 1, {x: '-=500', y: '-=7', rotation: '+=2' }, 2);
-    Grl.to(knot, 1, { x: '-=40', y: '-=10', rotation: '+=10', ease: Back.easeOut }, 2);
+    Grl.to(knot, 1, { x: '-=40', y: '-=10', rotation: '+=10', ease: Back.easeOut }, 2);*/
+    Grl.to(scabbard, 1, { x: '+=300', rotation: '-=2' }, 2);
+    Grl.to(saber2, 1, { x: '-=500', rotation: '+=0.5' }, 2);
     Grl.to(ger_text, 1, { css:{ opacity: 1 }}, 2.3 );
     Grl.to(ger_overlay, 1, { autoAlpha: 1  }, 2.3 );
     Grl.restart();
@@ -439,7 +440,6 @@ function startPublishingTween() {
     Pub.to(lupa, 0.8, { x: '+=100', y: '-=20' }, 2.3);
     Pub.to(book, 1, {  y: '-=50' }, 2.3);
     Pub.to(paper5, 1, { x: '+=100', y: '-=50' }, 2.8);
-
     Pub.restart();
     return Pub;
 }
