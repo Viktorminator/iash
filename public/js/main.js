@@ -311,7 +311,7 @@ function startAboutTween() {
 function startGenealogiaTween() {
     /* Genealogia timeline with paper */
     var Gtl = new TimelineMax();
-    Gtl.from(tubebad, 3, { x: 0, y: -500 , ease:Elastic.easeOut.config(1, 0.75)});
+    Gtl.from(tubebad, 3, { x: 0, y: 1500 , ease:Elastic.easeOut.config(1, 0.75)});
     Gtl.to(tubebad, 1, { rotation: '-5', transformOrigin: '100% 0' }, 0.5);
     Gtl.to(tubebad, 1, { rotation: 0, transformOrigin: '100% 0' }, 1.2);
     Gtl.to(swatch, 0.01, { autoAlpha: 1});
