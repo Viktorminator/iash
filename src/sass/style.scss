@@ -300,41 +300,38 @@ svg {
         height: 50%;
         overflow: hidden;
         position: absolute;
-        text-align: center;
         width: 100%;
         z-index: 2;
         display: flex;
         align-items: center;
         justify-content: center;
-
+        text-decoration: none;
+        &:visited {
+          color: $primary-color;
+        }
         .teaser-text {
-          .stamp {
-            width: 30px;
-            height: 30px;
-          }
-          .line {
-            width: 60px;
-            height: 60px;
-            position: absolute;
-            left: -22px;
-            top: -14px
-          }
-          position: relative;
-          width: auto;
           display: flex;
-          flex-direction: row;
-          z-index: 3;
+          align-self: center;
+          justify-content: center;
+          text-align: center;
+          max-width: 80%;
+          .icon {
+            width: 120px;
+            height: 120px;
+          }
 
-          h3 {
-            font-family: 'Bodoni';
+          & .title {
+            flex: 0 1 auto;
+            align-self: center;
+            font-family: 'Bodoni', sans-serif;
             font-weight: 500;
-            @include font-size(24px, 1em, 1);
-            padding: 6px 0 0 5px;
-            margin: 0 auto;
+            @include font-size(32px, 1em, 10);
+            font-size: 2.4vw;
             text-transform: uppercase;
           }
         }
       }
+
     }
   }
 }
@@ -1012,9 +1009,9 @@ svg {
     overflow: hidden;
   }
 }
-#section-anons {
+.section-anons {
   z-index: 2;
-  #anons-wrapper {
+  .slides {
     padding-left: 0;
     font-size: 0;
     height: 100%;
@@ -1090,10 +1087,16 @@ svg {
         display: flex;
         align-items: center;
         justify-content: center;
+        text-decoration: none;
+        &:visited {
+          color: $primary-color;
+        }
         .teaser-text {
           display: flex;
           align-self: center;
           justify-content: center;
+          text-align: center;
+          max-width: 80%;
           .icon {
             width: 120px;
             height: 120px;
@@ -1107,7 +1110,6 @@ svg {
             @include font-size(32px, 1em, 10);
             font-size: 2.4vw;
             text-transform: uppercase;
-            max-width: 80%;
           }
         }
       }
