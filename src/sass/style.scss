@@ -1050,10 +1050,6 @@ svg {
         }
       }
 
-      &.open {
-        z-index: 10;
-      }
-
       .teaser-image {
         background-color: $primary-color;
         background-position-x: center;
@@ -1068,7 +1064,6 @@ svg {
         @include font-size(40px, 40px, 0);
         @include transform(translateZ(1px));
         color: white;
-        font-family: 'icon';
         left: 50%;
         margin-left: -37px;
         position: absolute;
@@ -1090,39 +1085,27 @@ svg {
         height: 50%;
         overflow: hidden;
         position: absolute;
-        text-align: center;
         width: 100%;
         z-index: 2;
         display: flex;
         align-items: center;
         justify-content: center;
-
         .teaser-text {
-          .stamp {
-            position: absolute;
-            width: 30px;
-            height: 30px;
-          }
-          .line {
-            width: 60px;
-            height: 60px;
-            position: absolute;
-            left: -22px;
-            top: -14px
-          }
-          position: relative;
-          width: auto;
           display: flex;
-          flex-direction: row;
-          z-index: 3;
+          align-self: center;
+          justify-content: center;
+          .icon {
+            width: 120px;
+            height: 120px;
+          }
 
           & .title {
-            font-family: 'Bodoni';
+            flex: 0 1 auto;
+            align-self: center;
+            font-family: 'Bodoni', sans-serif;
             font-weight: 500;
             @include font-size(32px, 1em, 10);
             font-size: 2.4vw;
-            padding: 6px 0 0 5px;
-            margin: 0 auto;
             text-transform: uppercase;
             max-width: 80%;
           }
