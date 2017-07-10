@@ -314,9 +314,8 @@ svg {
           align-self: center;
           justify-content: center;
           text-align: center;
-          max-width: 80%;
           .icon {
-            width: 120px;
+            min-width: 120px;
             height: 120px;
           }
 
@@ -325,8 +324,7 @@ svg {
             align-self: center;
             font-family: 'Bodoni', sans-serif;
             font-weight: 500;
-            @include font-size(32px, 1em, 10);
-            font-size: 2.4vw;
+            @include font-size(34px, 1em, 10);
             text-transform: uppercase;
           }
         }
@@ -631,10 +629,9 @@ svg {
     }
     & #garda {
       position: absolute;
-      margin-top: 210px;
-      margin-left: -334px;
+      margin-top: -100px;
+      margin-left: -5px;
       z-index: 3;
-      visibility: hidden;
     }
 }
 /* Resources intro */
@@ -1096,9 +1093,8 @@ svg {
           align-self: center;
           justify-content: center;
           text-align: center;
-          max-width: 80%;
           .icon {
-            width: 120px;
+            min-width: 120px;
             height: 120px;
           }
 
