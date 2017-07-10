@@ -331,72 +331,91 @@ $(document).ready(function(){
      * INTRO SCENE
      **/
     var sceneIntro = new ScrollMagic.Scene({ triggerElement: '#intro'})
-        .addIndicators({name: "Intro:", offsetX: 200 })
+        //.addIndicators({name: "Intro:", offsetX: 200 })
         .addTo(controller)
         .setTween(startIntroTween());
     /**
      * ABOUT SCENE
      **/
     var sceneAbout = new ScrollMagic.Scene({ triggerElement: '#abo_intro'})
-        .addIndicators({name: "About"})
+        //.addIndicators({name: "About"})
         .addTo(controller)
         .setTween(startAboutTween());
     /**
      * GENEALOGIA SCENE
      */
     var sceneGenealogia = new ScrollMagic.Scene({ triggerElement: '#gen_intro'})
-        .addIndicators({name: "Genealogia"})
+        //.addIndicators({name: "Genealogia"})
         .addTo(controller)
         .setTween(startGenealogiaTween());
     /**
      * SFRAGISTIKA SCENE
      */
     var sceneSfragistika = new ScrollMagic.Scene({ triggerElement: '#sfr_intro'})
-        .addIndicators({name: "Genealogia"})
+        //.addIndicators({name: "Genealogia"})
         .addTo(controller)
         .setTween(startSfragistikaTween());
     /**
      * GERALDIKA SCENE
      */
     var sceneGeraldika = new ScrollMagic.Scene({ triggerElement: '#ger_intro'})
-        .addIndicators({name: "Geraldika"})
+        //.addIndicators({name: "Geraldika"})
         .addTo(controller)
         .setTween(startGeraldikaTween(bw));
     /**
      * RESOURCES TWEEN
      */
     var sceneResources = new ScrollMagic.Scene({ triggerElement: '#res_intro'})
-        .addIndicators({name: "Resources"})
+        //.addIndicators({name: "Resources"})
         .addTo(controller)
         .setTween(startResourcesTween());
     /**
      *  PUBLISHING SCENE
      */
     var scenePublishing = new ScrollMagic.Scene({ triggerElement: '#pub_intro'})
-        .addIndicators({name: "Publishing"})
+        //.addIndicators({name: "Publishing"})
         .addTo(controller)
         .setTween(startPublishingTween());
     /**
      * PROJECTS SCENE
      */
     var sceneProjects = new ScrollMagic.Scene({ triggerElement: '#pro_intro'})
-        .addIndicators({name: "Projects"})
+        //.addIndicators({name: "Projects"})
         .addTo(controller)
         .setTween(startProjectsTween());
     /**
      * EVENTS SCENE
      */
     var sceneEvents = new ScrollMagic.Scene({ triggerElement: '#eve_intro'})
-        .addIndicators({name: "Events"})
+        //.addIndicators({name: "Events"})
         .addTo(controller)
         .setTween(startEventsTween());
     /**
      * GRANTS SCENE
      */
     var sceneGrants = new ScrollMagic.Scene({ triggerElement: '#gra_intro'})
-        .addIndicators({name: "Grants"})
+        //.addIndicators({name: "Grants"})
         .addTo(controller)
         .setTween(startGrantsTween());
+    /**
+     * Slides creating
+     */
+    Handlebars.registerHelper('if_even', function(conditional, options) {
+        if((conditional % 2) == 0) {
+            return options.fn(this);
+        } else {
+            return options.inverse(this);
+        }
+    });
+
+    $.getJSON('/data/cells.json', function (data) {
+       var slideshowTemplate =  $('#slideshow-template').html();
+       console.log(slideshowTemplate);
+       var slideshowScript = Handlebars.compile(slideshowTemplate);
+
+       $('#genealogia').append(slideshowScript(data));
+
+    });
     /**
      * Menu interaction
      */

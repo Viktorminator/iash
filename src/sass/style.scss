@@ -306,6 +306,7 @@ svg {
         align-items: center;
         justify-content: center;
         text-decoration: none;
+        color: $primary-color;
         &:visited {
           color: $primary-color;
         }
@@ -1085,6 +1086,8 @@ svg {
         align-items: center;
         justify-content: center;
         text-decoration: none;
+        color: $primary-color;
+
         &:visited {
           color: $primary-color;
         }

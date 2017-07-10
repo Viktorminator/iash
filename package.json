@@ -1,9 +1,9 @@
 {
-  "name": "gulp-pug-sass-starter",
+  "name": "IASF",
   "version": "1.0.0",
-  "description": "A Pug and Sass starter project using gulp for task automation.",
+  "description": "",
   "main": "gulpfile.js",
-  "author": "Joshua Azemoh <joshazemoh@gmail.com> (http://azemoh.com)",
+  "author": "Viktor Matushevskyi (viktorminator@gmail.com)",
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
@@ -37,6 +37,7 @@
     "browsersync"
   ],
   "dependencies": {
+    "handlebars": "^4.0.10",
     "textsplitr": "^0.1.1"
   }
 }
