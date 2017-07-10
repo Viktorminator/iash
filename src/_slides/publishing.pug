@@ -1,11 +1,11 @@
-script#genealogia-template(type='text/x-hanlebars-template')
+script#publishing-template(type='text/x-hanlebars-template')
     .project.project_columns
         .section-anons.section
             ul.slides
-                | {{#each genealogia}}
+                | {{#each publishing}}
                 | <li class="blog-teaser slide {{#if_even @index}} odd {{ else }} even {{/if_even}} {{#if @first}} active {{/if}}">
                 |   <div style="background-image:url(/img/{{ image }});" class="teaser-image videobox"></div>
-                |     <div class="separator icon iconpointer-{{#if_even @index}}down{{ else }}up{{/if_even}}"></div><a href="#" class="teaser-content">
+                |     <div class="separator icon iconpointer-{{#if_even @index}}down{{/if_even}}"></div><a href="#" class="teaser-content">
                 |     <div class="teaser-text">
                 |       <svg viewbox="0 0 120 120" class="icon">
                 |         <g>
@@ -14,7 +14,7 @@ script#genealogia-template(type='text/x-hanlebars-template')
                 |           </clippath>
                 |         </g>
                 |         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/icons.svg{{ iconNumber }}" clip-path="url(#stamp_mask2)" width="60" height="60" x="50" y="20"></use>
-                |         <line x1="120" y1="0" x2="20" y2="240" stroke="black" style="stroke-width: 1px; fill: none;" class="liner"></line>
+                |         {{#if_even @index}}<line x1="120" y1="0" x2="20" y2="240" stroke="black" style="stroke-width: 1px; fill: none;" class="liner"></line>{{/if_even}}
                 |       </svg>
                 |       <div class="title">{{ title }}</div>
                 |     </div></a>

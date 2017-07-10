@@ -409,12 +409,30 @@ $(document).ready(function(){
     });
 
     $.getJSON('/data/cells.json', function (data) {
-       var slideshowTemplate =  $('#slideshow-template').html();
-       console.log(slideshowTemplate);
-       var slideshowScript = Handlebars.compile(slideshowTemplate);
+        //console.log(slideshowTemplate);
+        var genealogiaScript = Handlebars.compile($('#genealogia-template').html());
+        $('#genealogia').append(genealogiaScript(data));
 
-       $('#genealogia').append(slideshowScript(data));
+        var sfragistikaScript = Handlebars.compile($('#sfragistika-template').html());
+        $('#sfragistika').append(sfragistikaScript(data));
 
+        var geraldikaScript = Handlebars.compile($('#geraldika-template').html());
+        $('#geraldika').append(geraldikaScript(data));
+
+        var resourcesScript = Handlebars.compile($('#resources-template').html());
+        $('#resources').append(resourcesScript(data));
+
+        var publishingScript = Handlebars.compile($('#publishing-template').html());
+        $('#publishing').append(publishingScript(data));
+
+        var projectsScript = Handlebars.compile($('#projects-template').html());
+        $('#projects').append(projectsScript(data));
+
+        var eventsScript = Handlebars.compile($('#events-template').html());
+        $('#events').append(eventsScript(data));
+
+        var grantsScript = Handlebars.compile($('#grants-template').html());
+        $('#grants').append(grantsScript(data));
     });
     /**
      * Menu interaction
@@ -436,11 +454,11 @@ $(document).ready(function(){
         'gen_intro', 'genealogia',
         'sfr_intro', 'sfragistika',
         'ger_intro', 'geraldika',
-        'res_intro', 'resursi',
+        'res_intro', 'resources',
         'pub_intro', 'publishing',
         'pro_intro', 'projects',
-        'eve_intro', 'eve',
-        'gra_intro', 'gra'
+        'eve_intro', 'events',
+        'gra_intro', 'grants'
     ];
     var currentSlideIndex = (window.location.hash ? anchors.indexOf(window.location.hash.slice(1)) : 0);
     var numSlides = anchors.length;

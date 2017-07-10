@@ -5,6 +5,13 @@ block head_end
     script(type="text/javascript" src="/js/modernizr.custom.js")
 block gen_slides
     include _slides/genealogia
+    include _slides/geraldika
+    include _slides/projects
+    include _slides/publishing
+    include _slides/resources
+    include _slides/sfragistika
+    include _slides/events
+    include _slides/grants
 
 block content
     include _partials/header
@@ -69,7 +76,6 @@ block content
                     g#Page-1(stroke='none', stroke-width='1', fill='none', fill-rule='evenodd', font-weight='normal', font-size='90', font-family='HeliosCondLightC', font-style='condensed')
                         text(id='textio', fill='#fff', y='80') СФРАГІСТИКА
         #sfragistika
-        include _partials/items
         // ********************
         // ** Geraldika intro
         // ********************
@@ -89,7 +95,6 @@ block content
                     g#Page-1(stroke='none', stroke-width='1', fill='none', fill-rule='evenodd', font-weight='normal', font-size='90', font-family='HeliosCondLightC', font-style='condensed')
                         text(id='', fill='#fff', y='80') ГЕРАЛЬДИКА
         #geraldika
-        include _partials/items
         // ********************
         // ** Resources intro
         // ********************
@@ -109,8 +114,7 @@ block content
                     defs
                     g#Page-1(stroke='none', stroke-width='1', fill='none', fill-rule='evenodd', font-weight='normal', font-size='90', font-family='HeliosCondLightC', font-style='condensed')
                         text(id='', fill='#fff', y='80') РЕСУРСИ
-        #resursi
-        include _partials/items
+        #resources
         // ********************
         // ** Publishing intro
         // ********************
@@ -129,7 +133,6 @@ block content
                     g#Page-1(stroke='none', stroke-width='1', fill='none', fill-rule='evenodd', font-weight='normal', font-size='90', font-family='HeliosCondLightC', font-style='condensed')
                         text(id='', fill='#fff', y='80') ВИДАВНИЦТВО
         #publishing
-        include _partials/items
         // ********************
         // ** Projects intro
         // ********************
@@ -145,7 +148,6 @@ block content
                     g#Page-1(stroke='none', stroke-width='1', fill='none', fill-rule='evenodd', font-weight='normal', font-size='90', font-family='HeliosCondLightC', font-style='condensed')
                         text(id='', fill='#fff', y='80') ПРОЕКТИ
         #projects
-        include _partials/items
         // ********************
         // ** Events announces intro
         // ********************
@@ -165,8 +167,7 @@ block content
                 img#smoke3(src='/img/smokes/3.png')
                 img#smoke4(src='/img/smokes/2.png')
                 img#smoke5(src='/img/smokes/5.png')
-        #eve
-        include _partials/items2
+        #events
         // ********************
         // ** Grants intro
         // ********************
@@ -193,8 +194,7 @@ block content
                 img.wax#wax10(src='/img/wax/10.png')
                 img.wax#wax11(src='/img/wax/11.png')
                 img#smoke6(src='/img/smokes/3.png')
-        #gra
-        include _partials/items2
+        #grants
 
 
 block body_end

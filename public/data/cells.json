@@ -1,63 +1,49 @@
 { "genealogia" : [
-  {"title" : "Алфавіт родів", "url": "#", "image": "1-1.jpg", "iconNumber" : "#1"},
-  {"title" : "Алфавіт родів", "url": "#", "image": "1-2.jpg", "iconNumber" : "#2"},
-  {"title" : "Алфавіт родів", "url": "#", "image": "1-3.jpg", "iconNumber" : "#3"},
-  {"title" : "Алфавіт родів", "url": "#", "image": "1-1.jpg", "iconNumber" : "#4"},
+  {"title" : "Майстерня", "url": "#", "image": "1-1.jpg", "iconNumber" : "#3"},
   {"title" : "Алфавіт родів", "url": "#", "image": "1-2.jpg", "iconNumber" : "#5"},
-  {"title" : "Алфавіт родів", "url": "#", "image": "1-3.jpg", "iconNumber" : "#6"},
-  {"title" : "Алфавіт родів", "url": "#", "image": "1-1.jpg", "iconNumber" : "#7"},
-  {"title" : "Алфавіт родів", "url": "#", "image": "1-2.jpg", "iconNumber" : "#8"},
-  {"title" : "Алфавіт родів", "url": "#", "image": "1-3.jpg", "iconNumber" : "#9"},
-  {"title" : "Алфавіт родів", "url": "#", "image": "1-1.jpg", "iconNumber" : "#10"},
-  {"title" : "Алфавіт родів", "url": "#", "image": "1-2.jpg", "iconNumber" : "#11"},
-  {"title" : "Алфавіт родів", "url": "#", "image": "1-3.jpg", "iconNumber" : "#12"},
-  {"title" : "Алфавіт родів", "url": "#", "image": "1-1.jpg", "iconNumber" : "#13"},
-  {"title" : "Алфавіт родів", "url": "#", "image": "1-2.jpg", "iconNumber" : "#14"},
-  {"title" : "Алфавіт родів", "url": "#", "image": "1-3.jpg", "iconNumber" : "#15"},
-  {"title" : "Алфавіт родів", "url": "#", "image": "1-1.jpg", "iconNumber" : "#16"},
-  {"title" : "Алфавіт родів", "url": "#", "image": "1-2.jpg", "iconNumber" : "#17"},
-  {"title" : "Алфавіт родів", "url": "#", "image": "1-3.jpg", "iconNumber" : "#18"},
-  {"title" : "Алфавіт родів", "url": "#", "image": "1-1.jpg", "iconNumber" : "#19"}
+  {"title" : "Література з генеалогії", "url": "#", "image": "1-3.jpg", "iconNumber" : "#2"}
 ],
   "sfragistika" : [
-    {"title" : "Алфавіт родів", "url": "#", "image": "1-2.jpg", "iconNumber" : "#1"},
-    {"title" : "Алфавіт родів", "url": "#", "image": "1-3.jpg", "iconNumber" : "#2"},
-    {"title" : "Алфавіт родів", "url": "#", "image": "1-4.jpg", "iconNumber" : "#3"},
-    {"title" : "Алфавіт родів", "url": "#", "image": "1-5.jpg", "iconNumber" : "#4"}
+    {"title" : "Майстерня", "url": "#", "image": "2-1.png", "iconNumber" : "#3"},
+    {"title" : "Сфрагістичні колекції", "url": "#", "image": "2-2.png", "iconNumber" : "#4"},
+    {"title" : "Каталог", "url": "#", "image": "2-3.png", "iconNumber" : "#15"},
+    {"title" : "Література зі сфрагістики", "url": "#", "image": "2-4.png", "iconNumber" : "#2"}
+
   ],
   "geraldika" : [
-    {"title" : "Алфавіт родів", "url": "#", "image": "1-2.jpg", "iconNumber" : "#1"},
-    {"title" : "Алфавіт родів", "url": "#", "image": "1-3.jpg", "iconNumber" : "#2"},
-    {"title" : "Алфавіт родів", "url": "#", "image": "1-4.jpg", "iconNumber" : "#3"},
-    {"title" : "Алфавіт родів", "url": "#", "image": "1-5.jpg", "iconNumber" : "#4"}
+    {"title" : "Майстерня", "url": "#", "image": "3-1.png", "iconNumber" : "#3"},
+    {"title" : "Родові герби", "url": "#", "image": "3-2.png", "iconNumber" : "#1"},
+    {"title" : "Міські герби", "url": "#", "image": "3-3.png", "iconNumber" : "#8"},
+    {"title" : "Література з геральдики", "url": "#", "image": "3-4.png", "iconNumber" : "#2"}
   ],
   "resources" : [
-    {"title" : "Алфавіт родів", "url": "#", "image": "1-2.jpg", "iconNumber" : "#1"},
-    {"title" : "Алфавіт родів", "url": "#", "image": "1-3.jpg", "iconNumber" : "#2"},
-    {"title" : "Алфавіт родів", "url": "#", "image": "1-4.jpg", "iconNumber" : "#3"},
-    {"title" : "Алфавіт родів", "url": "#", "image": "1-5.jpg", "iconNumber" : "#4"}
+    {"title" : "Історіографія", "url": "#", "image": "4-1.png", "iconNumber" : "#12"},
+    {"title" : "", "url": "#", "image": "4-2.png", "iconNumber" : ""},
+    {"title" : "Джерела", "url": "#", "image": "4-3.png", "iconNumber" : "#7"}
   ],
   "publishing" : [
-    {"title" : "Алфавіт родів", "url": "#", "image": "1-2.jpg", "iconNumber" : "#1"},
-    {"title" : "Алфавіт родів", "url": "#", "image": "1-3.jpg", "iconNumber" : "#2"},
-    {"title" : "Алфавіт родів", "url": "#", "image": "1-4.jpg", "iconNumber" : "#3"},
-    {"title" : "Алфавіт родів", "url": "#", "image": "1-5.jpg", "iconNumber" : "#4"}
+    {"title" : "Крамниця", "url": "#", "image": "5-1.png", "iconNumber" : "#14"},
+    {"title" : "", "url": "#", "image": "5-2.png", "iconNumber" : ""},
+    {"title" : "Пропозиції співпраці", "url": "#", "image": "5-3.png", "iconNumber" : "#16"}
   ],
   "projects" : [
-    {"title" : "Алфавіт родів", "url": "#", "image": "1-2.jpg", "iconNumber" : "#1"},
-    {"title" : "Алфавіт родів", "url": "#", "image": "1-3.jpg", "iconNumber" : "#2"},
-    {"title" : "Алфавіт родів", "url": "#", "image": "1-4.jpg", "iconNumber" : "#3"},
-    {"title" : "Алфавіт родів", "url": "#", "image": "1-5.jpg", "iconNumber" : "#4"}
+    {"title" : "Музей Шереметьєвих", "url": "#", "image": "6-1.png", "iconNumber" : "#2"},
+    {"title" : "Семінар СІД", "url": "#", "image": "6-2.png", "iconNumber" : "#5"},
+    {"title" : "Сфрагістичний семінар", "url": "#", "image": "6-3.png", "iconNumber" : "#2"},
+    {"title" : "Генеалогічна конференція", "url": "#", "image": "6-4.png", "iconNumber" : "#10"},
+    {"title" : "Вікіпедія", "url": "#", "image": "6-5.png", "iconNumber" : "#9"},
+    {"title" : "Виставки і презентації", "url": "#", "image": "6-6.png", "iconNumber" : "#17"}
   ],
-  "eve" : [
-    {"title" : "Події", "url": "#", "image": "1-2.jpg", "iconNumber" : "#1"},
-    {"title" : "Алфавіт родів", "url": "#", "image": "1-3.jpg", "iconNumber" : "#2"},
-    {"title" : "Алфавіт родів", "url": "#", "image": "1-4.jpg", "iconNumber" : "#3"}
+  "events" : [
+    {"title" : "Графік семінарів", "url": "#", "image": "7-1.png", "iconNumber" : "#11"},
+    {"title" : "Публікації", "url": "#", "image": "7-2.png", "iconNumber" : "#12"},
+    {"title" : "Виставки і презентації", "url": "#", "image": "7-3.png", "iconNumber" : "#17"},
+    {"title" : "Конференції", "url": "#", "image": "7-4.png", "iconNumber" : "#7"}
   ],
-  "gra" : [
-    {"title" : "Премії та гранти", "url": "#", "image": "1-2.jpg", "iconNumber" : "#1"},
-    {"title" : "Алфавіт родів", "url": "#", "image": "1-3.jpg", "iconNumber" : "#2"},
-    {"title" : "Алфавіт родів", "url": "#", "image": "1-4.jpg", "iconNumber" : "#3"}
+  "grants" : [
+    {"title" : "Премії", "url": "#", "image": "8-1.png", "iconNumber" : "#19"},
+    {"title" : "Контакти", "url": "#", "image": "8-2.png", "iconNumber" : "#18"},
+    {"title" : "Гранти", "url": "#", "image": "8-3.png", "iconNumber" : "#21"}
   ]
 
 
