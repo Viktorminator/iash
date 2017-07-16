@@ -136,10 +136,13 @@ input[type="search"].search-wrapper-input {
 .overlay-hugeinc .submenu li {
   list-style-type: none;
 }
-.overlay .block {
-  display: block;
-  width: 33.333%;
-  padding-left: 8%;
+.menu {
+  display: flex;
+  justify-content: space-around;
+
+  & .block {
+    width: auto;
+  }
   & a:hover {
     transition: 0.5s;
     color: $secondary-color;
