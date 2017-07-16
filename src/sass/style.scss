@@ -139,6 +139,7 @@ input[type="search"].search-wrapper-input {
 .overlay .block {
   display: block;
   width: 33.333%;
+  padding-left: 8%;
   & a:hover {
     transition: 0.5s;
     color: $secondary-color;
