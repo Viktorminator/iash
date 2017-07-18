@@ -112,6 +112,7 @@ gulp.task('svgstore', function () {
  */
 gulp.task('watch', function () {
   gulp.watch(paths.sass + '**/*.scss', ['sass']);
+  gulp.watch(paths.sass + '*.scss', ['sass']);
   gulp.watch(paths.bower + 'css-hamburgers/**/**/*.scss', ['sass']);
   gulp.watch('./src/**/*.pug', ['rebuild']);
   gulp.watch(paths.scripts + '*.js', ['scripts']);

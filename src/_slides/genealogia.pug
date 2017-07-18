@@ -5,7 +5,7 @@ script#genealogia-template(type='text/x-hanlebars-template')
                 | {{#each genealogia}}
                 | <li class="blog-teaser slide {{#if_even @index}} odd {{ else }} even {{/if_even}} {{#if @first}} active {{/if}}">
                 |   <div style="background-image:url(/img/{{ image }});" class="teaser-image videobox"></div>
-                |     <div class="separator icon iconpointer-{{#if_even @index}}down{{ else }}up{{/if_even}}"></div><a href="#" class="teaser-content">
+                |     <div class="separator icon iconpointer-{{#if_even @index}}down{{ else }}up{{/if_even}}"></div><a href="{{ url }}" class="teaser-content">
                 |     <div class="teaser-text">
                 |       <svg viewbox="0 0 120 120" class="icon">
                 |         <g>

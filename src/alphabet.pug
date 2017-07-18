@@ -1,0 +1,91 @@
+extends _layouts/category
+
+block head_end
+    link(rel="stylesheet" href="/css/alphabet.css")
+    script(type="text/javascript" src="/js/modernizr.custom.js")
+block gen_slides
+
+block content
+    include _partials/header
+    .main
+        ul.cards
+            li.cards__item
+                a(href="#") А
+            li.cards__item
+                a(href="#") Б
+            li.cards__item
+                a(href="#") В
+            li.cards__item
+                a(href="#") Г
+            li.cards__item
+                a(href="#") Г
+            li.cards__item
+                a(href="#") Д
+            li.cards__item
+                a(href="#") Ж
+            li.cards__item
+                a(href="#") З
+            li.cards__item
+                a(href="#") И
+            li.cards__item
+                a(href="#") І
+            li.cards__item
+                a(href="#") Ї
+            li.cards__item
+                a(href="#") Й
+            li.cards__item
+                a(href="#") К
+            li.cards__item
+                a(href="#") Л
+            li.cards__item
+                a(href="#") М
+            li.cards__item
+                a(href="#") Н
+            li.cards__item
+                a(href="#") О
+            li.cards__item
+                a(href="#") П
+            li.cards__item
+                a(href="#") Р
+            li.cards__item
+                a(href="#") С
+            li.cards__item
+                a(href="#") Т
+            li.cards__item
+                a(href="#") У
+            li.cards__item
+                a(href="#") Ф
+            li.cards__item
+                a(href="#") Х
+            li.cards__item
+                a(href="#") Ц
+            li.cards__item
+                a(href="#") Ч
+            li.cards__item
+                a(href="#") Ш
+            li.cards__item
+                a(href="#") Щ
+            li.cards__item
+                a(href="#") Ь
+            li.cards__item
+                a(href="#") Ю
+            li.cards__item
+                a(href="#") Я
+
+
+block body_end
+    //script(type="text/javascript" src="/js/script.js")
+    script.
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\\/script>')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js')
+    //script(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/kinetic-v5.1.0.min.js')
+    script(src='js/ScrollMagic.min.js')
+    script(src='js/plugins/debug.addIndicators.min.js')
+    script(src='js/plugins/animation.gsap.min.js')
+    //script(src='js/plugins/animation.velocity.min.js')
+    script(src='js/plugins/jquery.ScrollMagic.min.js')
+    script(src='js/DrawSVGPlugin.min.js')
+    script(src='js/SplitText.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/ScrollToPlugin.min.js')
+    script(type="text/javascript" src='/js/handlebars.min.js')
+    script(src='js/menu.js')
