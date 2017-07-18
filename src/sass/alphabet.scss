@@ -47,14 +47,12 @@ html {
   text-align: center;
   display: flex;
   padding: 1rem;
-  margin: 0 50px 70px 50px;
-  @media(min-width: 40rem) {
-    width: 50%;
-  }
   @media(min-width: 56rem) {
+    font-size: 5rem;
     width: 86px;
     height: 86px;
     border: 1px solid $primary-color;
+    margin: 0 50px 70px 50px;
   }
   & a {
     color: $primary-color;
