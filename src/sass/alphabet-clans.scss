@@ -2,3 +2,50 @@
 @import "includes/mixins";
 @import "includes/icons";
 @import "blocks/header";
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('/img/bg/1-1.png');
+}
+.clans {
+  padding: 50px;
+  @media (min-width: 45rem) {
+    margin: 0 auto;
+    padding: 90px;
+    width: 80%;
+  }
+  background-color: white;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    &__item {
+      flex: 1 0 100%;
+      @media (min-width: 60rem) {
+        flex: 1 0 50%;
+      }
+      box-sizing: border-box;
+      font-size: 20px;
+      & a {
+        color: $primary-color;
+        text-decoration: none;
+        @include transition(all, 100ms);
+        &:hover {
+          color: red;
+        }
+      }
+      &__title {
+        font-family: 'BodoniItalic', sans-serif;
+        font-weight: bold;
+      }
+      &__type {
+        padding-left: 5px;
+      }
+    }
+  }
+}
