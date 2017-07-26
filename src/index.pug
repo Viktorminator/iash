@@ -2,6 +2,8 @@ extends _layouts/home
 
 block head_end
     link(rel="stylesheet" href="/css/style.css")
+    link(rel='stylesheet', type='text/css', href='/css/slick.css')
+
     script(type="text/javascript" src="/js/modernizr.custom.js")
 block gen_slides
     include _slides/genealogia
@@ -212,5 +214,6 @@ block body_end
     script(src='js/SplitText.min.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/ScrollToPlugin.min.js')
     script(type="text/javascript" src='/js/handlebars.min.js')
+    script(type='text/javascript', src='//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js')
     script(src='js/main.js')
     //script(src='js/menu.js')

@@ -837,7 +837,7 @@ svg {
     position: relative;
     top: 0;
     width: 100%;
-    li {
+    &__item {
       display: inline-block;
       height: 100%;
       overflow: hidden;

@@ -326,7 +326,18 @@ $(document).ready(function(){
         });
 
     });
-
+    /**
+     * Sliders
+     */
+    $(window).load(function() {
+        console.log("Sliders!");
+        $('#sfr_slides').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: false,
+            autoplaySpeed: 2000
+        });
+    });
     /**
      * INTRO SCENE
      **/
