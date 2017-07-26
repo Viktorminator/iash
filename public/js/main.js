@@ -335,8 +335,39 @@ $(document).ready(function(){
             slidesToShow: 3,
             slidesToScroll: 1,
             autoplay: false,
-            autoplaySpeed: 2000
+            autoplaySpeed: 2000,
+            appendArrows: '#sfr_slides',
+            prevArrow: '<div class="prev-next-button prev slick-prev"><a href="#" onclick="event.preventDefault()"><img src="/img/prev.png"></a></div>',
+            nextArrow: '<div class="prev-next-button next slick-next"><a href="#" onclick="event.preventDefault()"><img src="/img/next.png"></a></div>'
         });
+        $('#ger_slides').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: false,
+            autoplaySpeed: 2000,
+            appendArrows: '#ger_slides',
+            prevArrow: '<div class="prev-next-button prev slick-prev"><a href="#" onclick="event.preventDefault()"><img src="/img/prev.png"></a></div>',
+            nextArrow: '<div class="prev-next-button next slick-next"><a href="#" onclick="event.preventDefault()"><img src="/img/next.png"></a></div>'
+        });
+        $('#pro_slides').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: false,
+            autoplaySpeed: 2000,
+            appendArrows: '#pro_slides',
+            prevArrow: '<div class="prev-next-button prev slick-prev"><a href="#" onclick="event.preventDefault()"><img src="/img/prev.png"></a></div>',
+            nextArrow: '<div class="prev-next-button next slick-next"><a href="#" onclick="event.preventDefault()"><img src="/img/next.png"></a></div>'
+        });
+        $('#eve_slides').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: false,
+            autoplaySpeed: 2000,
+            appendArrows: '#eve_slides',
+            prevArrow: '<div class="prev-next-button prev slick-prev"><a href="#" onclick="event.preventDefault()"><img src="/img/prev.png"></a></div>',
+            nextArrow: '<div class="prev-next-button next slick-next"><a href="#" onclick="event.preventDefault()"><img src="/img/next.png"></a></div>'
+        });
+
     });
     /**
      * INTRO SCENE

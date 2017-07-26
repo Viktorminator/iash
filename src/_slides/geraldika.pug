@@ -1,9 +1,9 @@
 script#geraldika-template(type='text/x-hanlebars-template')
     .project.project_columns
         .section-anons.section
-            ul.slides.blog-overview
+            #ger_slides.blog-overview
                 | {{#each geraldika}}
-                | <li class="blog-teaser slide {{#if_even @index}} odd {{ else }} even {{/if_even}} {{#if @first}} active {{/if}}">
+                | <div class="slides__item {{#if_even @index}}odd{{ else }}even{{/if_even}} {{#if @first}} active {{/if}}">
                 |   <div style="background-image:url(/img/{{ image }});" class="teaser-image videobox"></div>
                 |     <div class="separator icon iconpointer-{{#if_even @index}}down{{ else }}up{{/if_even}}"></div><a href="#" class="teaser-content">
                 |     <div class="teaser-text">
@@ -18,11 +18,5 @@ script#geraldika-template(type='text/x-hanlebars-template')
                 |       </svg>
                 |       <div class="title">{{ title }}</div>
                 |     </div></a>
-                | </li>
+                | </div>
                 | {{/each}}
-            .prev-next-button.previous
-                a(href='#')
-                    img(src='/img/prev.png')
-            .prev-next-button.next
-                a(href='#')
-                    img(src='/img/next.png')

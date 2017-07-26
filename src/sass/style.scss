@@ -2,6 +2,7 @@
 @import "includes/mixins";
 @import "includes/icons";
 @import "blocks/header";
+@import "blocks/slick";
 /*
   HEADER
  */
@@ -947,10 +948,14 @@ svg {
   background: red;
   transform: translateY(-50%);
   z-index: 30;
+  opacity: 0.5;
+  &:hover {
+    opacity: 1;
+  }
 }
 
-.previous { left: 10px; }
-.next { right: 10px; }
+.prev { left: 20px; }
+.next { right: 20px; }
 
 .prev-next-button svg {
   position: absolute;
@@ -958,6 +963,7 @@ svg {
   top: 20%;
   width: 60%;
   height: 60%;
+
 }
 
 .arrow { fill: #fff ; }
