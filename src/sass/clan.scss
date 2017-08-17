@@ -1,0 +1,60 @@
+@import "includes/base";
+@import "includes/mixins";
+@import "includes/icons";
+@import "blocks/header";
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.bcg {
+  position: absolute;
+  background: url('/img/bg/1-1.png')  center center no-repeat fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.clan {
+  padding: 50px;
+  @media (min-width: 45rem) {
+    margin: 0 auto;
+    padding: 10px 90px;
+    width: 80%;
+  }
+  background-color: white;
+  &__title {
+    font-family: 'BodoniItalic', sans-serif;
+    text-align: center;
+    font-size: 60px;
+    margin: 0;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+  }
+  &__content {
+    font-family: 'Helios', Arial, sans-serif;
+  }
+  &__sidebar {
+    font-family: 'BodoniItalic', sans-serif;
+    & ul {
+      list-style: none;
+      & b {
+        font-family: 'BodoniBoldItalic', sans-serif;
+      }
+    }
+  }
+  & a {
+    color: $primary-color;
+    text-decoration: none;
+    @include transition(all, 100ms);
+    &:hover {
+      color: red;
+    }
+  }
+}
