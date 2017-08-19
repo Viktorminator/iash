@@ -66,12 +66,12 @@ function startSfragistikaTween() {
     /* Sfragistika timeline */
     var Stl = new TimelineMax();
     // letter, lenta1, lenta2, stampiron
-    Stl.from(letter, 1, {y: '-500', ease:Elastic.easeOut.config(1, 0.75) }, 1);
-    Stl.from(stampiron, 1, {y: '-500', ease:Elastic.easeOut.config(1, 0.75) }, 1);
+    Stl.from(letter, 1, {y: '-500', ease:Back.easeOut.config(1, 0.75) }, 1);
+    Stl.from(stampiron, 1, {y: '-500', ease:Back.easeOut.config(1, 0.75) }, 1);
     Stl.from(glove, 1, { bezier: [{x: '0', y: '0'}, {x: '-400', y: '200'},  {x: '-500', y: '500'}] }, 1);
-    Stl.to(letter, 0.8, { y: '+=50', ease:Elastic.easeOut }, 2.2);
-    Stl.to(stampiron, 0.8, { y: '+=50', ease:Elastic.easeOut }, 2.2);
-    Stl.to(glove, 0.8, { y: '+=50', ease:Elastic.easeOut }, 2.2);
+    Stl.to(letter, 0.8, { y: '+=50', ease:Back.easeOut.config(1, 0.4) }, 2.2);
+    Stl.to(stampiron, 0.8, { y: '+=50', ease:Back.easeOut.config(1, 0.4) }, 2.2);
+    Stl.to(glove, 0.8, { y: '+=50', ease:Back.easeOut.config(1, 0.4) }, 2.2);
     Stl.to(glove, 1, { attr:{src:'/img/glove2.png'}}, 2);
     Stl.to(stamper, 0.01, { y: '+=45' }, 2);
     Stl.to(glove, 1, { bezier: [{x: '0', y: '0'}, {x: '-400', y: '200'},  {x: '-500', y: '500'}]  });
@@ -82,6 +82,7 @@ function startSfragistikaTween() {
     Stl.to(stamper, 1.5, {scale: 6 }, 3.3);
     Stl.to(letter, 1, { y: '+=200' }, 3.3);
     Stl.to(sfr_text, 1, { css:{ opacity: 1 }}, 3.3);
+    Stl.to(sfr_overlay, 1, {  css:{ autoAlpha: 1 } }, 3.5);
     Stl.restart();
     return Stl;
 }
@@ -244,8 +245,10 @@ $(document).ready(function(){
         ,tail1 = document.getElementById('tail1')
         ,tail2 = document.getElementById('tail2')
         ,gen_text = document.getElementById('gen_text')
+        // sfragistika variables
         ,letter = document.getElementById('letter')
         ,stampiron = document.getElementById('stampiron')
+        ,sfr_overlay = document.getElementById('sfr_overlay')
         ,glove = document.getElementById('glove')
         ,fingers = document.getElementById('fingers')
         ,stamper = document.getElementById('stamper')
