@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "browser-sync": "^2.9.3",
+    "browser-sync": "^2.18.13",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.0.1",
     "gulp-concat": "^2.6.1",
@@ -20,10 +20,10 @@
     "gulp-pug": "^3.0.3",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.0.4",
-    "gulp-svgmin": "^1.2.3",
+    "gulp-svgmin": "^1.2.4",
     "gulp-svgstore": "^6.1.0",
     "gulp-uglify": "^2.1.2",
-    "jshint": "^2.9.4"
+    "jshint": "^2.9.5"
   },
   "repository": {
     "type": "git",

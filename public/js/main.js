@@ -129,15 +129,15 @@ function startResourcesTween() {
     Res.to(glasses, 1, { x: '-=80', y: '+=50', rotation: '-=10' }, 5.9);
     Res.to(res_text, 1, { css:{ opacity: 1 }}, 5.9 );
     // paper3, paper1
-    Res.to(paper3, 0.1, { y: '-=400' }, 5.9);
-    Res.to(paper1, 0.1, { y: '-=400' }, 5.9);
+    Res.to(paper3, 0.6, { y: '-=400' }, 5.9);
+    Res.to(paper1, 0.6, { y: '-=400' }, 5.9);
     Res.to(paper1, 0.1, { css: { zIndex: 8 }}, 6);
     Res.to(paper3, 0.1, { css: { zIndex: 6 }}, 6);
     Res.to(signet, 0.1, { css: { zIndex: 7 }}, 6);
-    Res.to(paper1, 0.5, { y: '+=200' }, 6.3);
-    Res.to(signet, 1, { y: '+=100' }, 6.2);
-    Res.to(signet, 1, { rotation: '-=20', ease: Elastic.easeOut }, 6.1);
-    Res.to(paper3, 0.5, { y: '+=200' }, 6.1);
+    Res.to(paper1, 0.5, { y: '+=200' }, 6.5);
+    Res.to(signet, 1, { y: '+=100' }, 6.4);
+    Res.to(signet, 1, { rotation: '-=20', ease: Elastic.easeOut }, 6.3);
+    Res.to(paper3, 0.5, { y: '+=200' }, 6.3);
     Res.restart();
     return Res;
 }
