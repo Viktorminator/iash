@@ -8,7 +8,7 @@
 }
 @font-face {
   font-family: 'BodoniBold';
-  src: url("./fonts/Bodoni72C-Bold.otf") format("opentype");
+  src: url("../fonts/Bodoni72C-Bold.otf") format("opentype");
   font-weight: bold;
   font-style: normal;
 }
@@ -44,6 +44,12 @@
 $primary-color: #6d6855;
 $menu-color: #030911;
 $secondary-color: #fff;
+$gray-darker:               #444444;
+$gray-dark:                 #696969;
+$gray:                      #999999;
+$gray-light:                #cccccc;
+$gray-lighter:              #ececec;
+$gray-lightest:             lighten($gray-lighter,4%);
 /*	TYPOGRAPHY
 –––––––––––––––––––––––––––*/
 

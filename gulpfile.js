@@ -8,7 +8,8 @@ var gulp = require('gulp'),
   prefix = require('gulp-autoprefixer'),
   sass = require('gulp-sass'),
   jshint = require('gulp-jshint'),
-  uglify = require('gulp-uglify'),
+  //uglify = require('gulp-uglify'),
+  gulpPugBeautify = require('gulp-pug-beautify'),
   rename = require('gulp-rename'),
   notify = require('gulp-notify'),
   concat = require('gulp-concat'),
@@ -21,6 +22,7 @@ var gulp = require('gulp'),
  */
 var paths = {
   public: './public/',
+  development: './iash/wp-content/themes/sigillum/css/',
   sass: './src/sass/',
   bower: './bower_components/',
   css: './public/css/',
@@ -38,12 +40,14 @@ gulp.task('pug', function () {
     .pipe(data(function (file) {
       return require(paths.data + path.basename(file.path) + '.json');
     }))
-    .pipe(pug())
+    .pipe(gulpPugBeautify({ omit_empty: true }))
+    .pipe(pug({ beautify: true }))
     .on('error', function (err) {
       process.stderr.write(err.message + '\n');
       this.emit('end');
     })
-    .pipe(gulp.dest(paths.public));
+    .pipe(gulp.dest(paths.public))
+    ;
 });
 
 /**
@@ -83,6 +87,19 @@ gulp.task('sass', function () {
     .pipe(browserSync.reload({
       stream: true
     }));
+});
+
+gulp.task('development', function () {
+  return gulp.src(paths.sass + '*.scss')
+    .pipe(sass({
+      includePaths: [paths.sass],
+      outputStyle: 'compressed'
+    }))
+    .on('error', sass.logError)
+    .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {
+      cascade: true
+    }))
+    .pipe(gulp.dest(paths.development))
 });
 
 gulp.task('scripts', function() {
