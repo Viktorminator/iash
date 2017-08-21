@@ -197,7 +197,7 @@ svg {
     }
   }
   &__bcg {
-    background: url('/img/background1.png') no-repeat;
+    background: url('../img/background1.png') no-repeat;
     background-size: cover;
     position: absolute;
     width: 100%;
@@ -257,7 +257,7 @@ svg {
     }
   }
   &__bcg {
-    background: url('/img/background1.png') center center no-repeat fixed;
+    background: url('../img/background1.png') center center no-repeat fixed;
     background-size: cover;
     position: absolute;
     width: 100%;
@@ -274,7 +274,7 @@ svg {
   justify-content: center;
   height: 100vh;
   &__bcg {
-    background: url('/img/background1.png') center center no-repeat fixed;
+    background: url('../img/background1.png') center center no-repeat fixed;
     background-size: cover;
     position: absolute;
     width: 100%;
@@ -401,7 +401,7 @@ svg {
   }
 
   &__bcg {
-    background: url('/img/background2.png') center center no-repeat fixed;
+    background: url('../img/background2.png') center center no-repeat fixed;
     background-size: cover;
     position: absolute;
     width: 100%;
@@ -421,7 +421,7 @@ svg {
       height: 100vh;
     }
     &__bcg {
-      background: url('/img/background3.png') center center no-repeat fixed;
+      background: url('../img/background3.png') center center no-repeat fixed;
       background-size: cover;
       position: absolute;
       width: 100%;
@@ -429,7 +429,7 @@ svg {
       overflow: hidden;
     }
     &__overlay {
-      background: url('/img/overlay.png') center center no-repeat fixed;
+      background: url('../img/overlay.png') center center no-repeat fixed;
       background-size: cover;
       position: absolute;
       width: 100%;
@@ -474,7 +474,7 @@ svg {
     height: 100vh;
   }
   &__bcg {
-    background: url('/img/background4.png') center center no-repeat fixed;
+    background: url('../img/background4.png') center center no-repeat fixed;
     background-size: cover;
     position: absolute;
     width: 100%;
@@ -545,7 +545,7 @@ svg {
     z-index: 8;
   }
   &__bcg {
-    background: url('/img/background5.png') center center no-repeat fixed;
+    background: url('../img/background5.png') center center no-repeat fixed;
     background-size: cover;
     position: absolute;
     width: 100%;
@@ -595,7 +595,7 @@ svg {
     height: 100vh;
   }
   &__bcg {
-    background: url('/img/background6.png') center center no-repeat fixed;
+    background: url('../img/background6.png') center center no-repeat fixed;
     background-color: #353335;
     background-blend-mode: multiply;
     background-size: cover;
@@ -639,7 +639,7 @@ svg {
     height: 100vh;
   }
   &__bcg {
-    background: url('/img/background7.png') center center no-repeat fixed;
+    background: url('../img/background7.png') center center no-repeat fixed;
     background-size: cover;
     position: absolute;
     width: 100%;
@@ -697,7 +697,7 @@ svg {
     height: 100vh;
   }
   &__bcg {
-    background: url('/img/background7.png') center center no-repeat fixed;
+    background: url('../img/background7.png') center center no-repeat fixed;
     background-size: cover;
     position: absolute;
     width: 100%;
@@ -1029,7 +1029,7 @@ nav {
 
 
 .bcg {
-  background: url('/img/bg/1-1.png')  center center no-repeat fixed;
+  background: url('../img/bg/1-1.png')  center center no-repeat fixed;
   background-size: cover;
   height: 100vh;
   overflow: hidden;
@@ -1079,7 +1079,7 @@ nav {
       display:block;
       border:0px;
       height: 10px;
-      background-image: url('../img/strela.png');
+      background-image: url('..../img/strela.png');
       background-repeat: no-repeat;
       background-position: center;
       background-size: 100% 100%;
@@ -1176,7 +1176,7 @@ nav {
 ** Clans 
 */
 .bcg {
-  background: url('/img/bg/1-1.png')  center center no-repeat fixed;
+  background: url('../img/bg/1-1.png')  center center no-repeat fixed;
   background-size: cover;
   height: 100vh;
   overflow: hidden;
