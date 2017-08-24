@@ -17,6 +17,7 @@ var gulp = require('gulp'),
   svgmin = require('gulp-svgmin'),
   browserSync = require('browser-sync');
 
+
 /*
  * Directories here
  */
@@ -80,9 +81,10 @@ gulp.task('sass', function () {
       outputStyle: 'compressed'
     }))
     .on('error', sass.logError)
-    .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {
-      cascade: true
-    }))
+    .pipe(prefix({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
     .pipe(gulp.dest(paths.css))
     .pipe(browserSync.reload({
       stream: true

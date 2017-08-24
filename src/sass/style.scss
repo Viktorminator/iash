@@ -1,3 +1,4 @@
+@import "includes/normalize";
 @import "includes/base";
 @import "includes/mixins";
 @import "includes/icons";
@@ -331,7 +332,7 @@ svg {
     z-index: 2;
   }
   & #gen_text {
-    opacity: 0; 
+    opacity: 0;
     visibility: hidden;
     margin-left: 76px;
   }
@@ -362,11 +363,13 @@ svg {
     position: relative;
     overflow: hidden;
     height: 100vh;
+
   }
   #sfr_overlay {
     content:'\A';
     position:absolute;
-    width:100%; height:100%;
+    width:100%;
+    height:100%;
     left:0;
     background:rgba(0,0,0,0.4);
     z-index: 5;
@@ -1028,10 +1031,9 @@ nav {
 }
 
 
-.bcg {
+.article {
   background: url('../img/bg/1-1.png')  center center no-repeat fixed;
   background-size: cover;
-  height: 100vh;
   overflow: hidden;
 }
 .clan {
@@ -1040,14 +1042,19 @@ nav {
     margin: 0 auto;
     padding: 10px 90px;
     width: 80%;
+    margin-top: 170px;
   }
   background-color: white;
   &__title {
     font-family: 'BodoniItalic', sans-serif;
-    text-align: center;
-    font-size: 55px;
+    text-align: left;
+    line-height: 1em;
+    font-size: 47px;
     margin: 0;
     letter-spacing: 0.1rem;
+    @media(min-width: 45rem) {
+      margin-top: 50px;
+    }
   }
   &__container {
     display: flex;
@@ -1075,11 +1082,14 @@ nav {
   }
   &__sidebar {
     font-family: 'BodoniItalic', sans-serif;
+    @media(min-width: 45rem) {
+      margin-top: 130px;
+    }
     hr {
-      display:block;
-      border:0px;
+      display: block;
+      border: 0px;
       height: 10px;
-      background-image: url('..../img/strela.png');
+      background-image: url('../img/strela.png');
       background-repeat: no-repeat;
       background-position: center;
       background-size: 100% 100%;
@@ -1209,7 +1219,6 @@ nav {
       }
       &__title {
         font-family: 'BodoniItalic', sans-serif;
-        font-weight: bold;
       }
       &__type {
         padding-left: 5px;
