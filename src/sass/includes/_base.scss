@@ -27,18 +27,9 @@
         url("../fonts/Bodoni72C-Italic.otf") format("opentype");
   font-style: italic, oblique;
 }
-@font-face {
-  font-family: 'Helios';
-  src: url('../fonts/HeliosCondLightC-Italic.woff') format('woff'),
-        url("../fonts/HeliosCondLightC-Italic.otf") format("opentype");
-  font-style: italic, oblique;
-}
-@font-face {
-  font-family: 'Helios';
-  src: url('../fonts/HeliosCondLightC.woff') format('woff'),
-        url("../fonts/HeliosCondLightC.otf") format("opentype");
-  font-weight: normal;
-}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i&subset=cyrillic');
+
 @font-face {
   font-family: 'Abetka';
   src: url('../fonts/FitaVjazC.woff') format('woff'),

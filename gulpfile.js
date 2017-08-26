@@ -9,6 +9,7 @@ var gulp = require('gulp'),
   sass = require('gulp-sass'),
   jshint = require('gulp-jshint'),
   //uglify = require('gulp-uglify'),
+  //htmlbeautify = require('gulp-html-prettify'),
   gulpPugBeautify = require('gulp-pug-beautify'),
   rename = require('gulp-rename'),
   notify = require('gulp-notify'),
@@ -41,12 +42,13 @@ gulp.task('pug', function () {
     .pipe(data(function (file) {
       return require(paths.data + path.basename(file.path) + '.json');
     }))
-    .pipe(gulpPugBeautify({ omit_empty: true }))
-    .pipe(pug({ beautify: true }))
+    //.pipe(gulpPugBeautify({ omit_empty: true }))
+    .pipe(pug())
     .on('error', function (err) {
       process.stderr.write(err.message + '\n');
       this.emit('end');
     })
+    //.pipe(htmlbeautify())
     .pipe(gulp.dest(paths.public))
     ;
 });

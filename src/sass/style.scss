@@ -25,7 +25,7 @@ svg {
     display: flex;
     align-self: center;
     & svg {
-      font-family: 'Helios', sans-serif;
+      font-family: 'Roboto', sans-serif;
       font-weight: 100;
       z-index: 2;
     }
@@ -164,7 +164,7 @@ svg {
     z-index: 3;
     &--title {
       color: $secondary-color;
-      font-family: 'Helios', sans-serif;
+      font-family: 'Roboto', sans-serif;
       font-size: 70px;
       font-weight: 100;
       z-index: 2;
@@ -213,6 +213,14 @@ svg {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  &__bcg {
+    background: url('../img/background1.png') center no-repeat fixed;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
   &__content {
     position: relative;
     width: auto;
@@ -222,7 +230,7 @@ svg {
     margin-top: 180px;
     margin-left: 20px;
     &--title {
-      font-family: 'Helios', sans-serif;
+      font-family: 'Roboto', sans-serif;
       font-weight: 100;
       margin: 0 -40px;
     }
@@ -255,16 +263,17 @@ svg {
           line-height: 20px;
         }
       }
+      & a {
+        text-decoration: none;
+        color: $primary-color;
+        @include transition(all, 200ms);
+        &:hover {
+          color: red;
+        }
+      }
     }
   }
-  &__bcg {
-    background: url('../img/background1.png') center center no-repeat fixed;
-    background-size: cover;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
+
 }
 /* Genealogia intro */
 .project_genintro {
@@ -272,12 +281,16 @@ svg {
   margin: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  display: -webkit-flex; /* Safari */
+  -webkit-justify-content: space-around; /* Safari 6.1+ */
+  display: flex;
+  justify-content: space-around;
   height: 100vh;
   &__bcg {
     background: url('../img/background1.png') center center no-repeat fixed;
     background-size: cover;
     position: absolute;
+    left: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -314,6 +327,7 @@ svg {
   }
   & #gen_text {
     position: absolute;
+    left: 0;
     z-index: 4;
   }
   & #stamp {
@@ -328,7 +342,7 @@ svg {
   }
   & #gen_text_content {
     position: relative;
-    font-family: 'HeliosCondLightC', Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     z-index: 2;
   }
   & #gen_text {
@@ -398,7 +412,7 @@ svg {
     visibility: hidden;
   }
   & #sfr_text {
-    position: absolute;
+    position: relative;
     z-index: 6;
     opacity: 0;
   }
@@ -455,7 +469,7 @@ svg {
       margin-left: -60px;
     }
     & #ger_text {
-      position: absolute;
+      position: relative;
       z-index: 4;
       opacity: 0;
     }
@@ -471,7 +485,7 @@ svg {
   &__content {
     display: flex;
     justify-content: space-around;
-    align-items: flex-start; /* align vertical */
+    align-items: center; /* align vertical */
     position: relative;
     overflow: hidden;
     height: 100vh;
@@ -484,8 +498,11 @@ svg {
     height: 100%;
     overflow: hidden;
   }
-  & #paper1, #paper2, #paper3, #glasses, #tail3, #signet, #knot2, #res_text {
+  & #paper1, #paper2, #paper3, #glasses, #tail3, #signet, #knot2 {
     position: absolute;
+  }
+  & #res_text {
+    position: relative;
   }
   & #paper3 {
     z-index: 1;
@@ -533,7 +550,7 @@ svg {
   &__content {
     display: flex;
     justify-content: space-around;
-    align-items: flex-start; /* align vertical */
+    align-items: center; /* align vertical */
     position: relative;
     overflow: hidden;
     height: 100vh;
@@ -571,7 +588,7 @@ svg {
   }
   & #pub_text {
     z-index: 6;
-    align-self: center;
+    position: relative;
     opacity: 0;
   }
   & #lupa {
@@ -1065,7 +1082,7 @@ nav {
   }
   }
   &__content {
-    font-family: 'Helios', Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-align: justify;
     & p {
       margin-top: 20px;

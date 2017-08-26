@@ -23,7 +23,7 @@ block content
                     g
                         clippath#introtext_mask
                             polygon#intro_mask(stroke='', points='0 0 400 0 300 200 0 200')
-                    text#intro_text(clip-path='url(#introtext_mask)', height='100%', width='100%', x='160', y='148', font-size='130', textLength='210', kerning='normal') IASH
+                    text#intro_text(clip-path='url(#introtext_mask)', height='100%', width='100%', x='140', y='148', font-size='130', textLength='260', kerning='normal') IASH
                     line#intro_line(x1='400', y1='0', x2='300', y2='200', style='stroke:#6d6855;stroke-width:1')
                 p ІНСТИТУТ СПЕЦІАЛЬНИХ ІСТОРИЧНИХ ДИСЦИПЛІН МУЗЕЮ ШЕРЕМЕТЬЄВИХ
 
@@ -35,13 +35,18 @@ block content
                         g
                             clippath#abouttext_mask
                                 polygon#about_mask(stroke='', points='0 0 400 0 300 200 0 200')
-                        text#about_text(clip-path='url(#abouttext_mask)', font-size='80', height='100', width='400', x='190', y='80', style='stroke: #fff; fill: #fff;') ABOUT
+                        text#about_text(clip-path='url(#abouttext_mask)', font-size='66', height='100', width='400', x='190', y='80', style='stroke: #fff; fill: #fff;') ABOUT
                         line#about_line(x1='400', y1='0', x2='300', y2='200', style='stroke:#fff;stroke-width:1')
                 .project_about__content--text
-                    h1 ПРО ІНСТИТУТ
+                    h1
+                        a(href="#") ПРО ІНСТИТУТ
                     p Інститут спеціальних історичних дисциплін Музею Шереметьєвих – це науково-дослідна установа, яка була створена з метою сприяння розвитку сфрагістики, геральдики, генеалогії та суміжних з ними дисциплін.
                         |  До роботи в Інституті залучаються провідні вітчизняні науковці,
                         | які активно займаються як прикладними дослідженнями, так і розвитком теоретичних підвалин зазначених галузей історичної науки.
+                        | <br/>
+                        | детальніше про інститут
+
+
         // ********************
         // ** Genealogia intro
         // ********************
@@ -56,8 +61,8 @@ block content
                 img#hat(src='/img/hat.png')
                 img#tail1(src='/img/tail1.png')
                 img#tail2(src='/img/tail2.png')
-                svg#gen_text(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='600', height='200', viewbox='0 0 600 190')
-                    text#gen_text_content(height='100%', width='100%', x='110', y='60', font-size='80') ГЕНЕАЛОГІЯ
+                a(href="#genealogia")
+                    img#gen_text(src='/img/titles/GENEALOGIYA.svg')
         #genealogia
         // ********************
         // ** Sfragistika intro
@@ -70,12 +75,9 @@ block content
                 img#stampiron(src='/img/stampiron.png')
                 img#glove(src='/img/glove.png')
                 img#stamper(src='/img/stamper.png')
-                svg(id='sfr_text', width='475px',  viewbox='0 0 475 90', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
-                    title СФРАГІСТИКА
-                    desc СФРАГІСТИКА
-                    defs
-                    g#Page-1(stroke='none', stroke-width='1', fill='none', fill-rule='evenodd', font-weight='normal', font-size='90', font-family='HeliosCondLightC', font-style='condensed')
-                        text(id='textio', fill='#fff', y='80') СФРАГІСТИКА
+                a(href="#sfragistika")
+                    img#sfr_text(src='/img/titles/SPHRAGISTYKA.svg')
+
         #sfragistika
         // ********************
         // ** Geraldika intro
@@ -89,12 +91,8 @@ block content
                 img#garda(src='/img/garda.png')
                 //img#knot(src='/img/knot.png')
                 //img#scabbard(src='/img/saber.png')
-                svg(id='ger_text', width='475px', viewbox='0 0 475 90', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
-                    title ГЕРАЛЬДИКА
-                    desc ГЕРАЛЬДИКА
-                    defs
-                    g#Page-1(stroke='none', stroke-width='1', fill='none', fill-rule='evenodd', font-weight='normal', font-size='90', font-family='HeliosCondLightC', font-style='condensed')
-                        text(id='', fill='#fff', y='80') ГЕРАЛЬДИКА
+                a(href="#geraldika")
+                    img#ger_text(src='/img/titles/GERALDYKA.svg')
         #geraldika
         // ********************
         // ** Resources intro
@@ -109,12 +107,8 @@ block content
                 img#tail3(src='/img/tail3.png')
                 img#knot2(src='/img/knot2.png')
                 img#signet(src='/img/signet.png')
-                svg(id='res_text' width='310px', viewbox='0 0 310 90', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
-                    title РЕСУРСИ
-                    desc РЕСУРСИ
-                    defs
-                    g#Page-1(stroke='none', stroke-width='1', fill='none', fill-rule='evenodd', font-weight='normal', font-size='90', font-family='HeliosCondLightC', font-style='condensed')
-                        text(id='', fill='#fff', y='80') РЕСУРСИ
+                a(href="#resources")
+                    img#res_text(src='/img/titles/RESURSY.svg')
         #resources
         // ********************
         // ** Publishing intro
@@ -127,12 +121,8 @@ block content
                 img#lupa(src='/img/lupa.png')
                 img#hand(src='/img/FFFFFF-0.png')
                 img#paper5(src='/img/paper1.png')
-                svg(id='pub_text' width='520px', viewbox='0 0 520 90', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
-                    title ВИДАВНИЦТВО
-                    desc ВИДАВНИЦТВО
-                    defs
-                    g#Page-1(stroke='none', stroke-width='1', fill='none', fill-rule='evenodd', font-weight='normal', font-size='90', font-family='HeliosCondLightC', font-style='condensed')
-                        text(id='', fill='#fff', y='80') ВИДАВНИЦТВО
+                a(href="#publishing")
+                    img#pub_text(src='/img/titles/VYDAVNYCTVO.svg')
         #publishing
         // ********************
         // ** Projects intro
@@ -142,12 +132,7 @@ block content
             .project_projectsintro__content
                 img#lupa2(src='/img/lupa2.png')
                 img#glass(src='/img/glass.svg')
-                svg(id='pro_text' width='305px', height='90px', viewbox='0 0 305 90', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
-                    title ПРОЕКТИ
-                    desc ПРОЕКТИ
-                    defs
-                    g#Page-1(stroke='none', stroke-width='1', fill='none', fill-rule='evenodd', font-weight='normal', font-size='90', font-family='HeliosCondLightC', font-style='condensed')
-                        text(id='', fill='#fff', y='80') ПРОЕКТИ
+                img#pro_text(src='/img/titles/PROEKTY.svg')
         #projects
         // ********************
         // ** Events announces intro
@@ -155,12 +140,7 @@ block content
         #eve_intro.project_eventsintro
             .project_eventsintro__bcg
             .project_eventsintro__content
-                svg(id='eve_text' width='465px', height='100px', viewbox='0 0 465 100', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
-                    title АНОНС ПОДІЙ
-                    desc АНОНС ПОДІЙ
-                    defs
-                    g#Page-1(stroke='none', stroke-width='1', fill='none', fill-rule='evenodd', font-weight='normal', font-size='90', font-family='HeliosCondLightC', font-style='condensed')
-                        text(id='', fill='#fff', y='80') АНОНС ПОДІЙ
+                img#eve_text(src='/img/titles/ANONS PODIY.svg')
                 img#arrow(src='/img/arrow.png')
                 img#knot3(src='/img/knot.png')
                 img#smoke1(src='/img/smokes/1.png')
@@ -175,12 +155,7 @@ block content
         #gra_intro.project_grantsintro
             .project_grantsintro__bcg
             .project_grantsintro__content
-                svg(id='gra_text' width='600px', height='100px', viewbox='0 0 600 100', version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
-                    title ПРЕМІЇ ТА ГРАНТИ
-                    desc ПРЕМІЇ ТА ГРАНТИ
-                    defs
-                    g#Page-1(stroke='none', stroke-width='1', fill='none', fill-rule='evenodd', font-weight='normal', font-size='90', font-family='HeliosCondLightC', font-style='condensed')
-                        text(id='', fill='red', y='80') ПРЕМІЇ ТА ГРАНТИ
+                img#gra_text(src='/img/titles/PREMII TA GR.svg')
                 img#stamp2(src='/img/stamp2.png')
                 img#knot4(src='/img/knot.png')
                 img#paper4(src='/img/paper2.png')
