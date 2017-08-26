@@ -25,7 +25,7 @@ svg {
     display: flex;
     align-self: center;
     & svg {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Open Sans Condensed', sans-serif;
       font-weight: 100;
       z-index: 2;
     }
@@ -164,7 +164,7 @@ svg {
     z-index: 3;
     &--title {
       color: $secondary-color;
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Open Sans Condensed', sans-serif;
       font-size: 70px;
       font-weight: 100;
       z-index: 2;
@@ -230,7 +230,7 @@ svg {
     margin-top: 180px;
     margin-left: 20px;
     &--title {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Open Sans Condensed', sans-serif;
       font-weight: 100;
       margin: 0 -40px;
     }
@@ -328,8 +328,12 @@ svg {
   & #gen_text {
     position: absolute;
     left: 0;
+    padding: 5px 0 0 70px;
     z-index: 4;
   }
+  & #link {
+  }
+
   & #stamp {
     position: absolute;
     right: 100px;
@@ -342,7 +346,7 @@ svg {
   }
   & #gen_text_content {
     position: relative;
-    font-family: 'Roboto', Arial, sans-serif;
+    font-family: 'Open Sans Condensed', Arial, sans-serif;
     z-index: 2;
   }
   & #gen_text {
@@ -1082,7 +1086,7 @@ nav {
   }
   }
   &__content {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
     text-align: justify;
     & p {
       margin-top: 20px;

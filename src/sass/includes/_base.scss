@@ -28,8 +28,7 @@
   font-style: italic, oblique;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i&subset=cyrillic');
-
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&subset=cyrillic');
 @font-face {
   font-family: 'Abetka';
   src: url('../fonts/FitaVjazC.woff') format('woff'),
@@ -52,7 +51,7 @@ $gray-lightest:      lighten($gray-lighter,4%);
 –––––––––––––––––––––––––––*/
 
 body {
-  font-family: 'Bodoni', Arial, sans-serif;
+  font-family: 'Open Sans Condensed', Arial, sans-serif;
   color: $primary-color;
   font-size: 100%;
   line-height: 1.5;
