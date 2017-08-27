@@ -34,7 +34,7 @@ svg {
       width: 400px;
       height: 270px;
       padding: 52px 0 0 0;
-      font-family: 'Bodoni', sans-serif;
+      font-family: 'Bodoni', 'Playfair Display', sans-serif;
       font-size: 1.9em;
       z-index: 3;
       line-height: 1.2em;
@@ -143,7 +143,7 @@ svg {
           & .title {
             flex: 0 1 auto;
             align-self: center;
-            font-family: 'Bodoni', sans-serif;
+            font-family: 'Bodoni', 'Playfair Display', sans-serif;
             font-weight: 500;
             @include font-size(34px, 1em, 10);
             text-transform: uppercase;
@@ -178,13 +178,13 @@ svg {
     }
     &--text {
       max-width: 500px;
-      font-family: 'BodoniItalic', sans-serif;
+      font-family: 'BodoniItalic', 'Playfair Display', sans-serif;
       z-index: 3;
       font-size: 17px;
       & h1 {
         position: absolute;
         right: 0;
-        font-family: 'Bodoni', Arial, sans-serif;
+        font-family: 'Bodoni', 'Playfair Display',sans-serif;
         font-size: 1.6em;
       }
       & p {
@@ -243,7 +243,7 @@ svg {
     &--text {
       max-width: 710px;
       margin-left: 10px;
-      font-family: 'BodoniItalic', sans-serif;
+      font-family: 'BodoniItalic', 'Playfair Display', sans-serif;
       z-index: 3;
       font-size: 24px;
       letter-spacing: 0.2ex;
@@ -948,21 +948,20 @@ svg {
         }
         .teaser-text {
           display: flex;
-          align-self: center;
           justify-content: center;
-          text-align: center;
           .icon {
             min-width: 120px;
             height: 120px;
           }
-
-          & .title {
+          .title {
             flex: 0 1 auto;
+            max-width: 60%;
             align-self: center;
             font-family: 'Bodoni', sans-serif;
             font-weight: 500;
             @include font-size(32px, 1em, 10);
             text-transform: uppercase;
+            margin-left: -20px;
           }
         }
       }
@@ -1067,7 +1066,7 @@ nav {
   }
   background-color: white;
   &__title {
-    font-family: 'BodoniItalic', sans-serif;
+    font-family: 'BodoniItalic', 'Playfair Display', sans-serif;
     text-align: left;
     line-height: 1em;
     font-size: 47px;
@@ -1102,7 +1101,7 @@ nav {
   }
   }
   &__sidebar {
-    font-family: 'BodoniItalic', sans-serif;
+    font-family: 'BodoniItalic', 'Playfair Display', sans-serif;
     @media(min-width: 45rem) {
       margin-top: 130px;
     }
@@ -1122,7 +1121,7 @@ nav {
         margin-top: 20px;
       }
       & b {
-        font-family: 'BodoniBoldItalic', sans-serif;
+        font-family: 'BodoniBoldItalic', 'Playfair Display', sans-serif;
       }
     }
   }
@@ -1239,7 +1238,7 @@ nav {
         }
       }
       &__title {
-        font-family: 'BodoniItalic', sans-serif;
+        font-family: 'BodoniItalic', 'Playfair Display', sans-serif;
       }
       &__type {
         padding-left: 5px;

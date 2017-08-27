@@ -9,7 +9,7 @@ var gulp = require('gulp'),
   sass = require('gulp-sass'),
   jshint = require('gulp-jshint'),
   //uglify = require('gulp-uglify'),
-  //htmlbeautify = require('gulp-html-prettify'),
+  htmlbeautify = require('gulp-html-prettify'),
   gulpPugBeautify = require('gulp-pug-beautify'),
   rename = require('gulp-rename'),
   notify = require('gulp-notify'),
@@ -48,7 +48,7 @@ gulp.task('pug', function () {
       process.stderr.write(err.message + '\n');
       this.emit('end');
     })
-    //.pipe(htmlbeautify())
+    .pipe(htmlbeautify())
     .pipe(gulp.dest(paths.public))
     ;
 });

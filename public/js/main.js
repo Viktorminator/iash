@@ -493,7 +493,7 @@ $(document).ready(function(){
      * Slide scroller
      */
     var delta = 0;
-    var scrollThreshold = 4;
+    var scrollThreshold = 5;
     var anchors = [
         'intro', 'abo_intro',
         'gen_intro', 'genealogia',
@@ -518,6 +518,7 @@ $(document).ready(function(){
                 //console.log('prev');
                 prevSlide();
                 delta = 0;
+
             }
 
             console.log('delta = ' + delta);
@@ -532,6 +533,7 @@ $(document).ready(function(){
                 //console.log('next');
                 nextSlide();
                 delta = 0;
+
             }
             console.log('delta = ' + delta);
 
@@ -555,6 +557,7 @@ $(document).ready(function(){
             controller.scrollTo('#' + anchors[currentSlideIndex]);
             // If supported by the browser we can also update the URL
          }
+         delta = 0;
     }
 
     function nextSlide() {
@@ -569,6 +572,7 @@ $(document).ready(function(){
         if (currentSlideIndex < numSlides) {
             controller.scrollTo('#' + anchors[currentSlideIndex]);
         }
+        delta = 0;
     }
 
     $(window).on({
