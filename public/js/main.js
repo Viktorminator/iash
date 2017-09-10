@@ -13,8 +13,8 @@ function startIntroTween() {
 function startAboutTween() {
     var tla = new TimelineMax();
     tla.from('#about_line', 1, { drawSVG: '0', delay: 2, ease: Power0.easeIn});
-    tla.from('#about_text', 3, { x: '190', ease: Back.easeOut.config(1) }, 3);
-    tla.from('#about_mask', 3, { x: '-190', ease: Back.easeOut.config(1)}, 3);
+    tla.from('#about_text', 3, { x: '230', ease: Back.easeOut.config(1) }, 3);
+    tla.from('#about_mask', 3, { x: '-230', ease: Back.easeOut.config(1)}, 3);
     tla.from('.project_about__content--text h1', 1.5, { opacity: '0'}, 2);
     tla.from('.project_about__content--text p', 1.5, { opacity: '0', ease: Power0.easeIn}, 2.5);
     tla.restart();

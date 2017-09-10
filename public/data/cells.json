@@ -10,7 +10,7 @@
     {"title" : "Література зі сфрагістики", "url": "#", "image": "2-4.png", "iconNumber" : "2"}
 
   ],
-  "geraldika" : [
+  "geraldyka" : [
     {"title" : "Майстерня", "url": "#", "image": "3-1.png", "iconNumber" : "3"},
     {"title" : "Родові герби", "url": "#", "image": "3-2.png", "iconNumber" : "1"},
     {"title" : "Міські герби", "url": "#", "image": "3-3.png", "iconNumber" : "8"},
@@ -41,9 +41,9 @@
     {"title" : "Конференції", "url": "#", "image": "7-4.png", "iconNumber" : "7"}
   ],
   "grants" : [
-    {"title" : "Проекти", "url": "#", "image": "8-1.png", "iconNumber" : "19"},
+    {"title" : "Премії", "url": "#", "image": "8-1.png", "iconNumber" : "19"},
     {"title" : "Контакти", "url": "#", "image": "8-2.png", "iconNumber" : "18"},
-    {"title" : "Історії", "url": "#", "image": "8-3.png", "iconNumber" : "21"}
+    {"title" : "Гранти", "url": "#", "image": "8-3.png", "iconNumber" : "21"}
   ]
 
 

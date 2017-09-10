@@ -7,7 +7,9 @@ script#sfragistika-template(type='text/x-hanlebars-template')
                 |   <div style="background-image:url(/img/{{ image }});" class="teaser-image videobox"></div>
                 |     <div class="separator icon iconpointer-{{#if_even @index}}down{{ else }}up{{/if_even}}"></div><a href="#" class="teaser-content">
                 |     <div class="teaser-text">
-                |       <image class="icon" width="100" height="100" src="/img/icons/{{iconNumber}}.svg" />
+                |       {{#if iconNumber}}
+                |           <image class="icon" width="100" height="100" src="/img/icons/{{iconNumber}}.svg" />
+                |       {{/if}}
                 |       <div class="title">{{ title }}</div>
                 |     </div></a>
                 | </div>

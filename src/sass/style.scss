@@ -230,9 +230,7 @@ svg {
     margin-top: 180px;
     margin-left: 20px;
     &--title {
-      font-family: 'Open Sans Condensed', sans-serif;
-      font-weight: 100;
-      margin: 0 -40px;
+      margin: -32px -40px 0 0;
     }
     &--line {
       height: 100px;
@@ -502,6 +500,7 @@ svg {
     height: 100%;
     overflow: hidden;
   }
+
   & #paper1, #paper2, #paper3, #glasses, #tail3, #signet, #knot2 {
     position: absolute;
   }
@@ -845,6 +844,7 @@ svg {
           position: relative;
           width: 100%;
         }
+
       }
     }
   }
@@ -907,6 +907,12 @@ svg {
         position: absolute;
         z-index: 1;
         @include transform(translateZ(0px));
+      }
+      .extra {
+        position: absolute;
+        z-index: 10;
+        margin-top: -73px;
+        margin-left: -83px;
       }
       .separator {
         @include font-size(40px, 40px, 0);
@@ -1052,7 +1058,9 @@ nav {
 
 
 .article {
-  background: url('../img/bg/1-1.png')  center center no-repeat fixed;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   overflow: hidden;
 }
@@ -1102,14 +1110,16 @@ nav {
   }
   &__sidebar {
     font-family: 'BodoniItalic', 'Playfair Display', sans-serif;
+
     @media(min-width: 45rem) {
       margin-top: 130px;
+      max-width: 400px;
     }
     hr {
       display: block;
       border: 0px;
       height: 10px;
-      background-image: url('../img/strela.png');
+      background-image: url('../img/arrow.svg');
       background-repeat: no-repeat;
       background-position: center;
       background-size: 100% 100%;
@@ -1314,3 +1324,171 @@ nav {
   }
 }
 
+/*
+ Story
+ */
+.story {
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+  @media (min-width: 45rem) {
+    margin: 0 auto;
+    padding: 10px 90px;
+    width: 80%;
+    margin-top: 170px;
+  }
+  background-color: white;
+  &__title {
+    font-family: 'Playfair Display', 'Roboto', sans-serif;
+    text-align: left;
+    line-height: 1em;
+    font-size: 47px;
+    margin: 0;
+    letter-spacing: 0.1rem;
+    @media(min-width: 45rem) {
+      margin-top: 50px;
+    }
+  }
+  &__container {
+    display: flex;
+    font-size: 20px;
+    flex-direction: column;
+    @media(min-width: 45rem) {
+      flex-direction: row;
+    }
+  }
+  &__content {
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align: justify;
+    & p {
+      margin-top: 20px;
+      &:first-letter {
+        padding-left: 40px;
+      }
+      @media(min-width: 45rem) {
+        margin-left: 20%;
+        margin-top: 40px;
+      }
+    }
+    & a {
+      color: red;
+    }
+    @media(min-width: 45rem) {
+      padding: 0 0 0 60px;
+    }
+  }
+  &__sidebar {
+    font-family: 'BodoniItalic', 'Playfair Display', sans-serif;
+
+    @media(min-width: 45rem) {
+      margin-top: 130px;
+      max-width: 400px;
+    }
+    hr {
+      display: block;
+      border: 0px;
+      height: 10px;
+      background-image: url('../img/arrow.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100% 100%;
+    }
+    & ul {
+      list-style: none;
+      padding: 10px;
+      & li {
+        margin-top: 20px;
+      }
+      & b {
+        font-family: 'BodoniBoldItalic', 'Playfair Display', sans-serif;
+      }
+    }
+  }
+  & a {
+    color: $primary-color;
+    text-decoration: none;
+    @include transition(all, 100ms);
+    &:hover {
+      color: red;
+    }
+  }
+}
+
+/*
+ Granty
+ */
+.granty {
+  padding: 50px;
+  @media (min-width: 45rem) {
+    margin: 0 auto;
+    padding: 10px 90px;
+    width: 80%;
+    margin-top: 170px;
+  }
+  background-color: white;
+  &__container {
+    margin-top: 100px;
+    margin-left: 30px;
+    display: flex;
+    justify-content: space-around;
+    &__sidebar {
+      flex: 1;
+      width: 400px;
+    }
+    &__content {
+      flex: 3;
+      font-family: 'BodoniItalic', sans-serif;
+      margin-left: 30px;
+      font-size: 33px;
+      &__header {
+        height: 220px;
+        &__title {
+          text-align: left;
+          line-height: 1.2em;
+          font-size: 47px;
+          margin: 0;
+          letter-spacing: 0.1rem;
+        }
+      }
+      &__ordered {
+        & ol {
+          list-style-type: none;
+          padding-left: 0;
+          padding-top: 40px;
+        }
+        & li {
+          margin-bottom: 100px;
+          position: relative;
+          &::before {
+            position: absolute;
+            content: url('../img/numbers/1.svg');
+            vertical-align: -50%;
+            left: -300px;
+          }
+        }
+      }
+      & hr {
+        display: block;
+        border: 0px;
+        height: 10px;
+        background-image: url('../img/arrow.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+      }
+      & span {
+        font-family: 'Open Sans Condensed', sans-serif;
+      }
+      & a {
+        color: red;
+        text-decoration: none;
+        @include transition(all, 100ms);
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+
+
+}

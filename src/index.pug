@@ -18,12 +18,13 @@ block content
     #main.main-container(role='main')
         #intro.intro
             .intro__content
+
                 svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='400', height='200', viewbox='0 0 400 200', aria-labelledby='title')
                     title#title Інститут сфрагістики
                     g
                         clippath#introtext_mask
                             polygon#intro_mask(stroke='', points='0 0 400 0 300 200 0 200')
-                    text#intro_text(clip-path='url(#introtext_mask)', height='100%', width='100%', x='140', y='148', font-size='130', textLength='260', kerning='normal') IASH
+                    image#intro_text(clip-path='url(#introtext_mask)', x='67', y='52', height='100', width='100%', xlink:href='/img/titles/IASH.svg')
                     line#intro_line(x1='400', y1='0', x2='300', y2='200', style='stroke:#6d6855;stroke-width:1')
                 p ІНСТИТУТ СПЕЦІАЛЬНИХ ІСТОРИЧНИХ ДИСЦИПЛІН МУЗЕЮ ШЕРЕМЕТЬЄВИХ
 
@@ -35,7 +36,7 @@ block content
                         g
                             clippath#abouttext_mask
                                 polygon#about_mask(stroke='', points='0 0 400 0 300 200 0 200')
-                        text#about_text(clip-path='url(#abouttext_mask)', font-size='66', height='100', width='400', x='190', y='80', style='stroke: #fff; fill: #fff;') ABOUT
+                        image#about_text(clip-path='url(#abouttext_mask)', x='50', y='52', height='80', width='100%', xlink:href='/img/titles/ABOUT.svg')
                         line#about_line(x1='400', y1='0', x2='300', y2='200', style='stroke:#fff;stroke-width:1')
                 .project_about__content--text
                     h1
