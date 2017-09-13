@@ -1447,6 +1447,7 @@ nav {
       margin-left: 20px;
     }
   }
+
   &__container {
     margin-top: 100px;
     margin-left: 30px;
@@ -1461,6 +1462,181 @@ nav {
       font-family: 'BodoniItalic', sans-serif;
       margin-left: 30px;
       font-size: 33px;
+      &__header {
+        &__title {
+          text-align: left;
+          line-height: 1.2em;
+          font-size: 47px;
+          margin: 0;
+          letter-spacing: 0.1rem;
+        }
+      }
+      &__row {
+        display: flex;
+        margin-left: -250px;
+        margin-top: 30px;
+        & h1, h2, h3 {
+          line-height: 1.2em;
+        }
+        & img {
+          margin-right: 140px;
+        }
+      }
+      & hr {
+        display: block;
+        border: 0px;
+        height: 10px;
+        background-image: url('../img/arrow.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+      }
+      & span {
+        font-family: 'Open Sans Condensed', sans-serif;
+      }
+      & a {
+        color: red;
+        text-decoration: none;
+        @include transition(all, 100ms);
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+/*
+ Table
+ */
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+table tr {
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+  table caption {
+    font-size: 1.3em;
+  }
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  table td:before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+/*
+ Rody
+ */
+.rody {
+  padding: 50px;
+  @media (min-width: 45rem) {
+    margin: 0 auto;
+    padding: 10px 90px;
+    width: 80%;
+    margin-top: 170px;
+  }
+  background-color: white;
+  &__title {
+    text-transform: uppercase;
+    font-family: 'Bodoni', sans-serif;
+    text-align: left;
+    line-height: 1.2em;
+    font-size: 47px;
+    margin: 0;
+    letter-spacing: 0.1rem;
+    @media (min-width: 45rem) {
+      margin-top: 100px;
+      margin-left: 20px;
+    }
+  }
+  &__container {
+    margin-top: 100px;
+    justify-content: space-around;
+    &__sidebar {
+      flex: 1;
+      width: 400px;
+    }
+    &__content {
+      flex: 3;
+      margin-left: 20px;
+      font-size: 33px;
+      & h2 {
+        font-family: 'BodoniItalic', 'Playfair Display', sans-serif;
+        margin-left: 310px;
+      }
+      figure {
+        display:flex;
+        align-items: flex-start;
+        margin: 0;
+        & img {
+          flex-grow:0;
+          flex-shrink:0;
+          width: 250px;
+          margin-top: 15px;
+          margin-right: 60px;
+        }
+      }
+
+      & p {
+        &:first-child {
+          margin-top: 0;
+        }
+        font-family: 'Open Sans Condensed', sans-serif;
+      }
       &__header {
         &__title {
           text-align: left;
@@ -1500,6 +1676,43 @@ nav {
       }
     }
   }
+}
 
-
+/*
+ Market
+ */
+.market {
+  padding: 50px;
+  @media (min-width: 45rem) {
+    margin: 0 auto;
+    padding: 10px 90px;
+    width: 80%;
+    margin-top: 170px;
+  }
+  &__title {
+    text-transform: uppercase;
+    font-family: 'Bodoni', sans-serif;
+    text-align: left;
+    line-height: 1.2em;
+    font-size: 47px;
+    margin: 0;
+    letter-spacing: 0.1rem;
+    color: #fff;
+    text-shadow: 15px 15px 7px rgba(0,0,0,0.5);
+    @media (min-width: 45rem) {
+      margin-top: 100px;
+      margin-left: 20px;
+    }
+  }
+  &__container {
+    margin-top: 100px;
+    &__content {
+      justify-content: space-between;
+      & img {
+        margin: 20px;
+        -webkit-box-shadow: 20px 20px 4px 0 rgba(0,0,0,0.5);
+        box-shadow: 20px 20px 4px 0 rgba(0,0,0,0.5);
+      }
+    }
+  }
 }

@@ -1,0 +1,24 @@
+extends _layouts/category
+
+block head_end
+    link(rel="stylesheet" href="/css/style.css")
+    script(type="text/javascript" src="/js/modernizr.custom.js")
+block gen_slides
+
+block content
+    include _partials/header
+    section.article(style="background-image: url('../img/bg/2-4.png');")
+        .market
+            h1.market__title Крамниця
+            .market__container
+                section.market__container__content
+                    a(href="http://resource.history.org.ua/cgi-bin/eiu/history.exe?&I21DBN=ELIB&P21DBN=ELIB&S21STN=1&S21REF=10&S21FMT=elib_all&C21COM=S&S21CNR=20&S21P01=0&S21P02=0&S21P03=ID=&S21COLORTERMS=0&S21STR=0008130")
+                        img(src='/img/books/yearbook1.png')
+                    a(href="http://resource.history.org.ua/cgi-bin/eiu/history.exe?&I21DBN=ELIB&P21DBN=ELIB&S21STN=1&S21REF=10&S21FMT=elib_all&C21COM=S&S21CNR=20&S21P01=0&S21P02=0&S21P03=ID=&S21COLORTERMS=0&S21STR=0012873")
+                        img(src='/img/books/yearbook2.png')
+                    a(href="http://resource.history.org.ua/cgi-bin/eiu/history.exe?&I21DBN=ELIB&P21DBN=ELIB&S21STN=1&S21REF=10&S21FMT=elib_all&C21COM=S&S21CNR=20&S21P01=0&S21P02=0&S21P03=ID=&S21COLORTERMS=0&S21STR=10986")
+                        img(src='/img/books/yearbook3.png')
+
+
+block body_end
+    include _partials/scripts
