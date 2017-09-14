@@ -7,7 +7,7 @@ block head_end
 block content
     include _partials/header
     section.article(style="background-image: url('../img/bg/8-2.png');")
-        .granty
+        .granty#main
             .granty__container
                 sidebar.granty__container__sidebar
                     img.granty__container__sidebar__image(src='../img/stamp-sh.png')
@@ -57,3 +57,4 @@ block content
 
 block body_end
     include _partials/scripts
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js')

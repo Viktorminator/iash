@@ -35,3 +35,15 @@ $(document).on("click", "a[href^=#]", function(e) {
     }
 
 });
+var main = document.getElementById('main');
+
+function appearance() {
+    var tl = new TimelineMax();
+    tl.to(main, 0.1, { autoAlpha: 1 });
+    tl.from(main, 1, { y: '+=1000' }, 1);
+    return tl;
+}
+
+$(window).load(function() {
+    appearance();
+});

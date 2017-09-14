@@ -1063,6 +1063,9 @@ nav {
   background-attachment: fixed;
   background-size: cover;
   overflow: hidden;
+  & #main {
+    visibility: hidden;
+  }
 }
 .clan {
   padding: 50px;
