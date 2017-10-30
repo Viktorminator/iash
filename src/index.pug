@@ -18,7 +18,6 @@ block content
     #main.main-container(role='main')
         #intro.intro
             .intro__content
-
                 svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='400', height='200', viewbox='0 0 400 200', aria-labelledby='title')
                     title#title Інститут сфрагістики
                     g
@@ -26,8 +25,10 @@ block content
                             polygon#intro_mask(stroke='', points='0 0 400 0 300 200 0 200')
                     image#intro_text(clip-path='url(#introtext_mask)', x='67', y='52', height='100', width='100%', xlink:href='/img/titles/IASH.svg')
                     line#intro_line(x1='400', y1='0', x2='300', y2='200', style='stroke:#6d6855;stroke-width:1')
+     
                 p ІНСТИТУТ СПЕЦІАЛЬНИХ ІСТОРИЧНИХ ДИСЦИПЛІН МУЗЕЮ ШЕРЕМЕТЬЄВИХ
-
+            a(href='').down
+                span
         #abo_intro.project.project_about
             .project_about__bcg
             .project_about__content

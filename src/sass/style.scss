@@ -20,10 +20,12 @@ svg {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  flex-direction:column;
   &__content {
     position: relative;
     display: flex;
     align-self: center;
+
     & svg {
       font-family: 'Open Sans Condensed', sans-serif;
       font-weight: 100;
@@ -40,6 +42,20 @@ svg {
       line-height: 1.2em;
     }
   }
+  & a {
+    position: absolute;
+    bottom: 20px;
+    align-self: center;
+    text-decoration: none;
+    color: $primary-color;
+    text-align: center;
+    &  span {
+      display: block;
+      height: 63px;
+      width: 63px;
+      background-image: url('/img/down.png')
+    }
+  }
 }
 #section-blog {
   z-index: 2;
@@ -52,7 +68,6 @@ svg {
     position: relative;
     top: 0;
     width: 100000000px;
-
     li {
       display: inline-block;
       height: 100%;
