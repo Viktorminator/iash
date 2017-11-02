@@ -25,7 +25,6 @@ svg {
     position: relative;
     display: flex;
     align-self: center;
-
     & svg {
       font-family: 'Open Sans Condensed', sans-serif;
       font-weight: 100;
@@ -43,17 +42,81 @@ svg {
     }
   }
   & a {
-    position: absolute;
-    bottom: 20px;
     align-self: center;
     text-decoration: none;
     color: $primary-color;
     text-align: center;
-    &  span {
-      display: block;
-      height: 63px;
-      width: 63px;
-      background-image: url('/img/down.png')
+    &:hover {
+      opacity: .8;
+    }
+    & span {
+      position: absolute;
+      bottom: 50px;
+      width: 46px;
+      height: 46px;
+      margin-left: -23px;
+      border: 1px solid $primary-color;
+      border-radius: 100%;
+      box-sizing: border-box;
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        content: '';
+        width: 16px;
+        height: 16px;
+        margin: -12px 0 0 -8px;
+        border-left: 1px solid $primary-color;
+        border-bottom: 1px solid $primary-color;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        box-sizing: border-box;
+      }
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        content: '';
+        width: 44px;
+        height: 44px;
+        box-shadow: 0 0 0 0 rgba(255,255,255,.1);
+        border-radius: 100%;
+        opacity: 0;
+        -webkit-animation: sdb03 3s infinite;
+        animation: sdb03 3s infinite;
+        box-sizing: border-box;
+      }
+      @-webkit-keyframes sdb03 {
+        0% {
+          opacity: 0;
+        }
+        30% {
+          opacity: 1;
+        }
+        60% {
+          box-shadow: 0 0 0 60px rgba(109, 104, 85,.1);
+          opacity: 0;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      @keyframes sdb03 {
+        0% {
+          opacity: 0;
+        }
+        30% {
+          opacity: 1;
+        }
+        60% {
+          box-shadow: 0 0 0 60px rgba(109, 104, 85,.1);
+          opacity: 0;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
     }
   }
 }
@@ -228,6 +291,7 @@ svg {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  flex-direction: column;
   &__bcg {
     background: url('../img/background1.png') center no-repeat fixed;
     background-size: cover;
@@ -286,7 +350,83 @@ svg {
       }
     }
   }
-
+  & a {
+    align-self: center;
+    text-decoration: none;
+    color: $primary-color;
+    text-align: center;
+    &:hover {
+      opacity: .8;
+    }
+    & span {
+      position: absolute;
+      width: 46px;
+      height: 46px;
+      margin-left: -23px;
+      border: 1px solid $primary-color;
+      border-radius: 100%;
+      box-sizing: border-box;
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        content: '';
+        width: 16px;
+        height: 16px;
+        margin: -12px 0 0 -8px;
+        border-left: 1px solid $primary-color;
+        border-bottom: 1px solid $primary-color;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        box-sizing: border-box;
+      }
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        content: '';
+        width: 44px;
+        height: 44px;
+        box-shadow: 0 0 0 0 rgba(255,255,255,.1);
+        border-radius: 100%;
+        opacity: 0;
+        -webkit-animation: sdb04 3s infinite;
+        animation: sdb04 3s infinite;
+        box-sizing: border-box;
+      }
+      @-webkit-keyframes sdb04 {
+        0% {
+          opacity: 0;
+        }
+        30% {
+          opacity: 1;
+        }
+        60% {
+          box-shadow: 0 0 0 60px rgba(109, 104, 85,.1);
+          opacity: 0;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      @keyframes sdb04 {
+        0% {
+          opacity: 0;
+        }
+        30% {
+          opacity: 1;
+        }
+        60% {
+          box-shadow: 0 0 0 60px rgba(109, 104, 85,.1);
+          opacity: 0;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+  }
 }
 /* Genealogia intro */
 .project_genintro {
@@ -383,6 +523,83 @@ svg {
     z-index: 1;
     transform: rotateY(180deg);
     visibility: hidden;
+  }
+  & a.down {
+    align-self: center;
+    text-decoration: none;
+    color: $primary-color;
+    text-align: center;
+    &:hover {
+      opacity: .8;
+    }
+    & span {
+      position: absolute;
+      width: 46px;
+      height: 46px;
+      margin-left: -23px;
+      border: 1px solid $primary-color;
+      border-radius: 100%;
+      box-sizing: border-box;
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        content: '';
+        width: 16px;
+        height: 16px;
+        margin: -12px 0 0 -8px;
+        border-left: 1px solid $primary-color;
+        border-bottom: 1px solid $primary-color;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        box-sizing: border-box;
+      }
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        content: '';
+        width: 44px;
+        height: 44px;
+        box-shadow: 0 0 0 0 rgba(255,255,255,.1);
+        border-radius: 100%;
+        opacity: 0;
+        -webkit-animation: sdb04 3s infinite;
+        animation: sdb04 3s infinite;
+        box-sizing: border-box;
+      }
+      @-webkit-keyframes sdb04 {
+        0% {
+          opacity: 0;
+        }
+        30% {
+          opacity: 1;
+        }
+        60% {
+          box-shadow: 0 0 0 60px rgba(109, 104, 85,.1);
+          opacity: 0;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      @keyframes sdb04 {
+        0% {
+          opacity: 0;
+        }
+        30% {
+          opacity: 1;
+        }
+        60% {
+          box-shadow: 0 0 0 60px rgba(109, 104, 85,.1);
+          opacity: 0;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    }
   }
 }
 /* Sfragistika intro */
