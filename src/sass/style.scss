@@ -1297,6 +1297,7 @@ nav {
   overflow: hidden;
   & #main {
     visibility: hidden;
+    position: relative;
   }
 }
 .clan {
@@ -1380,84 +1381,31 @@ nav {
   }
 }
 /*
-** Alphabet
-*/
-.main {
-  padding: 90px 20px;
-  @media (min-width: 30rem) {
-    padding: 90px;
-  }
-}
-.cards {
-  color: $gray;
-  font-family: 'Abetka', Helvetica, Arial, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 5rem;
-  line-height: 1em;
-  letter-spacing: 0;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -moz-font-feature-settings: "liga" on;
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.cards__item {
-  text-align: center;
-  display: flex;
-  padding: 0 10px;
-  width: 40px;
-  font-size: 4rem;
-  //height: 40px;
-  @media (min-width: 30rem) {
-    line-height: 100%;
-  }
-  @media(min-width: 56rem) {
-    font-size: 5rem;
-    width: 86px;
-    height: 86px;
-    border: 1px solid $primary-color;
-    margin: 0 50px 70px 50px;
-    &:hover {
-      font-size: 8rem;
-    }
-  }
-  & a {
-    line-height: 7rem;
-    color: $primary-color;
-    display: block;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    &:visited {
-      color: $primary-color;
-    }
-
-  }
-}
-/*
 ** Clans 
 */
-.bcg {
-  background: url('../img/bg/1-1.png')  center center no-repeat fixed;
-  background-size: cover;
-  height: 100vh;
-  overflow: hidden;
+.bcg-post {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  & img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 50%;
+    min-height: 50%;
+  }
 }
 .main {
-  padding: 50px;
+  position: relative;
+  z-index: 6;
+  width: 400px;
+  margin: 50px auto;
+  padding: 20px;
   @media (min-width: 45rem) {
     margin: 0 auto;
     padding: 90px;
@@ -1469,6 +1417,7 @@ nav {
     flex-wrap: wrap;
     &__item {
       flex: 1 0 100%;
+      padding-right: 20px;
       @media (min-width: 60rem) {
         flex: 1 0 50%;
       }
@@ -1515,17 +1464,18 @@ nav {
 }
 
 .cards {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    justify-content: space-around;
+    padding: 0;
 }
 
 .cards__item {
-  text-align: center;
   display: flex;
-  padding: 0 10px;
+  justify-content: center;
+  align-items: center;
   width: 40px;
   font-size: 4rem;
   //height: 40px;
@@ -1539,26 +1489,50 @@ nav {
     border: 1px solid $primary-color;
     margin: 0 50px 70px 50px;
     &:hover {
-      font-size: 8rem;
+      border: 1px solid $gray-darker;
     }
   }
   & a {
-    line-height: 7rem;
+    line-height: 5rem;
     color: $primary-color;
+    margin: 0 auto;
     display: block;
-    width: 100%;
-    height: 100%;
     text-decoration: none;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
     &:visited {
       color: $primary-color;
     }
+    &:hover {
+      color: $gray-darker;
+    }
   }
 }
-
+.bottom {
+    margin-top: 15px;
+    text-align: center;
+    margin-bottom: 40px;
+    & a {
+      color: $primary-color;
+      text-transform: uppercase;
+      font-family: 'Open Sans Condensed', sans-serif;
+      padding: 15px 30px;
+      border: 1px solid;
+      font-size: 2em;
+      margin: 0 auto;
+      text-decoration: none;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      &:visited {
+        color: $primary-color;
+      }
+      &:hover {
+        color: $gray-darker;
+      }
+    }
+}
 /*
  Story
  */
@@ -1817,6 +1791,7 @@ table th {
  Rody
  */
 .rody {
+  position: relative;
   padding: 50px;
   @media (min-width: 45rem) {
     margin: 0 auto;
@@ -1839,7 +1814,7 @@ table th {
     }
   }
   &__container {
-    margin-top: 100px;
+    margin: 100px 0;
     justify-content: space-around;
     &__sidebar {
       flex: 1;

@@ -1,6 +1,7 @@
 {
   "name": "IASF",
   "version": "1.0.0",
+  "license": "BSD-3-Clause",
   "description": "",
   "main": "gulpfile.js",
   "author": "Viktor Matushevskyi (viktorminator@gmail.com)",
@@ -25,7 +26,8 @@
     "gulp-svgmin": "^1.2.4",
     "gulp-svgstore": "^6.1.0",
     "gulp-uglify": "^2.1.2",
-    "jshint": "^2.9.5"
+    "jshint": "^2.9.5",
+    "gulp-deploy-ftp": "^1.0.*"
   },
   "repository": {
     "type": "git",
