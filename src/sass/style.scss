@@ -1300,6 +1300,60 @@ nav {
     position: relative;
   }
 }
+.search-results {
+  padding: 50px;
+  @media (min-width: 45rem) {
+    margin: 0 auto;
+    padding: 10px 90px;
+    width: 80%;
+    margin-top: 70px;
+  }
+  background-color: white;
+  &__title {
+    font-family: 'BodoniItalic', 'Playfair Display', sans-serif;
+    text-align: left;
+    line-height: 1em;
+    font-size: 47px;
+    margin: 0;
+    letter-spacing: 0.1rem;
+    @media(min-width: 45rem) {
+      margin-top: 50px;
+    }
+  }
+  &__container {
+    display: flex;
+    font-size: 20px;
+    flex-direction: column;
+    @media(min-width: 45rem) {
+      flex-direction: row;
+    }
+  }
+  &__content {
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align: justify;
+    & p {
+      margin-top: 20px;
+      &:first-letter {
+        padding-left: 40px;
+      }
+    }
+    & a {
+      color: red;
+    }
+    @media(min-width: 45rem) {
+      padding: 0 0 0 60px;
+    }
+  }
+  & a {
+    color: $primary-color;
+    text-decoration: none;
+    @include transition(all, 100ms);
+    &:hover {
+      color: red;
+    }
+  }
+}
+
 .clan {
   padding: 50px;
   @media (min-width: 45rem) {
@@ -1537,55 +1591,64 @@ nav {
  Story
  */
 .story {
-  padding: 50px;
+  padding: 100px 50px;
   @media (min-width: 45rem) {
-    margin: 0 auto;
+    margin: 170px auto;
     padding: 10px 90px;
     width: 80%;
-    margin-top: 170px;
   }
   background-color: white;
   &__title {
     text-transform: uppercase;
     font-family: 'Bodoni', sans-serif;
-    text-align: left;
     line-height: 1.2em;
     font-size: 47px;
     margin: 0;
     letter-spacing: 0.1rem;
+    text-align: center;
     @media (min-width: 45rem) {
+      text-align: left;
       margin-top: 100px;
       margin-left: 20px;
     }
   }
   &__container {
-    margin-top: 100px;
-    margin-left: 30px;
+    margin-left: 0;
+    margin-top: 20px;
     display: flex;
     justify-content: space-around;
+    @media (min-width: 45rem) {
+      margin-left: 30px;
+      margin-top: 100px;
+    }
     &__sidebar {
       flex: 1;
       width: 400px;
+      display: none;
+      @media (min-width: 45rem) {
+        display: block;
+      }
     }
     &__content {
       flex: 3;
-      margin-left: 30px;
-      font-size: 33px;
-      max-width: 80%;
+      font-size: 24px;
+      @media (min-width: 45rem) {
+        font-size: 33px;
+        margin-left: 30px;
+      }
       & h2 {
         font-family: 'BodoniItalic', 'Playfair Display', sans-serif;
       }
       figure {
-        margin: 0 auto;
+        margin: 40px auto;
         font-size: 20px;
         text-align: center;
-        margin-bottom: 40px;
       }
-
       & img {
         max-width: 100%;
       }
       & p {
+        text-align: justify;
         &:first-child {
           margin-top: 0;
         }
@@ -1602,7 +1665,10 @@ nav {
       }
       &__row {
         display: flex;
-        margin-left: -250px;
+        margin-left: 0;
+        @media(min-width: 45rem) {
+          margin-left: -250px;
+        }
         margin-top: 30px;
         & img {
           margin-right: 140px;
@@ -1638,10 +1704,9 @@ nav {
 .granty {
   padding: 50px;
   @media (min-width: 45rem) {
-    margin: 0 auto;
+    margin: 170px auto;
     padding: 10px 90px;
     width: 80%;
-    margin-top: 170px;
   }
   background-color: white;
   &__title {
@@ -1682,13 +1747,18 @@ nav {
       }
       &__row {
         display: flex;
-        margin-left: -250px;
+        @media (min-width: 45rem) {
+          margin-left: -250px;
+        }
         margin-top: 30px;
         & h1, h2, h3 {
           line-height: 1.2em;
         }
         & img {
-          margin-right: 140px;
+          margin-right: 40px;
+          @media (min-width: 45rem){
+            margin-right: 140px;
+          }
         }
       }
       & hr {
@@ -1925,4 +1995,72 @@ table th {
       }
     }
   }
+}
+/*
+Category
+*/
+/* THIS IS THE CLASS THAT IS APPLIED TO THE UNORDERED LIST AND ACTS AS THE FLEX CONTAINER */
+.articles {
+  display: flex;      /* THIS MAKES IT A FLEX CONTAINER */
+  flex-flow: row wrap;    /* THIS MAKES EACH BLOG POST LINE UP HORIZONTALLY AND WRAP TO THE NEXT LINE */
+  align-items: center;    /* YOU CAN CHOOSE DIFFERENT VALUES HERE */
+  justify-content: center;  /* YOU CAN CHOOSE DIFFERENT VALUES HERE */
+  list-style: none;   /* THIS REMOVES THE BULLET POINT FOR EACH LIST ITEM */
+}
+
+/* THIS IS THE CLASS FOR EACH LIST ITEM */
+.site-main {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  .page-header {
+    align-self: center;
+  }
+}
+.articles__card {
+  flex-basis: 400px;  /* WIDTH OF EACH ITEM - ADJUST FOR YOUR OWN PURPOSES */
+  height: 300px;    /* HEIGHT OF EACH ITEM - ADJUST FOR YOUR OWN PURPOSES */
+  padding: 10px;    /* SET WHATEVER PADDING VALUE YOU WANT */
+  margin: 10px;   /* SET WHATEVER MARGIN VALUE YOU WANT */
+  &__header {
+    & a {
+      text-decoration: none;
+      color: $primary-color;
+      @include transition(all, 100ms);
+      &:hover {
+        color: $menu-color;
+      }
+    }
+  }
+}
+/* USE THIS TO MAKE THE FEATURED IMAGES BEHAVE PROPERLY ACROSS ALL DEVICES */
+.articles__card img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 400px; /* SET WHATEVER SIZE VALUE YOU WANT */
+}
+
+.navigation .posts-navigation {
+  width: 100%;
+}
+nav.navigation.posts-navigation {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+h2.screen-reader-text, .nav-links {
+  align-self: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: $primary-color;
+  &:hover {
+    color: $menu-color;
+  }
+}
+.nav-links {
+  margin-bottom: 40px;
 }

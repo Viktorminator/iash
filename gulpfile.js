@@ -10,13 +10,11 @@ var gulp = require('gulp'),
   jshint = require('gulp-jshint'),
   //uglify = require('gulp-uglify'),
   htmlbeautify = require('gulp-html-prettify'),
-  gulpPugBeautify = require('gulp-pug-beautify'),
-  rename = require('gulp-rename'),
   notify = require('gulp-notify'),
-  concat = require('gulp-concat'),
   svgstore = require('gulp-svgstore'),
-  svgmin = require('gulp-svgmin'),
-  browserSync = require('browser-sync');
+  browserSync = require('browser-sync').create(),
+  gutil = require( 'gulp-util' ),
+  ftp = require( 'vinyl-ftp' );
 
 
 /*
@@ -64,12 +62,17 @@ gulp.task('rebuild', ['pug'], function () {
  * Wait for pug and sass tasks, then launch the browser-sync Server
  */
 gulp.task('browser-sync', ['sass', 'pug'], function () {
-  browserSync({
-    server: {
-      baseDir: paths.public
-    },
-    notify: false
-  });
+  // browserSync({
+  //   server: {
+  //     baseDir: paths.public
+  //   },
+  //   notify: false
+  // });
+    browserSync.init({
+        proxy: "http://sigillum.local/",
+        notify: true
+    });
+    gulp.watch('wp-content/themes/sigillum/css/*').on('change', browserSync.reload);
 });
 
 /**
@@ -104,6 +107,9 @@ gulp.task('development', function () {
       cascade: true
     }))
     .pipe(gulp.dest(paths.development))
+    .pipe(browserSync.reload({
+      stream: true
+    }));
 });
 
 gulp.task('scripts', function() {
@@ -132,8 +138,8 @@ gulp.task('svgstore', function () {
  * Watch .pug files run pug-rebuild then reload BrowserSync
  */
 gulp.task('watch', function () {
-  gulp.watch(paths.sass + '**/*.scss', ['sass']);
-  gulp.watch(paths.sass + '*.scss', ['sass']);
+  gulp.watch(paths.sass + '**/*.scss', ['sass', 'development']);
+  gulp.watch(paths.sass + '*.scss', ['sass', 'development']);
   gulp.watch(paths.bower + 'css-hamburgers/**/**/*.scss', ['sass']);
   gulp.watch('./src/**/*.pug', ['rebuild']);
   gulp.watch(paths.scripts + '*.js', ['scripts']);
@@ -148,3 +154,20 @@ gulp.task('build', ['sass', 'pug']);
  * files for changes
  */
 gulp.task('default', ['browser-sync', 'watch']);
+
+
+gulp.task('deploy', function() {
+    var conn = ftp.create( {
+        host:     'sterli00.ftp.tools',
+        user:     'sterli00_ftp',
+        password: 'Rk8S4i78Ns',
+        parallel: 10,
+        log:      gutil.log
+    } );
+    var globs = [
+        'public/css/**'
+    ];
+    return gulp.src( globs, { base: 'public/css/', buffer: false } )
+        .pipe( conn.newer( '/sigillum.com.ua/www/wp-content/themes/sigillum/css' ) ) // only upload newer files
+        .pipe( conn.dest( '/sigillum.com.ua/www/wp-content/themes/sigillum/css' ) );
+});
