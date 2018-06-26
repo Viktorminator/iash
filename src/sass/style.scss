@@ -165,7 +165,7 @@ svg {
       .teaser-image {
         background-color: $primary-color;
         background-position-x: center;
-        background-size: cover;
+        @include bgcover();
         height: 50%;
         width: 100%;
         position: absolute;
@@ -276,8 +276,8 @@ svg {
     }
   }
   &__bcg {
-    background: url('../img/background1.png') no-repeat;
-    background-size: cover;
+    @include background('../img/background1.png', center);
+    @include bgcover();
     position: absolute;
     width: 100%;
     height: 100%;
@@ -293,8 +293,8 @@ svg {
   height: 100vh;
   flex-direction: column;
   &__bcg {
-    background: url('../img/background1.png') center no-repeat fixed;
-    background-size: cover;
+    @include background('../img/background1.png', center);
+    @include bgcover();
     position: absolute;
     width: 100%;
     height: 100%;
@@ -440,8 +440,8 @@ svg {
   justify-content: space-around;
   height: 100vh;
   &__bcg {
-    background: url('../img/background1.png') center center no-repeat fixed;
-    background-size: cover;
+    @include background('../img/background1.png', center);
+    @include bgcover();
     position: absolute;
     left: 0;
     width: 100%;
@@ -652,8 +652,8 @@ svg {
   }
 
   &__bcg {
-    background: url('../img/background2.png') center center no-repeat fixed;
-    background-size: cover;
+    @include background('../img/background2.png', center);
+    @include bgcover();
     position: absolute;
     width: 100%;
     height: 100%;
@@ -672,16 +672,16 @@ svg {
       height: 100vh;
     }
     &__bcg {
-      background: url('../img/background3.png') center center no-repeat fixed;
-      background-size: cover;
+      @include background('../img/background3.png', center);
+      @include bgcover();
       position: absolute;
       width: 100%;
       height: 100%;
       overflow: hidden;
     }
     &__overlay {
-      background: url('../img/overlay.png') center center no-repeat fixed;
-      background-size: cover;
+      @include background('../img/overlay.png', center);
+      @include bgcover();
       position: absolute;
       width: 100%;
       height: 100%;
@@ -725,8 +725,8 @@ svg {
     height: 100vh;
   }
   &__bcg {
-    background: url('../img/background4.png') center center no-repeat fixed;
-    background-size: cover;
+    @include background('../img/background4.png', center);
+    @include bgcover();
     position: absolute;
     width: 100%;
     height: 100%;
@@ -800,8 +800,8 @@ svg {
     z-index: 8;
   }
   &__bcg {
-    background: url('../img/background5.png') center center no-repeat fixed;
-    background-size: cover;
+    @include background('../img/background5.png', center);
+    @include bgcover();
     position: absolute;
     width: 100%;
     height: 100%;
@@ -850,10 +850,10 @@ svg {
     height: 100vh;
   }
   &__bcg {
-    background: url('../img/background6.png') center center no-repeat fixed;
+    @include background('../img/background6.png', center);
+    @include bgcover();
     background-color: #353335;
     background-blend-mode: multiply;
-    background-size: cover;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -894,8 +894,8 @@ svg {
     height: 100vh;
   }
   &__bcg {
-    background: url('../img/background7.png') center center no-repeat fixed;
-    background-size: cover;
+    @include background('../img/background7.png', center);
+    @include bgcover();
     position: absolute;
     width: 100%;
     height: 100%;
@@ -952,8 +952,8 @@ svg {
     height: 100vh;
   }
   &__bcg {
-    background: url('../img/background7.png') center center no-repeat fixed;
-    background-size: cover;
+    @include background('../img/background7.png', center);
+    @include bgcover();
     position: absolute;
     width: 100%;
     height: 100%;
