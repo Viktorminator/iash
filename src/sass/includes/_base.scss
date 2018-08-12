@@ -3,28 +3,31 @@
 @font-face {
   font-family: 'Bodoni';
   src: url('../fonts/Bodoni72C.woff') format('woff'),
-        url("../fonts/Bodoni72C.otf") format("opentype");
+  url("../fonts/Bodoni72C.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'BodoniBold';
   src: url('../fonts/Bodoni72C.woff') format('woff'),
-        url("../fonts/Bodoni72C.otf") format("opentype");
+  url("../fonts/Bodoni72C.otf") format("opentype");
   font-weight: bold;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'BodoniBoldItalic';
   src: url('../fonts/Bodoni72C-BoldItalic.woff') format('woff'),
-        url("../fonts/Bodoni72C-BoldItalic.otf") format("opentype");
+  url("../fonts/Bodoni72C-BoldItalic.otf") format("opentype");
   font-weight: bold;
   font-style: italic, oblique;
 }
+
 @font-face {
   font-family: 'BodoniItalic';
   src: url('../fonts/Bodoni72C-Italic.woff') format('woff'),
-        url("../fonts/Bodoni72C-Italic.otf") format("opentype");
+  url("../fonts/Bodoni72C-Italic.otf") format("opentype");
   font-style: italic, oblique;
 }
 
@@ -41,13 +44,14 @@
 -----------------------*/
 $primary-color: #6d6855;
 $menu-color: #030911;
+$black: #000;
 $secondary-color: #fff;
-$gray-darker:      #444444;
-$gray-dark:         #696969;
-$gray:                #999999;
-$gray-light:         #cccccc;
-$gray-lighter:      #ececec;
-$gray-lightest:      lighten($gray-lighter,4%);
+$gray-darker: #444444;
+$gray-dark: #696969;
+$gray: #999999;
+$gray-light: #cccccc;
+$gray-lighter: #ececec;
+$gray-lightest: lighten($gray-lighter, 4%);
 /*	TYPOGRAPHY
 –––––––––––––––––––––––––––*/
 

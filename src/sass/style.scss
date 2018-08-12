@@ -1587,116 +1587,7 @@ nav {
       }
     }
 }
-/*
- Story
- */
-.story {
-  padding: 100px 50px;
-  @media (min-width: 45rem) {
-    margin: 170px auto;
-    padding: 10px 90px;
-    width: 80%;
-  }
-  background-color: white;
-  &__title {
-    text-transform: uppercase;
-    font-family: 'Bodoni', sans-serif;
-    line-height: 1.2em;
-    font-size: 47px;
-    margin: 0;
-    letter-spacing: 0.1rem;
-    text-align: center;
-    @media (min-width: 45rem) {
-      text-align: left;
-      margin-top: 100px;
-      margin-left: 20px;
-    }
-  }
-  &__container {
-    margin-left: 0;
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-around;
-    @media (min-width: 45rem) {
-      margin-left: 30px;
-      margin-top: 100px;
-    }
-    &__sidebar {
-      flex: 1;
-      width: 400px;
-      display: none;
-      @media (min-width: 45rem) {
-        display: block;
-      }
-    }
-    &__content {
-      flex: 3;
-      font-size: 24px;
-      @media (min-width: 45rem) {
-        font-size: 33px;
-        margin-left: 30px;
-      }
-      & h2 {
-        font-family: 'BodoniItalic', 'Playfair Display', sans-serif;
-      }
-      figure {
-        margin: 40px auto;
-        font-size: 20px;
-        text-align: center;
-      }
-      & img {
-        max-width: 100%;
-      }
-      & p {
-        text-align: justify;
-        &:first-child {
-          margin-top: 0;
-        }
-        font-family: 'Open Sans Condensed', sans-serif;
-      }
-      &__header {
-        &__title {
-          text-align: left;
-          line-height: 1.2em;
-          font-size: 47px;
-          margin: 0;
-          letter-spacing: 0.1rem;
-        }
-      }
-      &__row {
-        display: flex;
-        margin-left: 0;
-        @media(min-width: 45rem) {
-          margin-left: -250px;
-        }
-        margin-top: 30px;
-        & img {
-          margin-right: 140px;
-        }
-      }
-      & hr {
-        display: block;
-        border: 0px;
-        height: 10px;
-        background-image: url('../img/arrow.svg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 100% 100%;
-      }
-      & span {
-        font-family: 'Open Sans Condensed', sans-serif;
-      }
-      & a {
-        color: red;
-        text-decoration: none;
-        @include transition(all, 100ms);
-        &:hover {
-          color: $primary-color;
-        }
-      }
-    }
-  }
-}
+@import "pages/story";
 
 /*
  Granty
@@ -1996,6 +1887,8 @@ table th {
     }
   }
 }
+@import "pages/404";
+
 /*
 Category
 */
