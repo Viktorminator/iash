@@ -235,6 +235,7 @@ function startGrantsTween() {
     return Gra;
 }
 
+( function($) {
 $(document).ready(function(){
     var tubebad = document.getElementById('tubebad')
         ,tube = document.getElementById('tube')
@@ -442,43 +443,7 @@ $(document).ready(function(){
         //.addIndicators({name: "Grants"})
         .addTo(controller)
         .setTween(startGrantsTween());
-    /**
-     * Slides creating
-     */
-    Handlebars.registerHelper('if_even', function(conditional, options) {
-        if((conditional % 2) == 0) {
-            return options.fn(this);
-        } else {
-            return options.inverse(this);
-        }
-    });
 
-    $.getJSON('/data/cells.json', function (data) {
-        //console.log(slideshowTemplate);
-        var genealogiaScript = Handlebars.compile($('#genealogia-template').html());
-        $('#genealogia').append(genealogiaScript(data));
-
-        var sfragistikaScript = Handlebars.compile($('#sfragistika-template').html());
-        $('#sfragistika').append(sfragistikaScript(data));
-
-        var geraldikaScript = Handlebars.compile($('#geraldika-template').html());
-        $('#geraldika').append(geraldikaScript(data));
-
-        var resourcesScript = Handlebars.compile($('#resources-template').html());
-        $('#resources').append(resourcesScript(data));
-
-        var publishingScript = Handlebars.compile($('#publishing-template').html());
-        $('#publishing').append(publishingScript(data));
-
-        var projectsScript = Handlebars.compile($('#projects-template').html());
-        $('#projects').append(projectsScript(data));
-
-        var eventsScript = Handlebars.compile($('#events-template').html());
-        $('#events').append(eventsScript(data));
-
-        var grantsScript = Handlebars.compile($('#grants-template').html());
-        $('#grants').append(grantsScript(data));
-    });
     /**
      * Menu interaction
      */
@@ -493,7 +458,7 @@ $(document).ready(function(){
      * Slide scroller
      */
     var delta = 0;
-    var scrollThreshold = 5;
+    var scrollThreshold = 4;
     var anchors = [
         'intro', 'abo_intro',
         'gen_intro', 'genealogia',
@@ -518,10 +483,9 @@ $(document).ready(function(){
                 //console.log('prev');
                 prevSlide();
                 delta = 0;
-
             }
 
-            console.log('delta = ' + delta);
+             console.log('delta = ' + delta);
         }
 
         // --- Scrolling down ---
@@ -533,9 +497,8 @@ $(document).ready(function(){
                 //console.log('next');
                 nextSlide();
                 delta = 0;
-
             }
-            console.log('delta = ' + delta);
+            // console.log('delta = ' + delta);
 
         }
 
@@ -557,7 +520,6 @@ $(document).ready(function(){
             controller.scrollTo('#' + anchors[currentSlideIndex]);
             // If supported by the browser we can also update the URL
          }
-         delta = 0;
     }
 
     function nextSlide() {
@@ -572,7 +534,6 @@ $(document).ready(function(){
         if (currentSlideIndex < numSlides) {
             controller.scrollTo('#' + anchors[currentSlideIndex]);
         }
-        delta = 0;
     }
 
     $(window).on({
@@ -607,4 +568,5 @@ $(document).ready(function(){
     });
 
 });
+} ) ( jQuery );
 

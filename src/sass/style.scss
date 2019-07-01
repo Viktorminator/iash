@@ -234,6 +234,80 @@ svg {
 }
 .project {
   height: 100vh;
+  /* Button down */
+  & a.down {
+    &:hover {
+      opacity: .8;
+    }
+    & span {
+      position: absolute;
+      width: 46px;
+      height: 46px;
+      margin-left: -23px;
+      border: 1px solid $primary-color;
+      border-radius: 100%;
+      box-sizing: border-box;
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        content: '';
+        width: 16px;
+        height: 16px;
+        margin: -12px 0 0 -8px;
+        border-left: 1px solid $primary-color;
+        border-bottom: 1px solid $primary-color;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        box-sizing: border-box;
+      }
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        content: '';
+        width: 44px;
+        height: 44px;
+        box-shadow: 0 0 0 0 rgba(255,255,255,.1);
+        border-radius: 100%;
+        opacity: 0;
+        -webkit-animation: sdb04 3s infinite;
+        animation: sdb04 3s infinite;
+        box-sizing: border-box;
+      }
+      @-webkit-keyframes sdb04 {
+        0% {
+          opacity: 0;
+        }
+        30% {
+          opacity: 1;
+        }
+        60% {
+          box-shadow: 0 0 0 60px rgba(109, 104, 85,.1);
+          opacity: 0;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      @keyframes sdb04 {
+        0% {
+          opacity: 0;
+        }
+        30% {
+          opacity: 1;
+        }
+        60% {
+          box-shadow: 0 0 0 60px rgba(109, 104, 85,.1);
+          opacity: 0;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+  }
   &__content {
     position: relative;
     width: auto;
@@ -285,6 +359,7 @@ svg {
 }
 /* ABOUT */
 .project_about {
+  position: relative;
   padding: 0;
   margin: 0;
   display: flex;
@@ -292,6 +367,10 @@ svg {
   justify-content: center;
   height: 100vh;
   flex-direction: column;
+  & a.down {
+    position: absolute;
+    bottom: 95px;
+  }
   &__bcg {
     @include background('../img/background1.png', center);
     @include bgcover();
@@ -350,86 +429,10 @@ svg {
       }
     }
   }
-  & a {
-    align-self: center;
-    text-decoration: none;
-    color: $primary-color;
-    text-align: center;
-    &:hover {
-      opacity: .8;
-    }
-    & span {
-      position: absolute;
-      width: 46px;
-      height: 46px;
-      margin-left: -23px;
-      border: 1px solid $primary-color;
-      border-radius: 100%;
-      box-sizing: border-box;
-      &::after {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        content: '';
-        width: 16px;
-        height: 16px;
-        margin: -12px 0 0 -8px;
-        border-left: 1px solid $primary-color;
-        border-bottom: 1px solid $primary-color;
-        -webkit-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-        box-sizing: border-box;
-      }
-      &::before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        content: '';
-        width: 44px;
-        height: 44px;
-        box-shadow: 0 0 0 0 rgba(255,255,255,.1);
-        border-radius: 100%;
-        opacity: 0;
-        -webkit-animation: sdb04 3s infinite;
-        animation: sdb04 3s infinite;
-        box-sizing: border-box;
-      }
-      @-webkit-keyframes sdb04 {
-        0% {
-          opacity: 0;
-        }
-        30% {
-          opacity: 1;
-        }
-        60% {
-          box-shadow: 0 0 0 60px rgba(109, 104, 85,.1);
-          opacity: 0;
-        }
-        100% {
-          opacity: 0;
-        }
-      }
-      @keyframes sdb04 {
-        0% {
-          opacity: 0;
-        }
-        30% {
-          opacity: 1;
-        }
-        60% {
-          box-shadow: 0 0 0 60px rgba(109, 104, 85,.1);
-          opacity: 0;
-        }
-        100% {
-          opacity: 0;
-        }
-      }
-    }
-  }
 }
 /* Genealogia intro */
 .project_genintro {
+  position: relative;
   padding: 0;
   margin: 0;
   display: flex;
@@ -439,6 +442,10 @@ svg {
   display: flex;
   justify-content: space-around;
   height: 100vh;
+  & a.down {
+    position: absolute;
+    bottom: 100px;
+  }
   &__bcg {
     @include background('../img/background1.png', center);
     @include bgcover();
@@ -484,9 +491,6 @@ svg {
     padding: 5px 0 0 70px;
     z-index: 4;
   }
-  & #link {
-  }
-
   & #stamp {
     position: absolute;
     right: 100px;
@@ -524,86 +528,26 @@ svg {
     transform: rotateY(180deg);
     visibility: hidden;
   }
-  & a.down {
-    align-self: center;
-    text-decoration: none;
-    color: $primary-color;
-    text-align: center;
-    &:hover {
-      opacity: .8;
-    }
-    & span {
-      position: absolute;
-      width: 46px;
-      height: 46px;
-      margin-left: -23px;
-      border: 1px solid $primary-color;
-      border-radius: 100%;
-      box-sizing: border-box;
-      &::after {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        content: '';
-        width: 16px;
-        height: 16px;
-        margin: -12px 0 0 -8px;
-        border-left: 1px solid $primary-color;
-        border-bottom: 1px solid $primary-color;
-        -webkit-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-        box-sizing: border-box;
-      }
-      &::before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        content: '';
-        width: 44px;
-        height: 44px;
-        box-shadow: 0 0 0 0 rgba(255,255,255,.1);
-        border-radius: 100%;
-        opacity: 0;
-        -webkit-animation: sdb04 3s infinite;
-        animation: sdb04 3s infinite;
-        box-sizing: border-box;
-      }
-      @-webkit-keyframes sdb04 {
-        0% {
-          opacity: 0;
-        }
-        30% {
-          opacity: 1;
-        }
-        60% {
-          box-shadow: 0 0 0 60px rgba(109, 104, 85,.1);
-          opacity: 0;
-        }
-        100% {
-          opacity: 0;
-        }
-      }
-      @keyframes sdb04 {
-        0% {
-          opacity: 0;
-        }
-        30% {
-          opacity: 1;
-        }
-        60% {
-          box-shadow: 0 0 0 60px rgba(109, 104, 85,.1);
-          opacity: 0;
-        }
-        100% {
-          opacity: 0;
-        }
-      }
-    }
-  }
 }
 /* Sfragistika intro */
 .project_sfragistikaintro {
+  position: relative;
+  text-align: center;
+  & a.down {
+    position: absolute;
+    display: inline-block;
+    bottom: 100px;
+    z-index: 10;
+  }
+
+  &__bcg {
+    @include background('../img/background2.png', center);
+    @include bgcover();
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
   &__content {
     display: flex;
     justify-content: center; /* align horizontal */
@@ -611,7 +555,6 @@ svg {
     position: relative;
     overflow: hidden;
     height: 100vh;
-
   }
   #sfr_overlay {
     content:'\A';
@@ -651,18 +594,10 @@ svg {
     opacity: 0;
   }
 
-  &__bcg {
-    @include background('../img/background2.png', center);
-    @include bgcover();
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
-
 }
 /* Geraldika intro */
 .project_geraldikaintro {
+    position: relative;
     &__content {
       display: flex;
       align-items: center;
@@ -1048,7 +983,6 @@ svg {
   max-height: initial;
   overflow-x: hidden;
   overflow-y: scroll;
-  position: initial;
   position: relative;
   top: 0;
   // background: green;

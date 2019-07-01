@@ -62,16 +62,17 @@ gulp.task('rebuild', ['pug'], function () {
  * Wait for pug and sass tasks, then launch the browser-sync Server
  */
 gulp.task('browser-sync', ['sass', 'pug'], function () {
-  // browserSync({
-  //   server: {
-  //     baseDir: paths.public
-  //   },
-  //   notify: false
-  // });
-    browserSync.init({
-        proxy: "http://sigillum.local/",
-        notify: true
-    });
+    browserSync.init(({
+        notify: true,
+        port: 9000,
+        server: {
+            baseDir: paths.public
+        }
+    }));
+    // browserSync.init({
+    //     proxy: "http://sigillum.local/",
+    //     notify: true
+    // });
     gulp.watch('wp-content/themes/sigillum/css/*').on('change', browserSync.reload);
 });
 

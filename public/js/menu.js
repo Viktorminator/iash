@@ -14,11 +14,10 @@ $('#search-icon').click(function () {
     // console.log('toggle search');
 });
 // Hamburger menu
-$(document).on("click", "a[href^=#]", function(e) {
+$(document).on("click", "a[href^='#']", function(e) {
     var id = $(this).attr("href");
 
     if($(id).length > 0) {
-        e.preventDefault();
         $(overlay).toggleClass('open');
         $(triggerBttn).toggleClass('is-active');
         // trigger scroll
